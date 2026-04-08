@@ -1,4 +1,4 @@
-# Agent37 Skills — Lite Editions
+# UK Business Skills for Claude Code — Lite Editions
 
 19 Claude Code skills for UK businesses, freelancers, landlords, and professionals. Each skill is a `.md` file you drop into your Claude Code project — no install, no dependencies, no subscription.
 
