@@ -3,6 +3,7 @@ name: employee-handbook-generator
 description: Generates complete, legally compliant UK employee handbooks and workplace policies tailored to business type and size. Use when someone needs an employee handbook, HR policies, or workplace procedures.
 user-invocable: true
 argument-hint: "[business type] [number of employees] or describe your business"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # UK Employee Handbook & Policy Generator (Lite)

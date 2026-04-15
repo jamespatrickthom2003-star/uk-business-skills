@@ -3,6 +3,7 @@ name: client-comms-drafter
 description: Draft professional client emails and messages for freelancers. Handles project updates, scope changes, payment reminders, feedback requests, difficult conversations, and project wrap-ups. Use when a freelancer needs to write a client email, chase a payment, push back on scope creep, deliver bad news, or handle any tricky client communication.
 user-invocable: true
 argument-hint: "[situation] or describe what you need to communicate"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # Client Communication Drafter (Lite)

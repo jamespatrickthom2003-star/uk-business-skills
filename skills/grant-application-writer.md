@@ -3,6 +3,7 @@ name: grant-application-writer
 description: Write compelling grant applications and funding proposals for UK charities, social enterprises, researchers, and small businesses. Generates need statements, project narratives, budgets, theories of change, and monitoring frameworks. Use when someone needs to apply for a grant, write a funding proposal, or prepare a bid.
 user-invocable: true
 argument-hint: "[project description] [funder name if known] or describe what you need funding for"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # Grant Application & Funding Proposal Writer (Lite)

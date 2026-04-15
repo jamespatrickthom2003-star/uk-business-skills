@@ -3,6 +3,7 @@ name: uk-landlord-compliance
 description: Generate compliant UK landlord documents — Section 8 notices, tenancy agreements, rent increase notices, deposit prescribed information, Right to Rent records, safety certification trackers, and eviction procedure guides. Covers all 37 grounds for possession under the Renters' Rights Act 2025. Use when a UK landlord asks about compliance, notices, tenancy documentation, eviction, deposits, licensing, or any rental property legal obligation.
 user-invocable: true
 argument-hint: "[property type] [situation] or describe your landlord scenario"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # UK Landlord Compliance Document Generator (Lite)

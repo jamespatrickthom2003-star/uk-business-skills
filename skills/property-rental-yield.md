@@ -3,6 +3,7 @@ name: property-rental-yield
 description: Generate professional property listings and calculate rental yields, ROI projections, cash flow analysis, and stamp duty for UK property investments. Use when a landlord or agent needs property marketing copy, yield calculations, or investment analysis.
 user-invocable: true
 argument-hint: "[property details] [purchase price] [rent] or describe the property"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # Property Listing & Rental Yield Calculator (Lite)

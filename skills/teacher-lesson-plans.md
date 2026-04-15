@@ -3,6 +3,7 @@ name: teacher-lesson-plans
 description: Generate UK National Curriculum-aligned lesson plans, differentiated worksheets, assessment questions with mark schemes, and student report comments. Covers KS1-KS5 across all subjects. Use when a teacher needs lesson plans, worksheets, assessments, or report writing support.
 user-invocable: true
 argument-hint: "[subject] [topic] [year group] or describe what you're teaching"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # UK Teacher Lesson Plans & Assessment Generator (Lite)

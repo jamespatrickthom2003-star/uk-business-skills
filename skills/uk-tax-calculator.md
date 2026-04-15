@@ -3,6 +3,7 @@ name: uk-tax-calculator
 description: Calculate UK freelancer tax liability for 2025/26. Computes Income Tax, Class 4 NI, Class 2 NI, VAT threshold tracking, and MTD quarterly summaries from income and expense data. Use when a UK freelancer asks about tax, self-assessment, Making Tax Digital, National Insurance, VAT registration, or wants to estimate their tax bill.
 user-invocable: true
 argument-hint: "[gross income] [expenses] or describe your situation"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # UK Freelancer Tax Calculator & MTD Prep (Lite)

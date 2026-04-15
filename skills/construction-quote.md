@@ -3,6 +3,7 @@ name: construction-quote
 description: Generate itemised construction quotes, material lists, and job costings from plain English job descriptions. Covers extensions, kitchens, bathrooms, loft conversions, roofing, and general building work with UK material prices and labour rates. Use when a builder, tradesperson, or contractor needs to quote a job or estimate costs.
 user-invocable: true
 argument-hint: "[job description] or describe the construction/building work"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # Construction Quote & Job Costing Calculator (Lite)

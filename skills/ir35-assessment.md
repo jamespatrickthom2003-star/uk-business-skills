@@ -3,6 +3,7 @@ name: ir35-assessment
 description: Assess IR35 employment status for UK contractors using HMRC criteria and case law factors. Generates risk ratings, recommended contract amendments, and Status Determination Statements. Use when a contractor needs to check their IR35 status, a business needs to make a determination, or someone wants to understand employment status.
 user-invocable: true
 argument-hint: "[contract details and working practices] or describe your engagement"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # IR35 Status Assessment (Lite)

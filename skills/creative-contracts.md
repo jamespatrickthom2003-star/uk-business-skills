@@ -3,6 +3,7 @@ name: creative-contracts
 description: Generate photography, videography, and creative professional contracts -- client agreements, model releases, usage licences, and rights documentation. Use when a creative professional needs a contract, release form, usage agreement, or licensing terms.
 user-invocable: true
 argument-hint: "[shoot/project type] [client details] or describe your creative project"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # Photography & Creative Contracts Generator (Lite)

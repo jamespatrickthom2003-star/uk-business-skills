@@ -3,6 +3,7 @@ name: contract-review
 description: Review contracts for risks, unfair terms, and missing clauses. Generates plain-English summaries, risk flags, and negotiation talking points. Use when someone needs a contract reviewed, wants to understand terms, or needs to negotiate better conditions.
 user-invocable: true
 argument-hint: "paste your contract text or describe the agreement"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # Contract Review & Risk Flagger (Lite)

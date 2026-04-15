@@ -3,6 +3,7 @@ name: food-hygiene-haccp
 description: Generate UK food safety documentation — HACCP plans, food safety management systems, allergen matrices, cleaning schedules, and EHO inspection preparation. Use when a food business needs food hygiene documents, HACCP plans, or food safety policies.
 user-invocable: true
 argument-hint: "[food business type] [document needed] or describe your food safety requirement"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # Food Hygiene & HACCP Documentation Generator (Lite)

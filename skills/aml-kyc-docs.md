@@ -1,8 +1,9 @@
 ---
 name: aml-kyc-docs
-description: Generate UK AML/KYC compliance documentation — customer due diligence records, risk assessments, policies, and SAR drafts for regulated businesses. Use when a business needs AML documentation, client onboarding forms, or compliance records.
+description: Generate UK AML/KYC compliance documentation - customer due diligence records, risk assessments, policies, and SAR drafts for regulated businesses. Use when a business needs AML documentation, client onboarding forms, or compliance records.
 user-invocable: true
 argument-hint: "[business type] [document needed] or describe your AML/KYC requirement"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # UK AML/KYC Compliance Documentation Generator (Lite)

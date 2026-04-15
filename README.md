@@ -1,4 +1,13 @@
-# UK Business Skills for Claude Code — Lite Editions
+---
+title: UK Business Skills - GitHub Lite Repo
+type: readme
+status: active
+updated: 2026-04-13
+tags: [skills, distribution, github]
+related: [[[github-lite-repo]], [[agent37-skills]]]
+---
+
+# UK Business Skills for Claude Code - Lite Editions
 
 Built by [ExternalOS](https://externalos.gumroad.com/l/vrmevr). 19 Claude Code skills for UK businesses, freelancers, landlords, and professionals. Each skill is a `.md` file you drop into your Claude Code project — no install, no dependencies, no subscription.
 

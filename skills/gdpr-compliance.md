@@ -3,6 +3,7 @@ name: gdpr-compliance
 description: Generate UK/EU GDPR compliance documents — privacy policies, cookie policies, DPIAs, ROPA, DSAR responses, data breach notifications, and consent forms. Use when a business needs GDPR documentation, data protection policies, or privacy compliance.
 user-invocable: true
 argument-hint: "[business type] [document needed] or describe your data protection situation"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # GDPR Privacy Policy & Compliance Document Generator (Lite)

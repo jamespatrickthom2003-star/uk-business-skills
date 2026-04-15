@@ -3,6 +3,7 @@ name: health-safety-risk-assessment
 description: Generates HSE-compliant UK risk assessments from plain English descriptions of work activities and environments. Use when someone needs a risk assessment, H&S assessment, COSHH assessment, fire safety assessment, method statement, or any workplace health and safety document.
 user-invocable: true
 argument-hint: "[activity or workplace] or describe what you need assessed"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # UK Health & Safety Risk Assessment Generator (Lite)

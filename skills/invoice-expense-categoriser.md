@@ -3,6 +3,7 @@ name: invoice-expense-categoriser
 description: Categorise UK business expenses and invoices against HMRC Self Assessment categories. Generates quarterly P&L summaries, VAT-ready reports, and MTD-compatible breakdowns from raw transaction data. Use when a freelancer or small business needs to categorise expenses, prepare for tax, or organise bookkeeping.
 user-invocable: true
 argument-hint: "paste transactions, describe expenses, or provide a list of costs"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # UK Invoice & Expense Categoriser — HMRC-Aligned (Lite)

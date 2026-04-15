@@ -3,6 +3,7 @@ name: meeting-notes-actions
 description: Transform raw meeting notes or transcripts into structured summaries, action items with owners and deadlines, individual follow-up emails, and next meeting agendas. Use when someone has meeting notes to process, needs to send follow-ups, or wants to extract actions from a conversation.
 user-invocable: true
 argument-hint: "paste your meeting notes or transcript"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # Meeting Notes to Actions (Lite)

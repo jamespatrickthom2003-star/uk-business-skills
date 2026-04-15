@@ -3,6 +3,7 @@ name: uk-employment-law
 description: Calculate UK statutory employment entitlements (holiday, sick pay, notice, redundancy, maternity/paternity pay, minimum wage) and generate HR letters (disciplinary, dismissal, grievance, redundancy, flexible working) using 2025/26 rates and ERA 2025 reforms. Use when anyone asks about employee rights, HR calculations, or needs an employment letter template.
 user-invocable: true
 argument-hint: "[employee situation] or describe the HR scenario"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # UK Employment Law Calculator & Letter Generator (Lite)

@@ -3,6 +3,7 @@ name: proposal-generator
 description: Generate professional freelancer proposals, scopes of work, and project quotes from a brief description. Produces client-ready documents with deliverables, timelines, pricing, and terms. Use when a freelancer needs to write a proposal, quote, SOW, pitch, or project brief for a client.
 user-invocable: true
 argument-hint: "[project description] or describe the client situation"
+related: [[agent37-skills]], [[skills-pipeline]], [[externalos]]
 ---
 
 # Freelancer Proposal & SOW Generator (Lite)
