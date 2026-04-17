@@ -1145,11 +1145,11 @@ img { max-width: 100%; display: block; }
 
  /* HERO */
  .hero { padding: 80px 0 88px; position: relative; }
- .hero-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+ .hero-inner { max-width: 880px; margin: 0 auto; text-align: center; }
  .hero-copy { position: relative; z-index: 2; }
- .hero h1 { font-size: var(--type-h1); line-height: 1.02; color: var(--ink); }
+ .hero h1 { font-size: var(--type-h1); line-height: 1.04; color: var(--ink); }
  .hero h1 .accent { color: var(--purple-hero); }
- .hero p.lede { font-size: var(--type-lede); color: var(--warm-mid); max-width: 580px; margin: 26px auto 0; line-height: 1.75; }
+ .hero p.lede { font-size: var(--type-lede); color: var(--warm-mid); max-width: 680px; margin: 40px auto 0; line-height: 1.75; }
  .hero p.lede strong { color: var(--warm-dark); font-weight: 500; }
  .hero .divider { width: 120px; height: 3px; background: linear-gradient(90deg, var(--purple-hero), var(--purple-mid), var(--purple-pale)); border-radius: 2px; margin: 0 auto 26px; }
  .hero .cta-row { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; justify-content: center; }
