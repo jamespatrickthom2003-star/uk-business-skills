@@ -27,6 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
 
 <!-- Schema.org Quiz markup -->
 <script type="application/ld+json">
@@ -174,8 +175,6 @@
  /* ═══════════════════════════════════════════════
  LOGO MARK (The Distill Mark)
  ═══════════════════════════════════════════════ */
- .distill-mark { display: inline-block; vertical-align: middle; }
- .distill-mark svg { display: block; }
 
  /* Site masthead */
  .masthead { padding: 32px 0 0; }
@@ -936,53 +935,7 @@
  }
  .disclaimer p strong { color: var(--ink); }
 
- footer.site-footer {
- background: var(--ink);
- padding: 60px 0 56px;
- color: rgba(255,255,255,0.72);
- position: relative;
- }
- .footer-grid {
- display: flex;
- justify-content: space-between;
- align-items: flex-end;
- gap: 40px;
- flex-wrap: wrap;
- }
- .footer-brand {
- font-family: 'Libre Baskerville', serif;
- font-size: 22px;
- font-weight: 700;
- color: #FFFFFF;
- letter-spacing: -0.02em;
- }
- .footer-tagline {
- font-family: 'Libre Baskerville', serif;
- font-size: 13px;
- font-style: italic;
- color: rgba(255,255,255,0.35);
- margin-top: 6px;
- }
- .footer-right {
- text-align: right;
- }
- .footer-url {
- font-size: 14px;
- color: rgba(255,255,255,0.55);
- }
- .footer-url a { color: inherit; text-decoration: none; }
- .footer-url a:hover { color: #FFFFFF; }
- .footer-version {
- font-size: 11px;
- color: rgba(255,255,255,0.28);
- letter-spacing: 0.08em;
- text-transform: uppercase;
- margin-top: 6px;
- }
- @media (max-width: 720px) {
- .footer-grid { flex-direction: column; align-items: flex-start; }
- .footer-right { text-align: left; }
- }
+ /* Footer styles now inherited from styles.css (canonical .footer block) */
 
  /* ═══════════════════════════════════════════════
  ACCESSIBILITY / MOTION
@@ -1015,9 +968,9 @@
 <div class="masthead">
  <div class="wrap">
  <div class="masthead-inner">
- <a class="masthead-brand" href="https://externalos.gumroad.com" aria-label="ExternalOS home">
- <span class="mark-wrap distill-mark" aria-hidden="true">
- <svg width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+ <a class="masthead-brand" href="./" aria-label="ExternalOS home">
+ <span class="mark-wrap" aria-hidden="true">
+ <svg width="24" height="24" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
  <polygon points="20,4 34,18 20,32 6,18" fill="#DBC8F0"/>
  <polygon points="20,8.6 31.7,20.3 20,32 8.3,20.3" fill="#BEA0E0"/>
  <polygon points="20,13.2 29.4,22.6 20,32 10.6,22.6" fill="#9F72D0"/>
@@ -1040,10 +993,28 @@
  </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════
- HERO
-═══════════════════════════════════════════════ -->
+<!-- HERO -->
 <header class="hero" role="banner">
+ <div class="mark-rail mark-rail-left" aria-hidden="true">
+  <svg viewBox="0 0 140 280" xmlns="http://www.w3.org/2000/svg">
+   <polygon points="0,0 140,140 0,280" fill="#DBC8F0"/>
+   <polygon points="0,46 117,163 0,280" fill="#BEA0E0"/>
+   <polygon points="0,92 94,186 0,280" fill="#9F72D0"/>
+   <polygon points="0,138 71,209 0,280" fill="#8248BF"/>
+   <polygon points="0,184 48,232 0,280" fill="#6525AB"/>
+   <polygon points="0,230 25,255 0,280" fill="#4A1290"/>
+  </svg>
+ </div>
+ <div class="mark-rail mark-rail-right" aria-hidden="true">
+  <svg viewBox="0 0 140 280" xmlns="http://www.w3.org/2000/svg">
+   <polygon points="140,0 0,140 140,280" fill="#DBC8F0"/>
+   <polygon points="140,46 23,163 140,280" fill="#BEA0E0"/>
+   <polygon points="140,92 46,186 140,280" fill="#9F72D0"/>
+   <polygon points="140,138 69,209 140,280" fill="#8248BF"/>
+   <polygon points="140,184 92,232 140,280" fill="#6525AB"/>
+   <polygon points="140,230 115,255 140,280" fill="#4A1290"/>
+  </svg>
+ </div>
  <div class="wrap">
  <div class="hero-inner">
  <div class="hero-copy">
@@ -1061,19 +1032,6 @@
  <a href="#intro" class="btn btn-secondary">How it works</a>
  </div>
  </div>
- <div class="hero-ornament" aria-hidden="true">
- <span class="numeral">01</span>
- <svg class="mark-xl" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
- <polygon points="20,4 34,18 20,32 6,18" fill="#DBC8F0"/>
- <polygon points="20,8.6 31.7,20.3 20,32 8.3,20.3" fill="#BEA0E0"/>
- <polygon points="20,13.2 29.4,22.6 20,32 10.6,22.6" fill="#9F72D0"/>
- <polygon points="20,17.8 27.1,24.9 20,32 12.9,24.9" fill="#8248BF"/>
- <polygon points="20,22.4 24.8,27.2 20,32 15.2,27.2" fill="#6525AB"/>
- <polygon points="20,27 22.5,29.5 20,32 17.5,29.5" fill="#4A1290"/>
- <circle cx="20" cy="36" r="2" fill="#4A1290"/>
- </svg>
- <span class="ornament-tag">CEST-style · 7 factors</span>
- </div>
  </div>
  </div>
 </header>
@@ -1085,7 +1043,6 @@
  <div class="wrap">
  <div class="section-header">
  <div>
- <span class="section-number">01 / How it works</span>
  <h2 class="section-title" id="introHeading">A fast, honest IR35 check.</h2>
  </div>
  <p class="section-subtitle">Modelled on the seven factors that UK tribunals actually turn on when testing contractor status.</p>
@@ -1113,7 +1070,6 @@
  <div class="wrap">
  <div class="section-header">
  <div>
- <span class="section-number">02 / The checker</span>
  <h2 class="section-title" id="checkerHeading">Answer honestly.</h2>
  </div>
  <p class="section-subtitle">Think about how the work really happens, not just what the contract says. Tribunals look at both.</p>
@@ -1187,21 +1143,63 @@
  </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════
- FOOTER
-═══════════════════════════════════════════════ -->
-<footer class="site-footer">
+<!-- FOOTER (canonical, matches landing) -->
+<footer class="footer" role="contentinfo">
  <div class="wrap">
- <div class="footer-grid">
- <div class="footer-left">
- <div class="footer-brand">ExternalOS</div>
- <div class="footer-tagline">Compliance skills for UK freelancers, landlords and small employers.</div>
- </div>
- <div class="footer-right">
- <div class="footer-url"><a href="https://externalos.gumroad.com" target="_blank" rel="noopener">externalos.gumroad.com</a></div>
- <div class="footer-version">IR35 checker · v1.0 · 2026</div>
- </div>
- </div>
+  <div class="footer-inner">
+   <div class="footer-brand">
+    <div class="footer-brand-logo">
+     <span class="mark-wrap" aria-hidden="true">
+      <svg viewBox="0 0 40 40" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+       <polygon points="20,4 34,18 20,32 6,18" fill="#DBC8F0"/>
+       <polygon points="20,8.6 31.7,20.3 20,32 8.3,20.3" fill="#BEA0E0"/>
+       <polygon points="20,13.2 29.4,22.6 20,32 10.6,22.6" fill="#9F72D0"/>
+       <polygon points="20,17.8 27.1,24.9 20,32 12.9,24.9" fill="#8248BF"/>
+       <polygon points="20,22.4 24.8,27.2 20,32 15.2,27.2" fill="#6525AB"/>
+       <polygon points="20,27 22.5,29.5 20,32 17.5,29.5" fill="#4A1290"/>
+       <circle cx="20" cy="36" r="2" fill="#4A1290"/>
+      </svg>
+     </span>
+     <span class="wordmark">ExternalOS</span>
+    </div>
+    <p>The work, already done. UK tax, IR35, MTD, employment law, tenancy. Built in Leeds. Files you keep.</p>
+    <p class="footer-refund">7-day refund, no questions asked.</p>
+   </div>
+   <div>
+    <h5>Products</h5>
+    <ul>
+     <li><a href="https://externalos.gumroad.com" target="_blank" rel="noopener">UK Freelancer OS</a></li>
+     <li><a href="https://externalos.gumroad.com/l/aavttu" target="_blank" rel="noopener">Freelancer Toolkit</a></li>
+     <li><a href="https://externalos.gumroad.com/l/fxlgeq" target="_blank" rel="noopener">Employer Compliance</a></li>
+     <li><a href="https://externalos.gumroad.com/l/iuffuj" target="_blank" rel="noopener">Landlord Legal Pack</a></li>
+     <li><a href="https://externalos.gumroad.com/l/vrmevr" target="_blank" rel="noopener">Full UK Suite</a></li>
+    </ul>
+   </div>
+   <div>
+    <h5>Free Tools</h5>
+    <ul>
+     <li><a href="./ir35-checker.html">IR35 Checker</a></li>
+    </ul>
+    <h5 style="margin-top: 22px;">Legal</h5>
+    <ul>
+     <li><a href="/privacy.html">Privacy</a></li>
+     <li><a href="/refund-policy.html">Refund policy</a></li>
+    </ul>
+   </div>
+   <div>
+    <h5>Connect</h5>
+    <ul>
+     <li><a href="https://github.com/externalOS" target="_blank" rel="noopener">GitHub</a></li>
+     <li><a href="https://twitter.com/ExternalOS_" target="_blank" rel="noopener">X / Twitter</a></li>
+     <li><a href="https://instagram.com/externalos" target="_blank" rel="noopener">Instagram</a></li>
+     <li><a href="mailto:hello@externalos.com">Email</a></li>
+    </ul>
+   </div>
+  </div>
+  <div class="footer-bottom">
+   <div>ExternalOS 2026 <span class="full-stop" aria-hidden="true"></span> Leeds, UK <span class="full-stop" aria-hidden="true"></span> <a href="mailto:hello@externalos.com">hello@externalos.com</a></div>
+   <div>Sole trader, not VAT registered <span class="full-stop" aria-hidden="true"></span> Lifetime licence <span class="full-stop" aria-hidden="true"></span> Files you keep</div>
+  </div>
  </div>
 </footer>
 
@@ -1485,7 +1483,7 @@
  summary: 'Your answers look a lot like employment dressed up as a contract. Under the 2026 off-payroll rules, the engager is usually the one on the hook for getting this right, and the consequences of getting it wrong are expensive.',
  nextSteps: [
  'If you\u2019re the contractor: expect PAYE + employer/employee NI to be deducted at source by the fee-payer. Your take-home will drop. Factor this into your day rate.',
- 'If you\u2019re the engager (medium or large client): you're responsible for the Status Determination Statement (SDS). An incorrect determination makes you liable for unpaid tax, interest, and penalties.',
+ 'If you\u2019re the engager (medium or large client): you\u2019re responsible for the Status Determination Statement (SDS). An incorrect determination makes you liable for unpaid tax, interest, and penalties.',
  'Review the working practices, not just the paperwork. Tribunals look at how the job is actually done, not what the contract claims.',
  'Look at the factors that tipped the verdict: control, integration, mutuality of obligation. These are usually fixable with changes to HOW the work is organised, not just contract wording.',
  'If the engagement has to be outside IR35, the business model usually needs to change, genuine substitution, genuine project scope, genuine distance from the client\u2019s org.',
@@ -1621,193 +1619,6 @@
  }, 420);
  }
  });
-})();
-</script>
-
-<!-- ============================================================
-     EMAIL CAPTURE - Issue 02 IR35
-     Source: brain/10-projects/skills-pipeline/email-capture.html
-     ============================================================ -->
-<section class="eos-card" aria-labelledby="eos-card-headline-ir35">
-  <div class="eos-card-masthead">
-    <span class="eos-card-issue">
-      Issue 02
-      <span class="eos-card-issue-sep">/</span>
-      <span class="eos-card-issue-pub">IR35 Field Kit</span>
-    </span>
-    <svg class="eos-card-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-      <polygon points="20,4 34,18 20,32 6,18" fill="#DBC8F0"/>
-      <polygon points="20,8.6 31.7,20.3 20,32 8.3,20.3" fill="#BEA0E0"/>
-      <polygon points="20,13.2 29.4,22.6 20,32 10.6,22.6" fill="#9F72D0"/>
-      <polygon points="20,17.8 27.1,24.9 20,32 12.9,24.9" fill="#8248BF"/>
-      <polygon points="20,22.4 24.8,27.2 20,32 15.2,27.2" fill="#6525AB"/>
-      <polygon points="20,27 22.5,29.5 20,32 17.5,29.5" fill="#4A1290"/>
-      <circle cx="20" cy="36" r="2" fill="#4A1290"/>
-    </svg>
-  </div>
-  <div class="eos-card-grid">
-    <div class="eos-card-copy">
-      <span class="eos-card-eyebrow">Free resource</span>
-      <h2 class="eos-card-headline" id="eos-card-headline-ir35">
-        Free IR35 checker plus the <span class="accent">template library</span>.
-      </h2>
-      <p class="eos-card-lede">Our 7-question CEST-style checker sits inside your inbox alongside working contract templates: statement of work, substitution clause, day-rate invoice. Delivered the moment you confirm.</p>
-      <p class="eos-card-meta"><em>Built from real HMRC case law. Written for UK contractors who want to stay outside.</em></p>
-    </div>
-    <div class="eos-card-ornament" aria-hidden="true">
-      <span class="eos-card-numeral">02</span>
-      <svg class="eos-card-diamond" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" focusable="false">
-        <polygon points="20,4 34,18 20,32 6,18" fill="#DBC8F0"/>
-        <polygon points="20,8.6 31.7,20.3 20,32 8.3,20.3" fill="#BEA0E0"/>
-        <polygon points="20,13.2 29.4,22.6 20,32 10.6,22.6" fill="#9F72D0"/>
-        <polygon points="20,17.8 27.1,24.9 20,32 12.9,24.9" fill="#8248BF"/>
-        <polygon points="20,22.4 24.8,27.2 20,32 15.2,27.2" fill="#6525AB"/>
-        <polygon points="20,27 22.5,29.5 20,32 17.5,29.5" fill="#4A1290"/>
-        <circle cx="20" cy="36" r="2" fill="#4A1290"/>
-      </svg>
-    </div>
-    <svg class="eos-card-pencil" viewBox="0 0 800 10" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0,5 Q 40,2 80,5 T 160,5 T 240,5 T 320,5 T 400,5 T 480,5 T 560,5 T 640,5 T 720,5 T 800,5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="1 4"/>
-    </svg>
-    <form class="eos-card-form" action="https://formspree.io/f/mwvaveor" method="POST" data-variant="ir35" novalidate>
-      <div class="eos-card-field">
-        <label class="eos-card-label" for="eos-card-email-ir35">Your email</label>
-        <div class="eos-card-row">
-          <input class="eos-card-input" type="email" id="eos-card-email-ir35" name="email" required autocomplete="email" inputmode="email" placeholder="you@example.com">
-          <button type="submit" class="eos-card-btn">Send it over</button>
-        </div>
-      </div>
-      <div class="eos-card-consent">
-        <input type="checkbox" id="eos-card-consent-ir35" name="consent" value="yes" required>
-        <label for="eos-card-consent-ir35"><em>I agree ExternalOS may email me the IR35 checker, the template library, and occasional UK compliance updates. No third-party sharing. Unsubscribe link in every email.</em></label>
-      </div>
-      <div class="eos-card-honeypot" aria-hidden="true">
-        <label for="eos-card-gotcha-ir35">Leave blank</label>
-        <input type="text" id="eos-card-gotcha-ir35" name="_gotcha" tabindex="-1" autocomplete="off">
-      </div>
-      <input type="hidden" name="_subject" value="New subscriber - Issue 02 IR35">
-      <input type="hidden" name="source" value="ir35">
-      <div class="eos-card-status" role="status" aria-live="polite"></div>
-    </form>
-  </div>
-  <div class="eos-card-footer">
-    <span class="eos-card-footer-meta">
-      <span>From the desk of ExternalOS</span>
-      <span class="sep">/</span>
-      <span>Leeds, UK</span>
-      <span class="sep">/</span>
-      <span>GDPR single opt-in</span>
-    </span>
-    <span class="eos-card-footer-dot" aria-hidden="true"></span>
-  </div>
-</section>
-
-<!-- Email capture handler (binds all .eos-card-form on the page) -->
-<script>
-(function () {
-  var FALLBACK_EMAIL = 'hello@externalos.com';
-  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  function setStatus(form, msg, isError) {
-    var status = form.querySelector('.eos-card-status');
-    if (!status) return;
-    status.textContent = msg || '';
-    status.className = 'eos-card-status' + (isError ? ' is-error' : '');
-  }
-
-  function showSuccess(section, variant) {
-    var grid = section.querySelector('.eos-card-grid');
-    if (!grid) return;
-    var head = 'Thank you';
-    var detail = 'Check your inbox for a confirmation link. Click it to confirm your subscription (GDPR double opt-in). If you do not see it within 5 minutes, check spam or the promotions tab.';
-    if (variant === 'ir35') {
-      detail = 'Confirm the double opt-in email we just sent. The IR35 checker and the template library land in your inbox immediately after.';
-    } else if (variant === 'sole-trader') {
-      detail = 'Confirm the double opt-in email we just sent. The sole trader checklist arrives next, and the 5 October 2026 reminder is scheduled.';
-    }
-    var success = document.createElement('div');
-    success.className = 'eos-card-success';
-    success.setAttribute('role', 'status');
-    success.innerHTML =
-      '<p class="eos-card-success-eyebrow">You are on the list</p>' +
-      '<h3 class="eos-card-success-head">' + head + '</h3>' +
-      '<p class="eos-card-success-detail">' + detail + '</p>';
-    var copy = grid.querySelector('.eos-card-copy');
-    var form = grid.querySelector('.eos-card-form');
-    var pencil = grid.querySelector('.eos-card-pencil');
-    if (copy) copy.style.display = 'none';
-    if (form) form.style.display = 'none';
-    if (pencil) pencil.style.display = 'none';
-    grid.appendChild(success);
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    var form = e.currentTarget;
-    var section = form.closest('.eos-card');
-    var variant = form.dataset.variant || 'generic';
-    var emailInput = form.querySelector('input[type="email"]');
-    var consentInput = form.querySelector('input[name="consent"]');
-    var submitBtn = form.querySelector('.eos-card-btn');
-    var originalBtnHTML = submitBtn.innerHTML;
-
-    var email = (emailInput.value || '').trim();
-    if (!email || !EMAIL_RE.test(email)) {
-      emailInput.setAttribute('aria-invalid', 'true');
-      setStatus(form, 'Please enter a valid email address.', true);
-      emailInput.focus();
-      return;
-    }
-    emailInput.removeAttribute('aria-invalid');
-
-    if (!consentInput.checked) {
-      setStatus(form, 'Please confirm consent before subscribing.', true);
-      consentInput.focus();
-      return;
-    }
-
-    var honey = form.querySelector('input[name="_gotcha"]');
-    if (honey && honey.value) {
-      showSuccess(section, variant);
-      return;
-    }
-
-    if (!form.action || form.action.indexOf('FORMSPREE_FORM_ID') !== -1) {
-      setStatus(form, 'Form endpoint not configured. Email ' + FALLBACK_EMAIL + ' directly.', true);
-      return;
-    }
-
-    var fallbackMsg = 'Something went wrong. Email ' + FALLBACK_EMAIL + ' directly and we will add you manually.';
-
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
-
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    }).then(function (res) {
-      if (res.ok) { showSuccess(section, variant); return; }
-      return res.json().then(function (data) {
-        if (data && data.errors && data.errors.length) {
-          throw new Error(data.errors.map(function (er) { return er.message; }).join(' ') + ' Or email ' + FALLBACK_EMAIL + ' directly.');
-        }
-        throw new Error(fallbackMsg);
-      }, function () { throw new Error(fallbackMsg); });
-    }).catch(function (err) {
-      var msg = (err && err.message && err.message.indexOf(FALLBACK_EMAIL) !== -1) ? err.message : fallbackMsg;
-      setStatus(form, msg, true);
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnHTML;
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    var forms = document.querySelectorAll('.eos-card-form');
-    Array.prototype.forEach.call(forms, function (form) {
-      form.addEventListener('submit', handleSubmit);
-    });
-  });
 })();
 </script>
 
