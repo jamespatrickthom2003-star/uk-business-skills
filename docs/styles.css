@@ -1101,7 +1101,7 @@ img { max-width: 100%; display: block; }
  .masthead-nav a:hover { color: var(--purple-hero); }
  .masthead-nav .btn-nav { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 13px; padding: 9px 20px; border-radius: 100px; background: var(--purple-hero); color: #fff; text-decoration: none; transition: background 0.2s ease; }
  .masthead-nav .btn-nav:hover { background: var(--purple-deep); color: #fff; }
- @media (max-width: 640px) { .masthead-nav a:not(.btn-nav) { display: none; } }
+ @media (max-width: 640px) { .masthead-nav > a:not(.btn-nav) { display: none; } }
 
  /* ═══════════════════════════════════════════════════════════════
     MARK RAILS - static, hero-only decor. No scroll animation.
@@ -1512,6 +1512,11 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.1em; text-transform: uppercase;
   background: #F4EAD5; color: #8A6A1F; padding: 2px 7px; border-radius: 100px;
   margin-left: auto; flex-shrink: 0;
+}
+.skills-menu-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #d97706; margin-left: auto; flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.12);
 }
 
 /* Mobile: anchor to viewport edges, single column, accordion style */

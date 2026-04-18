@@ -22,7 +22,7 @@
     {
       title: 'Landlord & Property',
       items: [
-        { name: '31 May Landlord Kit', href: './landlord-31-may-kit.html', badge: 'Deadline' },
+        { name: '31 May Landlord Kit', href: './landlord-31-may-kit.html', dot: true },
         { name: 'Landlord Compliance', href: './uk-landlord-compliance.html' },
         { name: 'Property Rental Yield', href: './property-rental-yield.html' }
       ]
@@ -76,6 +76,12 @@
           b.className = 'skills-menu-badge';
           b.textContent = it.badge;
           a.appendChild(b);
+        }
+        if (it.dot) {
+          var d = document.createElement('span');
+          d.className = 'skills-menu-dot';
+          d.setAttribute('aria-label', 'Upcoming deadline');
+          a.appendChild(d);
         }
         li.appendChild(a);
         list.appendChild(li);
