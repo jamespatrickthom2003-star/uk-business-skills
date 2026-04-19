@@ -524,7 +524,7 @@
     <h1>The UK business work, <span class="accent">already done.</span></h1>
     <p class="lede">UK tax under the current bands. IR35 tested against Atholl House, PGMOL, and Kickabout Productions. MTD summaries ready for your accountant. <strong>One file per job, one payment, lifetime updates when the legislation moves.</strong></p>
     <div class="cta-row">
-     <a class="btn btn-primary btn-lg" href="#products">Get the £79 bundle <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+     <a class="btn btn-primary btn-lg" href="#find-your-pack">Find your toolkit <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
      <a class="btn btn-secondary btn-lg" href="./ir35-checker.html" target="_blank" rel="noopener">Try the free IR35 checker</a>
     </div>
     <div class="hero-trust">
@@ -619,17 +619,240 @@
  </div>
 </section>
 
+<!-- FIND YOUR PACK ASSESSMENT -->
+<section class="find-pack" id="find-your-pack" aria-labelledby="fyp-title">
+ <div class="wrap">
+  <div class="fyp-head">
+   <span class="eyebrow" style="color:var(--purple,#5b3dc9)">Five questions, honest recommendation</span>
+   <h2 id="fyp-title">Find the pack that fits <em>your</em> setup.</h2>
+   <p>Takes about 30 seconds. We'll highlight the pack we think suits you and show you the rest. You still decide.</p>
+  </div>
+
+  <div class="fyp-shell" id="fyp-shell">
+   <div class="fyp-progress"><div class="fyp-progress-bar" id="fyp-bar" style="width:20%"></div></div>
+   <div class="fyp-step-count" id="fyp-count">Question 1 of 5</div>
+
+   <div class="fyp-q fyp-q-active" data-q="1">
+    <h3>Which hat do you wear?</h3>
+    <div class="fyp-opts">
+     <button type="button" class="fyp-opt" data-key="role" data-val="freelancer">Sole trader or freelancer</button>
+     <button type="button" class="fyp-opt" data-key="role" data-val="landlord">Landlord (one or more properties)</button>
+     <button type="button" class="fyp-opt" data-key="role" data-val="employer">Employer (I hire staff)</button>
+     <button type="button" class="fyp-opt" data-key="role" data-val="multi">Multiple of the above</button>
+    </div>
+   </div>
+
+   <div class="fyp-q" data-q="2">
+    <h3>What's pressing right now?</h3>
+    <div class="fyp-opts">
+     <button type="button" class="fyp-opt" data-key="pain" data-val="tax">Self Assessment, tax bands, or MTD</button>
+     <button type="button" class="fyp-opt" data-key="pain" data-val="ir35">IR35 status on a contract</button>
+     <button type="button" class="fyp-opt" data-key="pain" data-val="rra">Renters' Rights Act 31 May deadline</button>
+     <button type="button" class="fyp-opt" data-key="pain" data-val="hr">Hiring, contracts, or employment paperwork</button>
+     <button type="button" class="fyp-opt" data-key="pain" data-val="general">General compliance, no fire yet</button>
+    </div>
+   </div>
+
+   <div class="fyp-q" data-q="3">
+    <h3>How do you work?</h3>
+    <div class="fyp-opts">
+     <button type="button" class="fyp-opt" data-key="tool" data-val="code">Claude Code in the terminal</button>
+     <button type="button" class="fyp-opt" data-key="tool" data-val="app">Claude.ai or Claude Desktop app</button>
+     <button type="button" class="fyp-opt" data-key="tool" data-val="notion">Notion-first, my business lives in databases</button>
+     <button type="button" class="fyp-opt" data-key="tool" data-val="docs">Just PDFs and docs, I'll read them</button>
+    </div>
+   </div>
+
+   <div class="fyp-q" data-q="4">
+    <h3>What would make this worth &pound;30 to &pound;80?</h3>
+    <div class="fyp-opts">
+     <button type="button" class="fyp-opt" data-key="worth" data-val="fees">Save accountant fees</button>
+     <button type="button" class="fyp-opt" data-key="worth" data-val="fine">Avoid a fine or penalty</button>
+     <button type="button" class="fyp-opt" data-key="worth" data-val="peace">Peace of mind before a deadline</button>
+     <button type="button" class="fyp-opt" data-key="worth" data-val="all">All of the above</button>
+    </div>
+   </div>
+
+   <div class="fyp-q" data-q="5">
+    <h3>Budget comfort?</h3>
+    <div class="fyp-opts">
+     <button type="button" class="fyp-opt" data-key="budget" data-val="low">Under &pound;30</button>
+     <button type="button" class="fyp-opt" data-key="budget" data-val="mid">&pound;30 to &pound;50</button>
+     <button type="button" class="fyp-opt" data-key="budget" data-val="high">&pound;50 or more if it's comprehensive</button>
+     <button type="button" class="fyp-opt" data-key="budget" data-val="any">Price isn't the blocker</button>
+    </div>
+   </div>
+
+   <div class="fyp-result" id="fyp-result" hidden>
+    <span class="eyebrow" style="color:var(--purple,#5b3dc9)">Your match</span>
+    <h3 id="fyp-result-name">Loading...</h3>
+    <p id="fyp-result-why"></p>
+    <div class="fyp-result-meta">
+     <span class="fyp-result-price" id="fyp-result-price"></span>
+     <a href="#" id="fyp-result-cta" class="btn btn-primary">Jump to this pack <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+    <button type="button" class="fyp-restart" id="fyp-restart">Start over</button>
+   </div>
+  </div>
+ </div>
+</section>
+
+<style>
+.find-pack { padding: 80px 0 40px; background: linear-gradient(180deg, transparent 0%, rgba(91,61,201,0.04) 100%); }
+.fyp-head { text-align: center; max-width: 640px; margin: 0 auto 40px; }
+.fyp-head h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(28px, 4vw, 42px); line-height: 1.15; margin: 12px 0; }
+.fyp-head h2 em { color: var(--purple, #5b3dc9); font-style: italic; }
+.fyp-head p { color: var(--warm-mid, #6e665c); font-size: 15px; }
+.fyp-shell { max-width: 720px; margin: 0 auto; background: #fff; border: 1px solid var(--line, #e5dfd3); padding: 32px; border-radius: 2px; }
+.fyp-progress { height: 3px; background: #efeae0; border-radius: 2px; overflow: hidden; margin-bottom: 6px; }
+.fyp-progress-bar { height: 100%; background: var(--purple, #5b3dc9); transition: width 0.3s ease; }
+.fyp-step-count { font-family: 'Syne', sans-serif; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warm-mid, #6e665c); font-weight: 600; margin-bottom: 24px; }
+.fyp-q { display: none; }
+.fyp-q-active { display: block; animation: fyp-fade 0.3s ease; }
+@keyframes fyp-fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.fyp-q h3 { font-family: 'Libre Baskerville', serif; font-size: 22px; margin-bottom: 20px; line-height: 1.3; }
+.fyp-opts { display: flex; flex-direction: column; gap: 8px; }
+.fyp-opt { text-align: left; padding: 14px 18px; border: 1px solid var(--line, #e5dfd3); background: transparent; border-radius: 2px; font-family: inherit; font-size: 14px; cursor: pointer; color: inherit; transition: all 0.15s; }
+.fyp-opt:hover { border-color: var(--purple, #5b3dc9); background: rgba(91,61,201,0.04); }
+.fyp-opt:focus-visible { outline: 2px solid var(--purple, #5b3dc9); outline-offset: 2px; }
+.fyp-result { text-align: center; animation: fyp-fade 0.4s ease; }
+.fyp-result h3 { font-family: 'Libre Baskerville', serif; font-size: 32px; margin: 10px 0 14px; }
+.fyp-result p { color: var(--warm-mid, #6e665c); max-width: 540px; margin: 0 auto 24px; line-height: 1.55; }
+.fyp-result-meta { display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
+.fyp-result-price { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 18px; }
+.fyp-restart { margin-top: 20px; background: none; border: none; color: var(--warm-mid, #6e665c); font-family: inherit; font-size: 13px; cursor: pointer; text-decoration: underline; text-decoration-color: rgba(110,102,92,0.35); }
+.product-card-highlighted { box-shadow: 0 0 0 3px var(--purple, #5b3dc9), 0 20px 40px rgba(91,61,201,0.15); position: relative; }
+.product-card-highlighted::before { content: 'Recommended for you'; position: absolute; top: -14px; left: 20px; background: var(--purple, #5b3dc9); color: #fff; font-family: 'Syne', sans-serif; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; padding: 5px 10px; border-radius: 2px; z-index: 2; }
+.featured-card-highlighted { box-shadow: 0 0 0 3px var(--purple, #5b3dc9), 0 30px 60px rgba(91,61,201,0.2); }
+</style>
+
+<script>
+(function(){
+ const answers = {};
+ const qs = document.querySelectorAll('.fyp-q');
+ const bar = document.getElementById('fyp-bar');
+ const count = document.getElementById('fyp-count');
+ const result = document.getElementById('fyp-result');
+ const resultName = document.getElementById('fyp-result-name');
+ const resultWhy = document.getElementById('fyp-result-why');
+ const resultPrice = document.getElementById('fyp-result-price');
+ const resultCta = document.getElementById('fyp-result-cta');
+ const restart = document.getElementById('fyp-restart');
+
+ const catalog = {
+  suite: { name: 'Full UK Business Suite', price: '£79', href: '#products', target: 'featured-card' },
+  os: { name: 'UK Freelancer OS (Notion Template)', price: '£29', href: '#product-os', target: 'product-os' },
+  toolkit: { name: 'UK Freelancer Toolkit', price: '£29', href: '#product-toolkit', target: 'product-toolkit' },
+  employer: { name: 'UK Employer Compliance Pack', price: '£39', href: '#product-employer', target: 'product-employer' },
+  rra: { name: 'Landlord 31 May Deadline Kit', price: '£29', href: '#product-rra', target: 'product-rra' },
+  landlord: { name: 'UK Landlord Legal Pack', price: '£29', href: '#product-landlord', target: 'product-landlord' }
+ };
+
+ function recommend(a) {
+  const s = { suite: 0, os: 0, toolkit: 0, employer: 0, rra: 0, landlord: 0 };
+  if (a.role === 'freelancer') { s.toolkit += 4; s.os += 3; }
+  else if (a.role === 'landlord') { s.landlord += 4; s.rra += 3; }
+  else if (a.role === 'employer') { s.employer += 5; }
+  else if (a.role === 'multi') { s.suite += 6; }
+
+  if (a.pain === 'tax') { s.toolkit += 3; s.os += 1; }
+  else if (a.pain === 'ir35') { s.toolkit += 4; }
+  else if (a.pain === 'rra') { s.rra += 6; }
+  else if (a.pain === 'hr') { s.employer += 4; s.suite += 1; }
+  else if (a.pain === 'general') { s.suite += 2; s.toolkit += 1; s.landlord += 1; s.employer += 1; }
+
+  if (a.tool === 'notion') { s.os += 4; }
+  else if (a.tool === 'code') { s.toolkit += 2; s.employer += 2; s.landlord += 2; s.suite += 2; }
+  else if (a.tool === 'app') { s.toolkit += 2; s.employer += 2; s.landlord += 2; s.suite += 2; }
+  else if (a.tool === 'docs') { s.rra += 2; }
+
+  if (a.worth === 'fees') { s.toolkit += 1; s.os += 1; }
+  else if (a.worth === 'fine') { s.rra += 2; s.employer += 2; }
+  else if (a.worth === 'peace') { s.suite += 1; }
+  else if (a.worth === 'all') { s.suite += 2; }
+
+  if (a.budget === 'low') { s.os += 2; s.toolkit += 1; s.rra += 1; s.landlord += 1; }
+  else if (a.budget === 'mid') { s.toolkit += 2; s.employer += 2; }
+  else if (a.budget === 'high') { s.suite += 3; }
+  else if (a.budget === 'any') { s.suite += 2; }
+
+  let top = 'toolkit', max = -1;
+  for (const k in s) { if (s[k] > max) { max = s[k]; top = k; } }
+  return top;
+ }
+
+ const whyCopy = {
+  suite: 'You wear multiple hats. The Suite covers tax, IR35, property, employment, HR, and trade-specific compliance in one download. At £79 it pays back the first time you avoid a fine or skip an accountant call.',
+  os: 'You live in Notion. The Freelancer OS slots into that: CRM, invoicing, tax dashboard, HMRC deadlines, eight connected modules. Cheapest door in, most structural if you want your whole business in one workspace.',
+  toolkit: 'You\'re a sole trader and the pressure is tax or IR35. Toolkit ships six files: tax calculator, IR35 assessment, contract review, invoicer, proposal generator, client comms. Covers Self Assessment and MTD phase 1.',
+  employer: 'You hire people. Employment law, handbook generator, H&S risk assessment, GDPR, AML/KYC, contracts. Seven files built on 2025/26 statutory rates (SSP £118.75, redundancy cap £719).',
+  rra: 'The 31 May Renters\' Rights Act deadline is the fire. Section 21 transition guide, tenant information sheet, Ground 4A template, full possession grounds reference. Up to £7,000 per breach if you miss it.',
+  landlord: 'Portfolio landlord, general compliance. Landlord compliance skill (RRA-aware), rental yield and SDLT calculator (post-1 April 2025 bands), GDPR for tenant data. Built for England-based portfolios.'
+ };
+
+ function showQ(n) {
+  qs.forEach(q => q.classList.toggle('fyp-q-active', parseInt(q.dataset.q) === n));
+  bar.style.width = (n * 20) + '%';
+  count.textContent = 'Question ' + n + ' of 5';
+ }
+
+ function showResult() {
+  document.querySelectorAll('.fyp-q').forEach(q => q.style.display = 'none');
+  const top = recommend(answers);
+  const item = catalog[top];
+  resultName.textContent = item.name;
+  resultWhy.textContent = whyCopy[top];
+  resultPrice.textContent = item.price + ' (ex-VAT)';
+  resultCta.href = item.href;
+  result.hidden = false;
+  bar.style.width = '100%';
+  count.textContent = 'Recommendation';
+
+  document.querySelectorAll('.product-card-highlighted, .featured-card-highlighted').forEach(el => {
+   el.classList.remove('product-card-highlighted', 'featured-card-highlighted');
+  });
+  if (top === 'suite') {
+   const fc = document.getElementById('featured-card');
+   if (fc) fc.classList.add('featured-card-highlighted');
+  } else {
+   const card = document.getElementById(item.target);
+   if (card) card.classList.add('product-card-highlighted');
+  }
+ }
+
+ document.querySelectorAll('.fyp-opt').forEach(btn => {
+  btn.addEventListener('click', () => {
+   const key = btn.dataset.key;
+   const val = btn.dataset.val;
+   answers[key] = val;
+   const current = parseInt(btn.closest('.fyp-q').dataset.q);
+   if (current < 5) showQ(current + 1);
+   else showResult();
+  });
+ });
+
+ restart.addEventListener('click', () => {
+  for (const k in answers) delete answers[k];
+  result.hidden = true;
+  document.querySelectorAll('.fyp-q').forEach(q => q.style.display = '');
+  document.querySelectorAll('.product-card-highlighted, .featured-card-highlighted').forEach(el => {
+   el.classList.remove('product-card-highlighted', 'featured-card-highlighted');
+  });
+  showQ(1);
+ });
+})();
+</script>
+
 <!-- FEATURED PRODUCT -->
 <section class="featured-product" id="products" aria-labelledby="featured-title">
  <div class="wrap">
   <div class="featured-card tilt-card" id="featured-card">
    <div class="glow"></div>
    <div class="featured-copy">
-    <span class="product-label"><span class="product-label-dot"></span>Best value</span>
+    <span class="product-label"><span class="product-label-dot"></span>For multi-hat businesses</span>
     <h3 id="featured-title">Full UK Business Suite</h3>
-    <span class="product-type-badge">All 19 Skills</span>
-    <span class="product-type-badge" style="background:#d97706;color:#fff;border-color:#d97706;margin-left:6px;">Save &pound;76 vs individual</span>
-    <p>Every skill file in one download. Tax, compliance, employment law, property, HR, contracts. We did the work once so you don't have to redo it every quarter.</p>
+    <span class="product-type-badge">4 Freelancer &middot; 4 Landlord &middot; 3 Employer &middot; 3 Property Pro &middot; 3 Regulated Trades &middot; 2 Universal</span>
+    <p><strong>Buy the Suite if you wear more than one hat.</strong> Landlord plus freelancer. Employer plus contractor. Property pro running a side shop. If you're only one thing, the single pack below is the honest answer, save your &pound;40. If you're three things at once, this pays for itself on the first deadline.</p>
     <div class="featured-pricing">
      <span class="price">&pound;79</span>
      <span class="price-meta"><strong style="color:#fff;font-family:'Syne',sans-serif;letter-spacing:0.02em">vs &pound;200 to &pound;2,000+</strong><br>for equivalent accountant work (Crunch, Qdos published rates, 2025).<br><span style="opacity:0.7">About &pound;4 per skill. Lifetime updates.</span><br><span style="opacity:0.6;font-size:11px">UK buyers: Gumroad adds 20% VAT at checkout (legally required, Gumroad handles the filing).</span></span>
@@ -674,7 +897,7 @@
    <p>Lifetime licence. Download once, use forever.</p>
   </div>
   <div class="product-grid">
-   <div class="product-card tilt-card">
+   <div class="product-card tilt-card" id="product-os">
     <span class="product-label"><span class="product-label-dot"></span>01 / Freelancer OS</span>
     <h3 class="product-name">UK Freelancer OS</h3>
     <span class="product-type-badge">Notion Template</span>
@@ -685,7 +908,7 @@
      <a href="https://externalos.gumroad.com/l/ipzsn" target="_blank" rel="noopener">Buy on Gumroad <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     </div>
    </div>
-   <div class="product-card tilt-card product-card-featured">
+   <div class="product-card tilt-card product-card-featured" id="product-toolkit">
     <div class="product-card-badge">Most popular</div>
     <span class="product-label"><span class="product-label-dot"></span>02 / Freelancer Toolkit</span>
     <h3 class="product-name">UK Freelancer Toolkit</h3>
@@ -697,7 +920,7 @@
      <a href="https://externalos.gumroad.com/l/aavttu" target="_blank" rel="noopener">Buy on Gumroad <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     </div>
    </div>
-   <div class="product-card tilt-card">
+   <div class="product-card tilt-card" id="product-employer">
     <span class="product-label"><span class="product-label-dot"></span>03 / Employer</span>
     <h3 class="product-name">UK Employer Compliance Pack</h3>
     <span class="product-type-badge">7 Skill Files</span>
@@ -708,7 +931,7 @@
      <a href="https://externalos.gumroad.com/l/fxlgeq" target="_blank" rel="noopener">Buy on Gumroad <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     </div>
    </div>
-   <div class="product-card tilt-card product-card-featured" style="background:linear-gradient(180deg,#FFF8EC 0%,#FAF8F3 100%);border-color:#d97706;">
+   <div class="product-card tilt-card product-card-featured" id="product-rra" style="background:linear-gradient(180deg,#FFF8EC 0%,#FAF8F3 100%);border-color:#d97706;">
     <span class="product-label"><span class="product-label-dot" style="background:#d97706;"></span>04 / Landlord 31 May Kit</span>
     <h3 class="product-name">UK Landlord 31 May Deadline Kit</h3>
     <span class="product-type-badge">4 Documents + Getting Started PDF</span>
@@ -719,7 +942,7 @@
      <a href="https://externalos.gumroad.com/l/landlord31may" target="_blank" rel="noopener">Buy on Gumroad <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     </div>
    </div>
-   <div class="product-card tilt-card">
+   <div class="product-card tilt-card" id="product-landlord">
     <span class="product-label"><span class="product-label-dot"></span>05 / Landlord</span>
     <h3 class="product-name">UK Landlord Legal Pack</h3>
     <span class="product-type-badge">3 Skill Files</span>
