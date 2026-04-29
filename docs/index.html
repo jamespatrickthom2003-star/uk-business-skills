@@ -1056,8 +1056,12 @@
    </article>
   </div>
   <style>
+   .free-tool-card { display: flex !important; flex-direction: column; }
+   .free-tool-card h3 { min-height: 2.6em; }
+   .free-tool-card > p { flex: 1 1 auto; }
+   .free-tool-card > a.btn { align-self: flex-start; margin-top: auto; }
    .free-tool-card:hover { border-color: var(--purple-pale); box-shadow: var(--shadow-md); }
-   @media (max-width: 1080px) { .free-tools-grid { grid-template-columns: repeat(2, 1fr) !important; max-width: 720px !important; } }
+   @media (max-width: 1080px) { .free-tools-grid { grid-template-columns: repeat(2, 1fr) !important; max-width: 720px !important; } .free-tool-card h3 { min-height: 0; } }
    @media (max-width: 600px) { .free-tools-grid { grid-template-columns: 1fr !important; } }
   </style>
  </div>
