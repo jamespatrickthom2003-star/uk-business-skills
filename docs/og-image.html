@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<title>ExternalOS OG image</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+ :root {
+  --warm-cream: #FAF6F0;
+  --warm-off: #F2EBE2;
+  --warm-cream-line: #E8DFD2;
+  --ink: #1A1714;
+  --warm-dark: #4A4039;
+  --warm-mid: #7A6E63;
+  --purple-hero: #5B3DC9;
+  --purple-deep: #4A1290;
+  --purple-mid: #6525AB;
+  --purple-pale: #BEA0E0;
+  --purple-tint: #F1EAF9;
+ }
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ html, body { width: 1200px; height: 630px; overflow: hidden; }
+ body {
+  font-family: 'Inter', sans-serif;
+  background: var(--warm-cream);
+  color: var(--ink);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 44px 72px 48px;
+ }
+
+ /* Decorative diamond layers behind content (mirrors site masthead motif) */
+ .deco {
+  position: absolute;
+  top: -160px;
+  right: -160px;
+  width: 640px;
+  height: 640px;
+  pointer-events: none;
+  opacity: 0.95;
+ }
+ .deco-bottom {
+  position: absolute;
+  bottom: -210px;
+  left: -160px;
+  width: 520px;
+  height: 520px;
+  pointer-events: none;
+  opacity: 0.55;
+  transform: rotate(15deg);
+ }
+ /* (decorative grid lines removed: top one was cutting through the brand mark, bottom one was redundant after pill removal) */
+
+ /* Brand bar (top) */
+ .brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+ }
+ .brand-mark {
+  width: 36px;
+  height: 36px;
+ }
+ .brand-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+ }
+ .brand-name span { color: var(--warm-mid); font-weight: 600; }
+
+ /* Eyebrow */
+ .eyebrow {
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--purple-mid);
+  margin-top: 38px;
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+ }
+ .eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: var(--purple-mid);
+ }
+
+ /* Headline */
+ .headline {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-top: 18px;
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+ }
+ .headline em {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--purple-hero);
+ }
+
+ /* Sub-line */
+ .sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--warm-dark);
+  margin-top: 24px;
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+ }
+
+ /* Footer row */
+ .footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+ }
+ .footer-domain {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+ }
+</style>
+</head>
+<body>
+
+<svg class="deco" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ <polygon points="20,4 34,18 20,32 6,18" fill="#DBC8F0" opacity="0.55"/>
+ <polygon points="20,8.6 31.7,20.3 20,32 8.3,20.3" fill="#BEA0E0" opacity="0.6"/>
+ <polygon points="20,13.2 29.4,22.6 20,32 10.6,22.6" fill="#9F72D0" opacity="0.65"/>
+ <polygon points="20,17.8 27.1,24.9 20,32 12.9,24.9" fill="#8248BF" opacity="0.7"/>
+ <polygon points="20,22.4 24.8,27.2 20,32 15.2,27.2" fill="#6525AB" opacity="0.75"/>
+</svg>
+
+<svg class="deco-bottom" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ <polygon points="20,4 34,18 20,32 6,18" fill="#DBC8F0" opacity="0.30"/>
+ <polygon points="20,8.6 31.7,20.3 20,32 8.3,20.3" fill="#BEA0E0" opacity="0.35"/>
+ <polygon points="20,13.2 29.4,22.6 20,32 10.6,22.6" fill="#9F72D0" opacity="0.40"/>
+</svg>
+
+<div class="brand">
+ <svg class="brand-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <polygon points="20,4 34,18 20,32 6,18" fill="#DBC8F0"/>
+  <polygon points="20,8.6 31.7,20.3 20,32 8.3,20.3" fill="#BEA0E0"/>
+  <polygon points="20,13.2 29.4,22.6 20,32 10.6,22.6" fill="#9F72D0"/>
+  <polygon points="20,17.8 27.1,24.9 20,32 12.9,24.9" fill="#8248BF"/>
+  <polygon points="20,22.4 24.8,27.2 20,32 15.2,27.2" fill="#6525AB"/>
+  <polygon points="20,27 22.5,29.5 20,32 17.5,29.5" fill="#4A1290"/>
+  <circle cx="20" cy="36" r="2" fill="#4A1290"/>
+ </svg>
+ <span class="brand-name">External<span>OS</span></span>
+</div>
+
+<span class="eyebrow">UK Compliance 2026</span>
+
+<h1 class="headline">The UK business<br/>work, <em>already done</em>.</h1>
+
+<p class="sub">Tax, IR35, MTD, employment law, tenancy. Built on 2025/26 HMRC rates and current case law. Files you keep.</p>
+
+<div class="footer">
+ <span class="footer-domain">externalos.com</span>
+</div>
+
+</body>
+</html>
