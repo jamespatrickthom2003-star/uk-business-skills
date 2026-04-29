@@ -20,9 +20,14 @@
 <link rel="stylesheet" href="styles.css?v=149" />
 
 <style>
- .kit-wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 96px; }
+ main.kit-main { padding: 56px 0 96px; }
+ .kit-content { max-width: 680px; margin: 0 auto; }
+ .kit-content > .kit-eyebrow,
+ .kit-content > h1,
+ .kit-content > .kit-lede { text-align: center; }
+ .kit-content > .kit-lede { max-width: 600px; margin-left: auto; margin-right: auto; }
  .kit-eyebrow { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--purple-hero); margin-bottom: 14px; }
- .kit-wrap h1 { font-family: 'Libre Baskerville', serif; font-size: clamp(30px, 4.4vw, 44px); line-height: 1.12; color: var(--ink); margin-bottom: 18px; }
+ .kit-content h1 { font-family: 'Libre Baskerville', serif; font-size: clamp(30px, 4.4vw, 44px); line-height: 1.12; color: var(--ink); margin-bottom: 18px; }
  .kit-lede { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.7; color: var(--warm-dark); margin-bottom: 20px; }
  .kit-whats-in { background: #F6F1EC; border: 1px solid var(--warm-cream); border-radius: 12px; padding: 24px 28px; margin: 28px 0 36px; font-family: 'Inter', sans-serif; }
  .kit-whats-in h3 { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.10em; text-transform: uppercase; color: var(--ink); margin-bottom: 14px; }
@@ -50,6 +55,8 @@
  .kit-sources { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--warm-mid); margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--warm-cream); line-height: 1.7; }
 
  .kit-upsell { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--warm-cream); }
+ .kit-upsell-head { max-width: 680px; margin: 0 auto 28px; text-align: center; }
+ .kit-upsell-head .kit-upsell-eyebrow { color: var(--purple-mid, var(--purple-hero)); }
  .kit-upsell-eyebrow { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--warm-mid); margin-bottom: 10px; }
  .kit-upsell h2 { font-family: 'Libre Baskerville', serif; font-size: 26px; color: var(--ink); margin-bottom: 12px; line-height: 1.2; }
  .kit-upsell p { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; color: var(--warm-dark); margin-bottom: 20px; }
@@ -99,12 +106,14 @@
  </div>
 </div>
 
-<main class="kit-wrap">
- <div class="kit-eyebrow">Free guide, updated 23 April 2026</div>
- <h1>The MTD for ITSA Survival Kit</h1>
- <p class="kit-lede">One A4 page. Plain English. Your Q1 deadline, your software options, and a seven-step action list for the £50k mandated cohort. Sourced to gov.uk.</p>
+<main class="kit-main">
+ <div class="wrap">
+  <div class="kit-content">
+   <div class="kit-eyebrow">Free guide, updated 23 April 2026</div>
+   <h1>The MTD for ITSA Survival Kit</h1>
+   <p class="kit-lede">One A4 page. Plain English. Your Q1 deadline, your software options, and a seven-step action list for the £50k mandated cohort. Sourced to gov.uk.</p>
 
- <div class="kit-whats-in">
+   <div class="kit-whats-in">
   <h3>What is inside</h3>
   <ul>
    <li>The three things MTD changes, in four lines</li>
@@ -138,16 +147,19 @@
  </div>
 
  <div class="kit-sources">
-  Sources: gov.uk Making Tax Digital for Income Tax collection, HMRC Penalty Reform for Volunteers notice, HMRC Penalties for Late Payment and Interest Harmonisation. Updated 23 April 2026.
-  <br><br>
-  This kit is general information, not personalised tax advice. For complex situations consult a qualified accountant or tax adviser.
- </div>
+   Sources: gov.uk Making Tax Digital for Income Tax collection, HMRC Penalty Reform for Volunteers notice, HMRC Penalties for Late Payment and Interest Harmonisation. Updated 23 April 2026.
+   <br><br>
+   This kit is general information, not personalised tax advice. For complex situations consult a qualified accountant or tax adviser.
+  </div>
+ </div><!-- /.kit-content -->
 
  <!-- TRIPWIRE + UPSELL -->
  <section class="kit-upsell">
-  <div class="kit-upsell-eyebrow">If the kit was useful</div>
-  <h2>Two small next steps</h2>
-  <p>The free kit tells you the rules. These take you from reading to filing without the 2am spreadsheet panic.</p>
+  <div class="kit-upsell-head">
+   <div class="kit-upsell-eyebrow">If the kit was useful</div>
+   <h2>Two small next steps</h2>
+   <p>The free kit tells you the rules. These take you from reading to filing without the 2am spreadsheet panic.</p>
+  </div>
 
   <div class="tripwire-card">
    <span class="price-tag">&pound;3 &nbsp;&middot;&nbsp; new</span>
@@ -175,12 +187,13 @@
     <p>UK Freelancer Tax Calculator, proposals, client emails, HMRC SA103 expense categoriser.</p>
    </a>
    <a class="pack-card" href="https://externalos.gumroad.com/l/compliance-tracker" target="_blank" rel="noopener">
-    <div class="pack-price">&pound;79 / year &nbsp;&middot;&nbsp; live</div>
+    <div class="pack-price">&pound;59 lifetime &nbsp;&middot;&nbsp; live</div>
     <h4>UK Compliance Tracker</h4>
-    <p>Live Google Sheet. MTD deadlines, RRA, employment law. Daily freshness, 14/7/1-day alerts.</p>
+    <p>Live Google Sheet. MTD deadlines, RRA, employment law. Updated monthly, 14/7/1-day alerts.</p>
    </a>
   </div>
  </section>
+ </div><!-- /.wrap -->
 </main>
 
 <footer class="footer">
