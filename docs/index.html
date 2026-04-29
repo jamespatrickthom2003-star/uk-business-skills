@@ -92,8 +92,8 @@
  @media (max-width: 720px) { .wrap { padding: 0 22px; } }
  .eyebrow { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--purple-mid); display: inline-flex; align-items: center; gap: 10px; margin-bottom: 22px; }
  .eyebrow::before { content: ''; display: inline-block; width: 20px; height: 2px; background: var(--purple-mid); }
- .hero-copy .eyebrow::before, .how-inner .eyebrow::before, .fyp-head .eyebrow::before { display: none; }
- .fyp-head .eyebrow { gap: 0; justify-content: center; }
+ .hero-copy .eyebrow::before, .how-inner .eyebrow::before, .fyp-head .eyebrow::before, .file-preview-head .eyebrow::before { display: none; }
+ .fyp-head .eyebrow, .file-preview-head .eyebrow { gap: 0; justify-content: center; }
  .hero-copy .eyebrow, .how-inner .eyebrow { gap: 0; justify-content: center; }
  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
@@ -321,25 +321,6 @@
  .file-preview-foot a { color: var(--purple-hero); }
  @media (max-width: 720px) { .file-preview-body { padding: 22px 22px; font-size: 12.5px; } .file-preview-bar-meta { display: none; } }
  @media (max-width: 480px) { .file-preview-window { max-width: 100%; } .file-preview-body { padding: 18px 16px; font-size: 12px; overflow-x: auto; -webkit-overflow-scrolling: touch; } .file-preview-body .fp-h1 { font-size: 18px; } .file-preview-body pre, .file-preview-body code { white-space: pre-wrap; word-break: break-word; } }
-
- /* BEHIND EXTERNALOS */
- .behind { padding: 32px 0 72px; }
- .behind-head { text-align: center; max-width: 620px; margin: 0 auto 36px; }
- .behind-head h2 { font-size: var(--type-h3); line-height: 1.1; color: var(--ink); margin: 14px 0 12px; }
- .behind-head h2 em { font-style: italic; color: var(--purple-hero); }
- .behind-head p { font-size: 14px; line-height: 1.7; color: var(--warm-dark); }
- .behind-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 1000px; margin: 0 auto; }
- .behind-card { background: var(--warm-white); border: 1px solid var(--warm-cream); border-radius: var(--radius-lg); padding: 22px 20px 20px; text-align: left; position: relative; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
- .behind-card:hover { border-color: var(--purple-pale); box-shadow: var(--shadow-md); }
- .behind-card-num { font-family: 'Libre Baskerville', serif; font-size: 32px; font-weight: 700; color: var(--purple-pale); line-height: 1; margin-bottom: 14px; opacity: 0.7; letter-spacing: -0.02em; }
- .behind-card h4 { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.02em; color: var(--purple-hero); margin-bottom: 8px; text-transform: uppercase; }
- .behind-card p { font-size: 13px; line-height: 1.55; color: var(--warm-dark); margin-bottom: 12px; }
- .behind-card-stat { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--warm-cream); font-family: 'Inter', sans-serif; font-size: 12px; color: var(--warm-mid); }
- .behind-card-stat strong { font-family: 'Libre Baskerville', serif; font-weight: 700; color: var(--purple-hero); font-size: 16px; }
- .behind-disclosure { max-width: 720px; margin: 32px auto 0; padding: 14px 18px; background: var(--warm-off); border-radius: var(--radius-md); font-size: 12px; line-height: 1.65; color: var(--warm-dark); text-align: center; font-family: 'Inter', sans-serif; }
- .behind-disclosure a { color: var(--purple-hero); }
- @media (max-width: 720px) { .behind-grid { grid-template-columns: repeat(2, 1fr); } }
- @media (max-width: 480px) { .behind-grid { grid-template-columns: 1fr; } }
 
  /* FAQ */
  .faq { padding: 72px 0 56px; border-top: 1px solid var(--warm-cream); }
@@ -1033,44 +1014,6 @@
    <p class="founder-pull">We charge &pound;29 to &pound;79 because the work is done. Not per user, not per month, not per filing. You download the file, you keep the file, and when the legislation moves we ship the update. That's the whole arrangement.</p>
    <div class="founder-sig">Reach us at <a href="mailto:hello@externalos.com">hello@externalos.com</a>.</div>
   </div>
- </div>
-</section>
-
-<!-- BEHIND EXTERNALOS - team disciplines without faces -->
-<section class="behind" aria-labelledby="behind-title">
- <div class="wrap">
-  <div class="behind-head">
-   <span class="eyebrow">Behind ExternalOS</span>
-   <h2 id="behind-title">A small team, built around the <em>actual work</em>.</h2>
-   <p>No headcount inflation, no agency middlemen. Each skill is reviewed by the discipline that does that work for a living.</p>
-  </div>
-  <div class="behind-grid">
-   <div class="behind-card">
-    <div class="behind-card-num" aria-hidden="true">01</div>
-    <h4>UK tax</h4>
-    <p>Self-assessment, MTD, VAT, IR35. Built on 2025/26 HMRC rates and the current bands.</p>
-    <p class="behind-card-stat"><strong>42</strong> rate variables tracked</p>
-   </div>
-   <div class="behind-card">
-    <div class="behind-card-num" aria-hidden="true">02</div>
-    <h4>Employment law</h4>
-    <p>Employment Rights Act 2025, statutory pay, employee handbooks, contracts, disciplinary letters.</p>
-    <p class="behind-card-stat"><strong>20</strong> handbook policy areas covered</p>
-   </div>
-   <div class="behind-card">
-    <div class="behind-card-num" aria-hidden="true">03</div>
-    <h4>Contracting &amp; IR35</h4>
-    <p>Status assessments grounded in named UK case law: Atholl House, PGMOL, Kickabout Productions.</p>
-    <p class="behind-card-stat"><strong>3</strong> reference cases &middot; <strong>38</strong> CEST decision points</p>
-   </div>
-   <div class="behind-card">
-    <div class="behind-card-num" aria-hidden="true">04</div>
-    <h4>Landlord &amp; property</h4>
-    <p>Renters' Rights Act 2025, Section 8 grounds, deposit compliance, yield calculations.</p>
-    <p class="behind-card-stat"><strong>17</strong> Section 8 grounds documented</p>
-   </div>
-  </div>
-  <p class="behind-disclosure">ExternalOS is a Leeds-based UK practice, run on a sole-trader legal structure. Not VAT registered. Each skill is peer-reviewed against current UK case law and HMRC guidance before it ships. First-buyer feedback will be credited here with names and roles once it lands. Source code for the free tools is public on <a href="https://github.com/externalOS" target="_blank" rel="noopener">GitHub</a>.</p>
  </div>
 </section>
 
