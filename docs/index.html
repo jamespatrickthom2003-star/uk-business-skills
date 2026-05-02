@@ -109,7 +109,7 @@
  .masthead-nav a:hover { color: var(--purple-hero); }
  .masthead-nav .btn-nav { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 13px; padding: 9px 20px; border-radius: 100px; background: var(--purple-hero); color: #fff; text-decoration: none; transition: background 0.2s ease; }
  .masthead-nav .btn-nav:hover { background: var(--purple-deep); color: #fff; }
- @media (max-width: 640px) { .masthead-nav > a:not(.btn-nav) { display: none; } .masthead-nav .skills-dropdown { display: none; } .masthead-nav .btn-nav { font-size: 12px; padding: 8px 14px; white-space: nowrap; } .masthead-brand .wordmark { font-size: 15px; } .masthead { padding: 20px 0 0; } }
+ @media (max-width: 640px) { .masthead-nav { gap: 18px; } .masthead-nav > a { display: none; } .masthead-nav .skills-dropdown, .masthead-nav .free-tools-dropdown { display: inline-flex; } .masthead-nav .skills-dropdown-trigger, .masthead-nav .free-tools-dropdown-trigger { font-size: 13px; } .masthead-brand .wordmark { font-size: 15px; } .masthead { padding: 20px 0 0; } }
 
  /* ---------------------------------------------------------------
     MARK RAILS - static, hero-only decor. No scroll animation.
