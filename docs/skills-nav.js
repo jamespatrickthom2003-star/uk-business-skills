@@ -118,6 +118,9 @@
       trigger.replaceWith(wrap);
 
       function setOpen(open) {
+        if (open) {
+          document.dispatchEvent(new CustomEvent('externalos:open', { detail: { source: wrap } }));
+        }
         wrap.classList.toggle('is-open', open);
         btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       }
@@ -137,9 +140,32 @@
     });
   }
 
+  function initAccordionCoordinator() {
+    if (document._eosAccordionInit) return;
+    document._eosAccordionInit = true;
+    document.addEventListener('externalos:open', function (e) {
+      var src = e.detail && e.detail.source;
+      document.querySelectorAll('.skills-dropdown.is-open, .free-tools-dropdown.is-open').forEach(function (el) {
+        if (el === src) return;
+        el.classList.remove('is-open');
+        var btn = el.querySelector('button');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+      document.querySelectorAll('details[open]').forEach(function (d) {
+        if (d !== src) d.removeAttribute('open');
+      });
+    });
+    document.addEventListener('toggle', function (e) {
+      if (e.target && e.target.tagName === 'DETAILS' && e.target.open) {
+        document.dispatchEvent(new CustomEvent('externalos:open', { detail: { source: e.target } }));
+      }
+    }, true);
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', mount);
+    document.addEventListener('DOMContentLoaded', function () { mount(); initAccordionCoordinator(); });
   } else {
     mount();
+    initAccordionCoordinator();
   }
 })();

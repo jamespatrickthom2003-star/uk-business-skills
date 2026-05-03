@@ -94,6 +94,9 @@
       trigger.replaceWith(wrap);
 
       function setOpen(open) {
+        if (open) {
+          document.dispatchEvent(new CustomEvent('externalos:open', { detail: { source: wrap } }));
+        }
         wrap.classList.toggle('is-open', open);
         btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       }

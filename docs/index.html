@@ -156,7 +156,7 @@
  .hero-inner { max-width: 700px; margin: 0 auto; text-align: center; }
  .hero-copy { position: relative; z-index: 2; }
  .hero h1 { font-size: var(--type-h1); line-height: 1.02; color: var(--ink); }
- .hero h1 .accent { color: var(--purple-hero); }
+ .hero h1 .accent { color: var(--purple-hero); font-style: italic; }
  .hero p.lede { font-size: var(--type-lede); color: var(--warm-mid); max-width: 580px; margin: 26px auto 0; line-height: 1.75; }
  .hero p.lede strong { color: var(--warm-dark); font-weight: 500; }
  .hero .divider { width: 120px; height: 3px; background: linear-gradient(90deg, var(--purple-hero), var(--purple-mid), var(--purple-pale)); border-radius: 2px; margin: 0 auto 26px; }
@@ -350,7 +350,7 @@
  .free-tool-gift { max-width: 760px; margin: 0 auto; background: var(--purple-tint); border: 1px solid var(--purple-pale); border-radius: var(--radius-xl); padding: 48px 48px 44px; position: relative; overflow: hidden; text-align: center; box-shadow: var(--shadow-md); z-index: 5; }
  .free-tool-gift::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--purple-deep), var(--purple-mid), var(--eos-p3)); }
  .free-tool-gift .eyebrow { display: inline-flex; justify-content: center; margin-bottom: 20px; gap: 0; color: var(--purple-mid); }
- .free-tool-gift .eyebrow::before { display: none; }
+ .free-tool-gift .eyebrow::before, .free-tool .eyebrow::before { display: none; }
  .free-tool-gift h2 { font-family: 'Libre Baskerville', serif; font-weight: 700; letter-spacing: -0.02em; font-size: var(--type-h2); color: var(--ink); margin-bottom: 18px; line-height: 1.1; }
  .free-tool-gift > p { font-size: 15px; line-height: 1.75; color: var(--warm-dark); max-width: 540px; margin: 0 auto 26px; }
  .free-tool-gift .gift-price { font-family: 'Libre Baskerville', serif; font-size: 64px; font-weight: 700; color: var(--purple-hero); line-height: 1; margin-bottom: 22px; letter-spacing: -0.03em; }
@@ -461,7 +461,7 @@
  .free-tools-menu-blurb { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 400; color: var(--warm-mid); }
  .free-tools-menu-foot { font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--purple-hero); margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--warm-cream); text-align: center; }
  @media (max-width: 880px) { .free-tools-menu { position: fixed; top: 68px; left: 16px; right: 16px; transform: none; min-width: 0; width: auto; padding: 18px; } .free-tools-dropdown.is-open .free-tools-menu { transform: none; } .free-tools-menu::before { display: none; } }
- @media (max-width: 640px) { .masthead-nav .free-tools-dropdown { display: none; } }
+ @media (max-width: 640px) { .masthead-nav .free-tools-dropdown { display: inline-flex; } }
 </style>
 </head>
 <body>
@@ -1384,7 +1384,7 @@
  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(alignRails); }
 })();
 </script>
-<script src="./skills-nav.js?v=135" defer></script>
-<script src="./free-tools-nav.js?v=2" defer></script>
+<script src="./skills-nav.js?v=136" defer></script>
+<script src="./free-tools-nav.js?v=3" defer></script>
 </body>
 </html>
