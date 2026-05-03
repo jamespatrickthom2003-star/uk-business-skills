@@ -27,6 +27,11 @@
       name: 'Landlord Compliance Check',
       href: './landlord-compliance-check.html',
       blurb: '12 questions, Renters\u2019 Rights Act 2026 + 31 May Info Sheet.'
+    },
+    {
+      name: 'MTD for ITSA Survival Kit',
+      href: './mtd-kit.html',
+      blurb: 'One-page free PDF, your Q1 deadline + seven-step action list.'
     }
   ];
 
