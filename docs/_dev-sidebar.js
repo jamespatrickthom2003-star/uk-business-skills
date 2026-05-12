@@ -82,12 +82,14 @@
   style.id = 'eos-dev-sidebar-styles';
   style.textContent = [
     '#eos-dev-sidebar { position: fixed; top: 0; right: 0; bottom: 0; width: 320px; background: #0F0F0F; color: #F4EDE0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; line-height: 1.4; z-index: 99999; overflow-y: auto; box-shadow: -8px 0 32px rgba(0,0,0,0.3); transform: translateX(0); transition: transform 0.22s ease; }',
-    '#eos-dev-sidebar.closed { transform: translateX(calc(100% - 36px)); }',
-    '#eos-dev-sidebar .eds-header { position: sticky; top: 0; background: #1A1A1A; padding: 12px 16px; border-bottom: 1px solid #2A2A2A; display: flex; align-items: center; justify-content: space-between; }',
-    '#eos-dev-sidebar .eds-title { font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #B8541F; }',
-    '#eos-dev-sidebar .eds-toggle { background: transparent; border: 1px solid #3A3A3A; color: #F4EDE0; width: 24px; height: 24px; border-radius: 4px; cursor: pointer; font-size: 12px; padding: 0; line-height: 1; }',
+    '#eos-dev-sidebar.closed { transform: translateX(calc(100% - 44px)); }',
+    '#eos-dev-sidebar .eds-header { position: sticky; top: 0; background: #1A1A1A; padding: 10px 12px; border-bottom: 1px solid #2A2A2A; display: flex; align-items: center; gap: 12px; }',
+    '#eos-dev-sidebar.closed .eds-header { background: #B8541F; }',
+    '#eos-dev-sidebar.closed .eds-title, #eos-dev-sidebar.closed .eds-meta, #eos-dev-sidebar.closed .eds-section, #eos-dev-sidebar.closed .eds-footer { opacity: 0; pointer-events: none; transition: opacity 0.12s ease; }',
+    '#eos-dev-sidebar .eds-title { font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #B8541F; flex: 1; }',
+    '#eos-dev-sidebar .eds-toggle { background: transparent; border: 1px solid #3A3A3A; color: #F4EDE0; width: 22px; height: 22px; border-radius: 4px; cursor: pointer; font-size: 14px; padding: 0; line-height: 1; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; }',
     '#eos-dev-sidebar .eds-toggle:hover { background: #2A2A2A; }',
-    '#eos-dev-sidebar.closed .eds-toggle { transform: scaleX(-1); }',
+    '#eos-dev-sidebar.closed .eds-toggle { border-color: #fff; color: #fff; transform: scaleX(-1); }',
     '#eos-dev-sidebar .eds-meta { padding: 10px 16px; background: #1A1A1A; border-bottom: 1px solid #2A2A2A; font-size: 11px; color: rgba(244,237,224,0.5); line-height: 1.5; }',
     '#eos-dev-sidebar .eds-meta strong { color: #B8541F; }',
     '#eos-dev-sidebar .eds-section { padding: 14px 16px 6px; }',
@@ -115,8 +117,8 @@
 
   var html = [
     '<div class="eds-header">',
-      '<span class="eds-title">DEV INDEX</span>',
       '<button class="eds-toggle" type="button" aria-label="Toggle sidebar" title="Toggle">&lsaquo;</button>',
+      '<span class="eds-title">DEV INDEX</span>',
     '</div>',
     '<div class="eds-meta">',
       '<strong>staging-s206</strong> branch &middot; ' + totalPages + ' pages total. Temporary navigation for review.',
