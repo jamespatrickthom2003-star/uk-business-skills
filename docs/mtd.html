@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Making Tax Digital for Income Tax | UK | ExternalOS</title>
+<meta name="description" content="MTD for Income Tax explained without the SaaS sales pitch. The dignified spreadsheet path. Templates, calendars, and bridging guidance, paid once.">
+<meta property="og:title" content="MTD for Income Tax | ExternalOS">
+<meta property="og:description" content="The only MTD brand that helps you stay off the subscription treadmill.">
+<meta property="og:image" content="https://externalos.com/og-image.png">
+<link rel="icon" href="./favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --accent: #B8541F; --accent-deep: #8F3F12; --accent-pale: #FBEEDF;
+  --warm-white: #FBF7F0; --warm-off: #F4EDE0; --warm-cream: #ECE2CE;
+  --ink: #1A1A1A; --body: #4A463E; --muted: #6E665C;
+  --shadow-sm: 0 1px 3px rgba(26,26,26,0.06); --shadow-md: 0 4px 16px rgba(26,26,26,0.08);
+  --radius: 12px;
+}
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--warm-white); line-height: 1.6; }
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--accent-deep); }
+img { max-width: 100%; display: block; }
+h1, h2 { font-family: 'Libre Baskerville', Georgia, serif; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); }
+h3, h4 { font-family: 'Syne', sans-serif; font-weight: 600; color: var(--ink); }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+/* Banner */
+.banner { background: var(--ink); color: var(--warm-white); padding: 9px 16px; text-align: center; font-size: 13px; line-height: 1.4; border-bottom: 1px solid #3D3830; }
+.banner strong { color: var(--accent-pale); }
+.banner a { color: var(--accent-pale); }
+
+/* Nav */
+.nav { padding: 26px 0; display: flex; align-items: center; justify-content: space-between; }
+.brand { font-family: 'Libre Baskerville', serif; font-size: 24px; font-weight: 700; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.brand-dot { width: 12px; height: 12px; background: var(--accent); transform: rotate(45deg); }
+.brand-os { color: var(--accent); }
+.nav-cta { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 13px; padding: 10px 22px; border-radius: 100px; background: var(--ink); color: var(--warm-white); text-decoration: none; }
+
+/* Sub-nav for /mtd */
+.subnav { background: var(--warm-off); border-top: 1px solid var(--warm-cream); border-bottom: 1px solid var(--warm-cream); position: sticky; top: 0; z-index: 50; }
+.subnav-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; }
+.subnav-links { display: flex; flex-wrap: wrap; gap: 22px; font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600; }
+.subnav-links a { color: var(--ink); text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; }
+.subnav-links a.active { border-bottom-color: var(--accent); color: var(--accent-deep); }
+.subnav-links a:hover { color: var(--accent); }
+.subnav-cta { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; padding: 8px 18px; border-radius: 100px; background: var(--accent); color: var(--warm-white); text-decoration: none; letter-spacing: 0.04em; }
+
+/* Hero */
+.hero { padding: 80px 0 60px; text-align: center; }
+.hero .eyebrow { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; display: block; }
+.hero h1 { font-size: clamp(40px, 6vw, 72px); line-height: 1.04; margin-bottom: 28px; }
+.hero h1 em { color: var(--accent); font-style: italic; }
+.hero .lede { font-size: 20px; max-width: 720px; margin: 0 auto 16px; color: var(--body); }
+.hero .lede strong { color: var(--ink); }
+.hero .ctas { margin-top: 36px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn { padding: 16px 32px; border-radius: 100px; font-family: 'Syne', sans-serif; font-weight: 600; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.btn-primary { background: var(--accent); color: var(--warm-white); }
+.btn-primary:hover { background: var(--accent-deep); }
+.btn-secondary { background: var(--warm-white); color: var(--ink); border: 1.5px solid var(--ink); }
+.btn-secondary:hover { background: var(--warm-off); }
+
+/* The wedge */
+.wedge { background: var(--ink); color: var(--warm-white); padding: 80px 0; }
+.wedge-inner { max-width: 880px; margin: 0 auto; text-align: center; padding: 0 24px; }
+.wedge .eyebrow { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent-pale); margin-bottom: 24px; display: block; }
+.wedge h2 { font-size: clamp(28px, 4vw, 44px); line-height: 1.2; color: var(--warm-white); margin-bottom: 24px; }
+.wedge h2 em { color: var(--accent-pale); }
+.wedge p { font-size: 18px; line-height: 1.6; color: rgba(251,247,240,0.8); margin: 0 auto 18px; max-width: 720px; }
+
+/* Section grid */
+.section { padding: 80px 0; }
+.section.alt { background: var(--warm-off); }
+.section h2 { font-size: clamp(28px, 4vw, 44px); margin-bottom: 16px; text-align: center; }
+.section h2 em { color: var(--accent); font-style: italic; }
+.section .lede { font-size: 18px; color: var(--body); max-width: 680px; margin: 0 auto 48px; text-align: center; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-top: 40px; }
+.card { background: var(--warm-white); border: 1px solid var(--warm-cream); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
+.card.featured { background: var(--ink); color: var(--warm-white); border-color: var(--ink); }
+.card-tag { font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+.card.featured .card-tag { color: var(--accent-pale); }
+.card h3 { font-size: 22px; margin-bottom: 12px; line-height: 1.25; }
+.card.featured h3 { color: var(--warm-white); }
+.card p { font-size: 15px; line-height: 1.55; color: var(--body); margin-bottom: 20px; flex: 1; }
+.card.featured p { color: rgba(251,247,240,0.75); }
+.card-price { font-family: 'Libre Baskerville', serif; font-size: 26px; font-weight: 700; color: var(--ink); margin-bottom: 16px; }
+.card.featured .card-price { color: var(--warm-white); }
+.card-price small { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+.card.featured .card-price small { color: rgba(251,247,240,0.7); }
+.card-cta { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600; text-decoration: none; color: var(--accent); display: inline-flex; align-items: center; gap: 4px; align-self: flex-start; padding-top: 6px; border-top: 1px solid var(--warm-cream); width: 100%; padding-top: 16px; }
+.card.featured .card-cta { color: var(--accent-pale); border-color: rgba(251,247,240,0.15); }
+.card-cta::after { content: ' →'; }
+
+/* Timeline */
+.timeline { max-width: 760px; margin: 40px auto 0; }
+.timeline-item { display: flex; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--warm-cream); align-items: flex-start; }
+.timeline-item:last-child { border-bottom: none; }
+.timeline-date { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: var(--accent); min-width: 140px; padding-top: 2px; letter-spacing: 0.04em; }
+.timeline-body h4 { font-size: 17px; margin-bottom: 6px; }
+.timeline-body p { font-size: 15px; color: var(--body); }
+
+/* FAQ */
+.faq { max-width: 820px; margin: 40px auto 0; }
+.faq-item { padding: 24px 0; border-bottom: 1px solid var(--warm-cream); }
+.faq-item h4 { font-size: 18px; margin-bottom: 10px; font-family: 'Libre Baskerville', serif; font-weight: 700; }
+.faq-item p { font-size: 16px; color: var(--body); }
+
+/* Footer */
+.footer { background: var(--warm-off); border-top: 1px solid var(--warm-cream); padding: 60px 0 40px; margin-top: 0; }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px; align-items: flex-start; }
+.footer p, .footer a { font-size: 14px; color: var(--muted); text-decoration: none; }
+.footer a:hover { color: var(--accent); }
+.footer-cols { display: flex; gap: 56px; flex-wrap: wrap; }
+.footer-col h5 { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); margin-bottom: 16px; }
+.footer-col a { display: block; margin-bottom: 8px; }
+
+@media (max-width: 768px) {
+  .nav { flex-wrap: wrap; gap: 12px; }
+  .subnav-inner { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<div class="banner">Most UK compliance software charges &pound;15-&pound;35 <strong>every month</strong>. Ours is <strong>paid once</strong>. <a href="./index.html#products">See the bundle &rarr;</a></div>
+
+<header class="wrap">
+  <nav class="nav">
+    <a href="./index.html" class="brand"><span class="brand-dot"></span>External<span class="brand-os">OS</span></a>
+    <a href="./index.html#products" class="nav-cta">Get the bundle &pound;179</a>
+  </nav>
+</header>
+
+<div class="subnav">
+  <div class="wrap">
+    <div class="subnav-inner">
+      <div class="subnav-links">
+        <a href="./mtd.html" class="active">Overview</a>
+        <a href="./mtd-sole-traders.html">Sole Traders</a>
+        <a href="./mtd-landlords.html">Landlords</a>
+        <a href="./mtd-accountants.html">Accountants</a>
+        <a href="./mtd-self-assessment.html">Self Assessment</a>
+        <a href="./mtd-jargon.html">Jargon</a>
+        <a href="./mtd-clock.html">Penalty Clock</a>
+      </div>
+      <a href="./mtd-spreadsheet.html" class="subnav-cta">Get the MTD Spreadsheet &pound;29</a>
+    </div>
+  </div>
+</div>
+
+<section class="hero wrap">
+  <span class="eyebrow">Making Tax Digital for Income Tax</span>
+  <h1>Keep your spreadsheet. <em>Keep your money.</em></h1>
+  <p class="lede">From 6 April 2026, UK sole traders and landlords earning over &pound;50k must submit quarterly to HMRC. Every accounting brand will sell you a &pound;15 a month subscription to do it. <strong>You don't need one.</strong></p>
+  <p class="lede">HMRC permits a spreadsheet plus bridging software. We sell the spreadsheet. You keep it forever.</p>
+  <div class="ctas">
+    <a href="./mtd-spreadsheet.html" class="btn btn-primary">Get the MTD Spreadsheet &pound;29</a>
+    <a href="./mtd-jargon.html" class="btn btn-secondary">Read the plain English explainer</a>
+  </div>
+</section>
+
+<section class="wedge">
+  <div class="wedge-inner">
+    <span class="eyebrow">The wedge</span>
+    <h2>Every other MTD brand is selling you <em>software</em>. We are selling you the <em>template</em>.</h2>
+    <p>Sage, QuickBooks, Xero, FreshBooks. Every "free MTD checker" you have used funnelled you to a &pound;7 to &pound;15 a month subscription. The accounting category has a hard interest in keeping you on a monthly bill.</p>
+    <p>ExternalOS does not. We sell the spreadsheet, the calendar, the calculator. One payment. Lifetime updates when the legislation moves. You keep your files. We do not need you back.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>What MTD <em>actually means</em> for you</h2>
+    <p class="lede">Three things change. Pick the one that fits.</p>
+    <div class="cards">
+      <article class="card">
+        <span class="card-tag">Sole Trader</span>
+        <h3>Quarterly updates from April 2026</h3>
+        <p>If you earned over &pound;50k in self-employment income in 2024 to 25, you must submit four quarterly updates per year plus a final declaration. Most sole traders try to do it themselves. The category wants you to buy software. The HMRC rules permit a spreadsheet + bridging software.</p>
+        <a class="card-cta" href="./mtd-sole-traders.html">See the sole-trader guide</a>
+      </article>
+      <article class="card">
+        <span class="card-tag">Landlord</span>
+        <h3>Property income counts too</h3>
+        <p>If your combined self-employment + property income tipped over &pound;50k, you are in. Joint ownership splits the threshold per person. We have a calculator for the combined case so you do not need to ask your accountant just to find out if you qualify.</p>
+        <a class="card-cta" href="./mtd-landlords.html">See the landlord guide</a>
+      </article>
+      <article class="card featured">
+        <span class="card-tag">The MTD Spreadsheet</span>
+        <h3>Locked HMRC-shape template, &pound;29 once</h3>
+        <p>Four quarterly cumulative totals exactly as HMRC wants them. Bridging-software shortlist (free + &pound;15 to &pound;30 one-time). Quarterly checklist PDF. iCal feed of every deadline.</p>
+        <span class="card-price">&pound;29 <small>once, yours forever</small></span>
+        <a class="card-cta" href="./mtd-spreadsheet.html">See what's inside</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <h2>The MTD <em>timeline</em></h2>
+    <p class="lede">Three threshold phases. Find yours.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">6 Apr 2026</div>
+        <div class="timeline-body">
+          <h4>&pound;50k+ qualifying income mandate begins</h4>
+          <p>Sole traders and landlords with combined gross income over &pound;50,000 in the 2024 to 25 tax year. First quarterly update due 7 August 2026.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">6 Apr 2027</div>
+        <div class="timeline-body">
+          <h4>&pound;30k+ threshold mandate begins</h4>
+          <p>Sole traders and landlords with combined gross income over &pound;30,000 join the regime.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">6 Apr 2028</div>
+        <div class="timeline-body">
+          <h4>&pound;20k+ threshold mandate begins</h4>
+          <p>The lower-threshold expansion. Voluntary sign-up open before then.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Free <em>tools</em>, no email gate</h2>
+    <p class="lede">Use them right now. They will tell you what you need to know.</p>
+    <div class="cards">
+      <article class="card">
+        <span class="card-tag">Free tool</span>
+        <h3>The MTD Jargon Decoder</h3>
+        <p>12 cards. Qualifying income, cumulative update, EOPS, final declaration, bridging software. Plain English, 40 words each, one worked example each. The thing HMRC never quite explains.</p>
+        <a class="card-cta" href="./mtd-jargon.html">Open the decoder</a>
+      </article>
+      <article class="card">
+        <span class="card-tag">Free tool</span>
+        <h3>The &pound;200 Penalty Clock</h3>
+        <p>How close are you to the next penalty point? What does 4 points cost? A live counter you can screenshot, share, embed. The penalty rules are dramatic. We made them dramatic.</p>
+        <a class="card-cta" href="./mtd-clock.html">Open the clock</a>
+      </article>
+      <article class="card">
+        <span class="card-tag">Free PDF</span>
+        <h3>MTD for ITSA Survival Kit</h3>
+        <p>One-page PDF: your Q1 deadline + a seven-step action list. No email gate. Print and put on the fridge.</p>
+        <a class="card-cta" href="./mtd-kit.html">Get the PDF</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <h2>MTD <em>FAQ</em></h2>
+    <div class="faq">
+      <div class="faq-item">
+        <h4>Can I really do MTD with a spreadsheet?</h4>
+        <p>Yes. HMRC officially permits spreadsheet + bridging software. The bridging software is what connects your spreadsheet to HMRC's submission API. There are free bridging tools and paid ones from about &pound;15 to &pound;30 one-time. The MTD Spreadsheet pack includes a shortlist.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do I really need to submit four times a year?</h4>
+        <p>Yes if your income is over the threshold for your phase. The quarterly updates are cumulative totals, not full tax returns. The full tax return ("final declaration") is still annual.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What happens if I miss a quarterly update?</h4>
+        <p>Penalty points. Each missed submission earns a point. Hit 4 points and you get a &pound;200 fine. Points expire after 24 months of clean submissions. Use the <a href="./mtd-clock.html">Penalty Clock</a> if you want the dramatic version.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Will incorporating to a Ltd company avoid MTD?</h4>
+        <p>Not really. Companies have their own MTD regime arriving later. Incorporation has its own administrative overhead. The numbers on the trade-off live in our <a href="./index.html#products">Freelancer Toolkit</a>.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Is the MTD Spreadsheet HMRC-recognised?</h4>
+        <p>The spreadsheet itself is a template you own. The bridging software that submits to HMRC is HMRC-recognised. We list current HMRC-recognised bridging tools inside the pack and keep that list updated.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wedge" style="padding: 80px 0;">
+  <div class="wedge-inner">
+    <h2 style="margin-bottom: 28px;">Get the spreadsheet. <em>Pay once.</em></h2>
+    <p style="margin-bottom: 32px;">Locked HMRC-shape Excel/Numbers template. Bridging-software shortlist. Quarterly checklist PDF. iCal feed of every deadline. Lifetime updates when the rules change.</p>
+    <a href="./mtd-spreadsheet.html" class="btn btn-primary" style="background: var(--accent-pale); color: var(--ink);">Get the MTD Spreadsheet &pound;29 &rarr;</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>
+      <a class="brand" href="./index.html"><span class="brand-dot"></span>External<span class="brand-os">OS</span></a>
+      <p style="margin-top: 12px; max-width: 360px;">UK compliance, paid once. Tax, IR35, MTD, employment law, tenancy. Built in Leeds. Files you keep.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h5>MTD</h5>
+        <a href="./mtd.html">Overview</a>
+        <a href="./mtd-sole-traders.html">Sole Traders</a>
+        <a href="./mtd-landlords.html">Landlords</a>
+        <a href="./mtd-jargon.html">Jargon Decoder</a>
+        <a href="./mtd-clock.html">Penalty Clock</a>
+        <a href="./mtd-spreadsheet.html">The Spreadsheet</a>
+      </div>
+      <div class="footer-col">
+        <h5>Site</h5>
+        <a href="./index.html">Home</a>
+        <a href="./index.html#products">All toolkits</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <a href="./refund-policy.html">Refunds</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

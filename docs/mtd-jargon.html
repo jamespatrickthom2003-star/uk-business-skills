@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MTD Jargon Decoder | 12 Plain-English Cards | ExternalOS</title>
+<meta name="description" content="The 12 MTD ITSA terms HMRC writes badly. Plain English, 40 words each, one worked example each. Free, no email gate.">
+<meta property="og:title" content="MTD Jargon Decoder | ExternalOS">
+<meta property="og:description" content="The plain English glossary HMRC won't give you.">
+<link rel="icon" href="./favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --accent: #B8541F; --accent-deep: #8F3F12; --accent-pale: #FBEEDF;
+  --warm-white: #FBF7F0; --warm-off: #F4EDE0; --warm-cream: #ECE2CE;
+  --ink: #1A1A1A; --body: #4A463E; --muted: #6E665C;
+  --radius: 12px;
+}
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--warm-white); line-height: 1.6; }
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--accent-deep); }
+h1, h2 { font-family: 'Libre Baskerville', Georgia, serif; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); }
+h3, h4 { font-family: 'Syne', sans-serif; font-weight: 600; color: var(--ink); }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+.banner { background: var(--ink); color: var(--warm-white); padding: 9px 16px; text-align: center; font-size: 13px; border-bottom: 1px solid #3D3830; }
+.banner strong { color: var(--accent-pale); }
+.banner a { color: var(--accent-pale); }
+.nav { padding: 26px 0; display: flex; align-items: center; justify-content: space-between; }
+.brand { font-family: 'Libre Baskerville', serif; font-size: 24px; font-weight: 700; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.brand-dot { width: 12px; height: 12px; background: var(--accent); transform: rotate(45deg); }
+.brand-os { color: var(--accent); }
+.nav-cta { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 13px; padding: 10px 22px; border-radius: 100px; background: var(--ink); color: var(--warm-white); text-decoration: none; }
+
+.subnav { background: var(--warm-off); border-top: 1px solid var(--warm-cream); border-bottom: 1px solid var(--warm-cream); position: sticky; top: 0; z-index: 50; }
+.subnav-inner { display: flex; flex-wrap: wrap; gap: 16px; padding: 14px 0; justify-content: space-between; align-items: center; }
+.subnav-links { display: flex; flex-wrap: wrap; gap: 22px; font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600; }
+.subnav-links a { color: var(--ink); text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; }
+.subnav-links a.active { border-bottom-color: var(--accent); color: var(--accent-deep); }
+.subnav-cta { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; padding: 8px 18px; border-radius: 100px; background: var(--accent); color: var(--warm-white); text-decoration: none; letter-spacing: 0.04em; }
+
+.hero { padding: 64px 0 40px; text-align: center; }
+.hero .eyebrow { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; display: block; }
+.hero h1 { font-size: clamp(36px, 5vw, 60px); line-height: 1.06; margin-bottom: 22px; }
+.hero h1 em { color: var(--accent); font-style: italic; }
+.hero p { font-size: 18px; max-width: 720px; margin: 0 auto; color: var(--body); }
+
+.legend { background: var(--warm-off); padding: 24px; border-radius: var(--radius); margin: 40px auto; max-width: 880px; text-align: center; font-size: 14px; color: var(--body); border: 1px solid var(--warm-cream); }
+.legend strong { color: var(--ink); }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; margin: 40px auto 80px; max-width: 1180px; padding: 0 24px; }
+.card { background: var(--warm-white); border: 1px solid var(--warm-cream); border-radius: var(--radius); padding: 28px; position: relative; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(26,26,26,0.06); }
+.card-num { position: absolute; top: 18px; right: 18px; font-family: 'Libre Baskerville', serif; font-size: 36px; font-weight: 400; font-style: italic; color: var(--accent-pale); line-height: 1; }
+.card h3 { font-family: 'Libre Baskerville', serif; font-size: 22px; font-weight: 700; margin-bottom: 8px; padding-right: 40px; line-height: 1.25; }
+.card .term-meta { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
+.card .definition { font-size: 15px; color: var(--ink); margin-bottom: 18px; line-height: 1.55; font-weight: 500; }
+.card .example { font-size: 14px; color: var(--body); padding: 14px 16px; background: var(--accent-pale); border-left: 3px solid var(--accent); border-radius: 4px; line-height: 1.5; }
+.card .example strong { color: var(--accent-deep); display: block; font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 6px; }
+
+.cta-strip { background: var(--ink); color: var(--warm-white); padding: 60px 0; text-align: center; }
+.cta-strip h2 { color: var(--warm-white); font-size: clamp(28px, 4vw, 40px); margin-bottom: 16px; }
+.cta-strip h2 em { color: var(--accent-pale); font-style: italic; }
+.cta-strip p { max-width: 580px; margin: 0 auto 28px; color: rgba(251,247,240,0.75); font-size: 17px; }
+.btn { padding: 16px 32px; border-radius: 100px; font-family: 'Syne', sans-serif; font-weight: 600; font-size: 15px; text-decoration: none; display: inline-flex; gap: 8px; }
+.btn-primary { background: var(--accent-pale); color: var(--ink); }
+
+.footer { background: var(--warm-off); border-top: 1px solid var(--warm-cream); padding: 40px 0; text-align: center; }
+.footer p, .footer a { font-size: 14px; color: var(--muted); text-decoration: none; }
+.footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="banner">Most UK compliance software charges &pound;15-&pound;35 <strong>every month</strong>. Ours is <strong>paid once</strong>. <a href="./index.html#products">See the bundle &rarr;</a></div>
+
+<header class="wrap">
+  <nav class="nav">
+    <a href="./index.html" class="brand"><span class="brand-dot"></span>External<span class="brand-os">OS</span></a>
+    <a href="./index.html#products" class="nav-cta">Get the bundle &pound;179</a>
+  </nav>
+</header>
+
+<div class="subnav">
+  <div class="wrap">
+    <div class="subnav-inner">
+      <div class="subnav-links">
+        <a href="./mtd.html">Overview</a>
+        <a href="./mtd-sole-traders.html">Sole Traders</a>
+        <a href="./mtd-landlords.html">Landlords</a>
+        <a href="./mtd-accountants.html">Accountants</a>
+        <a href="./mtd-self-assessment.html">Self Assessment</a>
+        <a href="./mtd-jargon.html" class="active">Jargon</a>
+        <a href="./mtd-clock.html">Penalty Clock</a>
+      </div>
+      <a href="./mtd-spreadsheet.html" class="subnav-cta">Get the MTD Spreadsheet &pound;29</a>
+    </div>
+  </div>
+</div>
+
+<section class="hero wrap">
+  <span class="eyebrow">Free, no email gate</span>
+  <h1>The 12 MTD terms HMRC <em>writes badly.</em></h1>
+  <p>Plain English. 40 words each. One worked example each. The thing accountants charge you to translate.</p>
+</section>
+
+<div class="legend">
+  <strong>How to read these cards.</strong> Term + the official HMRC name. Then the plain meaning. Then a worked example using a real number. Built from <a href="https://www.gov.uk/government/publications/extension-of-making-tax-digital-for-income-tax-self-assessment-to-sole-traders-and-landlords/making-tax-digital-for-income-tax-self-assessment-for-sole-traders-and-landlords" target="_blank" rel="noopener">GOV.UK MTD ITSA guidance</a> + ICAEW TAXguide 01/25.
+</div>
+
+<div class="cards">
+
+<article class="card">
+  <span class="card-num">01</span>
+  <div class="term-meta">HMRC term</div>
+  <h3>Qualifying income</h3>
+  <p class="definition">Your gross self-employment income plus your gross property income, added together, before any expenses. If this combined number is over the threshold for your phase, you are in MTD.</p>
+  <div class="example"><strong>Worked example</strong>&pound;38,000 from freelance design + &pound;14,000 from one rental = &pound;52,000 qualifying income. Above the &pound;50k threshold. You are mandated from 6 April 2026.</div>
+</article>
+
+<article class="card">
+  <span class="card-num">02</span>
+  <div class="term-meta">HMRC term</div>
+  <h3>Cumulative update</h3>
+  <p class="definition">A quarterly submission to HMRC showing your year-to-date totals (not just the quarter). Q3 shows Q1+Q2+Q3 totals, not the three-month-only numbers. You correct earlier mistakes by overwriting.</p>
+  <div class="example"><strong>Worked example</strong>Q1 turnover &pound;9k. Q2 turnover &pound;7k. Your Q2 submission sends &pound;16k cumulative, not &pound;7k. Forgot a Q1 invoice? Add it to the cumulative total in Q2, no resubmit needed.</div>
+</article>
+
+<article class="card">
+  <span class="card-num">03</span>
+  <div class="term-meta">HMRC term</div>
+  <h3>EOPS (End of Period Statement)</h3>
+  <p class="definition">Originally a fifth annual submission to confirm your trading year is closed. HMRC scrapped the separate EOPS step in late 2024. Now folded into the Final Declaration. If you read older guidance saying EOPS, skip past it.</p>
+  <div class="example"><strong>Worked example</strong>Old plan: 4 quarterly updates + 1 EOPS + 1 final declaration = 6 submissions/year. New plan: 4 quarterly updates + 1 final declaration = 5. Easier.</div>
+</article>
+
+<article class="card">
+  <span class="card-num">04</span>
+  <div class="term-meta">HMRC term</div>
+  <h3>Final Declaration</h3>
+  <p class="definition">The annual confirmation, due 31 January after the tax year ends. Replaces the old Self Assessment return for MTD-mandated people. Confirms your total income, allowances, and tax due. Quarterly updates feed into this.</p>
+  <div class="example"><strong>Worked example</strong>2026-27 tax year ends 5 April 2027. Final Declaration due 31 January 2028. By then HMRC already has your Q1-Q4 updates, so the final declaration is a confirmation plus any other income (savings, dividends, etc.).</div>
+</article>
+
+<article class="card">
+  <span class="card-num">05</span>
+  <div class="term-meta">HMRC term</div>
+  <h3>Bridging software</h3>
+  <p class="definition">The connector between your spreadsheet and HMRC's submission API. You keep your records in Excel/Numbers/Sheets. The bridging software reads the numbers and submits them. HMRC officially recognises this path.</p>
+  <div class="example"><strong>Worked example</strong>Free options: 123 Sheets free tier, VitalTax free. Paid one-time: BTC Software, Easy MTD around &pound;15-&pound;30. No subscription needed if you stay on a spreadsheet.</div>
+</article>
+
+<article class="card">
+  <span class="card-num">06</span>
+  <div class="term-meta">HMRC term</div>
+  <h3>Compatible software</h3>
+  <p class="definition">Any software HMRC has certified as able to submit to MTD. Includes the SaaS accounting tools (Sage, Xero, QB) AND the bridging tools above. "Compatible" does not mean "you need a subscription". Spreadsheet + bridging = compatible.</p>
+  <div class="example"><strong>Worked example</strong>HMRC's "find software" page lists 30+ compatible options. About 25 are paid SaaS subscriptions. The other 5-7 are bridging tools that work with your spreadsheet. Pick the path that suits you.</div>
+</article>
+
+<article class="card">
+  <span class="card-num">07</span>
+  <div class="term-meta">HMRC term</div>
+  <h3>Quarterly update</h3>
+  <p class="definition">Each of the four times-per-year submissions. Quarter 1 covers 6 April to 5 July, submitted by 7 August. Q2 to 5 October submitted by 7 November. Q3 to 5 January submitted by 7 February. Q4 to 5 April submitted by 7 May.</p>
+  <div class="example"><strong>Worked example</strong>2026 dates: Q1 due 7 Aug 2026, Q2 due 7 Nov 2026, Q3 due 7 Feb 2027, Q4 due 7 May 2027, Final Declaration due 31 Jan 2028.</div>
+</article>
+
+<article class="card">
+  <span class="card-num">08</span>
+  <div class="term-meta">HMRC term</div>
+  <h3>Reasonable excuse</h3>
+  <p class="definition">The defence against penalties for a missed submission. HMRC's "reasonable excuse" bar is narrow: serious illness, bereavement, IT failure of HMRC's own systems, etc. "I forgot" and "I was busy" do NOT count.</p>
+  <div class="example"><strong>Worked example</strong>Hospitalised the week of a quarterly deadline = reasonable excuse, appeal succeeds. Software subscription lapsed and you couldn't submit = not reasonable, penalty stands.</div>
+</article>
+
+<article class="card">
+  <span class="card-num">09</span>
+  <div class="term-meta">HMRC term</div>
+  <h3>Soft-landing period</h3>
+  <p class="definition">A grace window where HMRC will not enforce penalties even if you submit late. There is NO soft-landing for MTD ITSA in 2026. The penalty regime starts on day one. (There was one for MTD VAT in 2019, hence the term.)</p>
+  <div class="example"><strong>Worked example</strong>Miss Q1 on 7 Aug 2026 = penalty point starts immediately. Do not bank on a grace period this time.</div>
+</article>
+
+<article class="card">
+  <span class="card-num">10</span>
+  <div class="term-meta">HMRC term</div>
+  <h3>Time to pay arrangement</h3>
+  <p class="definition">A formal payment plan with HMRC if you cannot pay the tax due. Set up online if you owe under &pound;30k. Spreads the bill over up to 12 months. Does not stop interest accruing but stops enforcement action.</p>
+  <div class="example"><strong>Worked example</strong>Final Declaration shows you owe &pound;4,200. Cannot pay in full. Set up a 6-month time-to-pay arrangement online: &pound;700/month, interest on the balance, no bailiffs.</div>
+</article>
+
+<article class="card">
+  <span class="card-num">11</span>
+  <div class="term-meta">HMRC term</div>
+  <h3>Combined gross income</h3>
+  <p class="definition">The qualifying income test for MTD looks at your self-employment AND property income together. Even if neither alone hits the threshold, the combined sum can. This catches a lot of side-hustle freelancers with a rental property.</p>
+  <div class="example"><strong>Worked example</strong>&pound;35k freelance + &pound;18k from one property = &pound;53k combined. Both individually below &pound;50k. Combined above. You are in.</div>
+</article>
+
+<article class="card">
+  <span class="card-num">12</span>
+  <div class="term-meta">HMRC term</div>
+  <h3>Voluntary sign-up</h3>
+  <p class="definition">Joining MTD before your phase mandates it. You can sign up now even if your income is under &pound;50k. Some accountants suggest this; most do not. The main reason to do it: spread the learning curve before your mandatory date.</p>
+  <div class="example"><strong>Worked example</strong>You earn &pound;22k freelance. Your mandate date is 6 April 2028. Voluntary sign-up now means 2 years of practice before it counts. Some people prefer the deadline pressure. Trade-off.</div>
+</article>
+
+</div>
+
+<section class="cta-strip">
+  <div class="wrap">
+    <h2>Now you understand the words. <em>Get the spreadsheet.</em></h2>
+    <p>The MTD Spreadsheet pack uses these terms correctly so you do not need to read 60 HMRC pages. Locked template + bridging guidance + quarterly checklist. &pound;29 once. Yours forever.</p>
+    <a href="./mtd-spreadsheet.html" class="btn btn-primary">Get the MTD Spreadsheet &pound;29 &rarr;</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>&copy; ExternalOS 2026. UK compliance, paid once. <a href="./mtd.html">Back to MTD overview</a> &middot; <a href="./index.html">Home</a> &middot; <a href="./privacy.html">Privacy</a> &middot; <a href="./terms.html">Terms</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
