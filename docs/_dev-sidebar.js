@@ -18,12 +18,8 @@
     ],
     'MTD sub-site': [
       { href: './mtd.html', label: 'mtd.html', note: 'Hub + anti-SaaS wedge' },
-      { href: './mtd-sole-traders.html', label: 'mtd-sole-traders.html', note: 'Stub' },
-      { href: './mtd-landlords.html', label: 'mtd-landlords.html', note: 'Stub' },
-      { href: './mtd-accountants.html', label: 'mtd-accountants.html', note: 'Stub' },
-      { href: './mtd-self-assessment.html', label: 'mtd-self-assessment.html', note: 'Stub' },
       { href: './mtd-jargon.html', label: 'mtd-jargon.html', note: '12-card Jargon Decoder, full build' },
-      { href: './mtd-clock.html', label: 'mtd-clock.html', note: 'Stub, £200 Penalty Clock to build' },
+      { href: './mtd-clock.html', label: 'mtd-clock.html', note: '£200 Penalty Clock, live interactive countdown + simulator' },
       { href: './mtd-spreadsheet.html', label: 'mtd-spreadsheet.html', note: 'PAID £29 product page, full build' },
       { href: './mtd-kit.html', label: 'mtd-kit.html', note: 'Existing MTD survival PDF page' }
     ],

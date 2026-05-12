@@ -168,7 +168,7 @@
    </div>
 
    <div class="product-grid">
-    <div class="product-card tilt-card product-card-featured">
+    <div class="product-card product-card-featured">
      <div class="product-card-badge">Best value</div>
      <span class="product-label"><span class="product-label-dot"></span>Full Suite</span>
      <h3 class="product-name">Full UK Business Suite</h3>
@@ -181,7 +181,7 @@
      </div>
     </div>
 
-    <div class="product-card tilt-card product-card-featured" style="background:linear-gradient(180deg,#FBEEDF 0%,#FAF8F3 100%);border-color:#8F3F12;">
+    <div class="product-card product-card-featured" style="background:linear-gradient(180deg,#FBEEDF 0%,#FAF8F3 100%);border-color:#8F3F12;">
      <span class="product-label"><span class="product-label-dot" style="background:#8F3F12;"></span>Live Tracker</span>
      <h3 class="product-name">UK Compliance Tracker</h3>
      <span class="product-type-badge">Live Google Sheet</span>
@@ -193,7 +193,7 @@
      </div>
     </div>
 
-    <div class="product-card tilt-card">
+    <div class="product-card">
      <span class="product-label"><span class="product-label-dot"></span>Freelancer</span>
      <h3 class="product-name">UK Freelancer Toolkit</h3>
      <span class="product-type-badge">6 Skill Files</span>
@@ -205,7 +205,7 @@
      </div>
     </div>
 
-    <div class="product-card tilt-card">
+    <div class="product-card">
      <span class="product-label"><span class="product-label-dot"></span>Landlord</span>
      <h3 class="product-name">UK Landlord Legal Pack</h3>
      <span class="product-type-badge">Skill Files</span>
@@ -237,7 +237,7 @@
  // Lerped 3D tilt on cards, mirrors landing page implementation.
  var RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
  if (!RM) {
-  document.querySelectorAll('.tilt-card').forEach(function(card){
+  document.querySelectorAll('.').forEach(function(card){
    var cur = {x:0, y:0}, tgt = {x:0, y:0}, running = false;
    var maxDeg = 4;
    function tick(){

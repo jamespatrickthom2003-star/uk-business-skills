@@ -309,7 +309,7 @@
  <!-- LANDLORD KIT UPSELL -->
  <section class="featured-product" aria-labelledby="featured-title">
   <div class="wrap">
-   <div class="featured-card tilt-card">
+   <div class="featured-card">
     <div class="glow"></div>
     <div class="featured-copy">
      <span class="product-label"><span class="product-label-dot"></span>Closing the gaps</span>
@@ -738,12 +738,12 @@
 })();
 </script>
 
-<!-- Tilt + glow effect on .tilt-card elements (matches landing) -->
+<!-- Tilt + glow effect on . elements (matches landing) -->
 <script>
 (function(){
  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
  if (RM) return;
- document.querySelectorAll('.tilt-card').forEach(function(card){
+ document.querySelectorAll('.').forEach(function(card){
   var cur = {x:0, y:0}, tgt = {x:0, y:0}, running = false;
   var maxDeg = (card.classList.contains('featured-card') || card.classList.contains('free-tool-gift')) ? 2 : 4;
   function tick(){
