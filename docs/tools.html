@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All UK Compliance Tools | &pound;9 to &pound;49 each, paid once | ExternalOS</title>
+<meta name="description" content="18 UK compliance toolkits. Tax, IR35, MTD, landlord, employer, GDPR, AML, H&S. Buy individually £9-£49 or save with a bundle. No subscription.">
+<meta property="og:title" content="All UK Compliance Tools | ExternalOS">
+<meta property="og:description" content="The full toolkit catalogue. Paid once, yours forever.">
+<link rel="icon" href="./favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --accent: #B8541F; --accent-deep: #8F3F12; --accent-pale: #FBEEDF; --accent-mid: #D17638;
+  --warm-white: #FBF7F0; --warm-off: #F4EDE0; --warm-cream: #ECE2CE;
+  --ink: #1A1A1A; --body: #4A463E; --muted: #6E665C;
+  --radius: 12px;
+}
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--warm-white); line-height: 1.6; }
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--accent-deep); }
+h1, h2 { font-family: 'Libre Baskerville', Georgia, serif; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); }
+h3, h4 { font-family: 'Syne', sans-serif; font-weight: 600; color: var(--ink); }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+.banner { background: var(--ink); color: var(--warm-white); padding: 9px 16px; text-align: center; font-size: 13px; border-bottom: 1px solid #3D3830; }
+.banner strong { color: var(--accent-pale); }
+.banner a { color: var(--accent-pale); }
+.nav { padding: 26px 0; display: flex; align-items: center; justify-content: space-between; }
+.brand { font-family: 'Libre Baskerville', serif; font-size: 24px; font-weight: 700; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.brand-dot { width: 12px; height: 12px; background: var(--accent); transform: rotate(45deg); }
+.brand-os { color: var(--accent); }
+.nav-cta { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 13px; padding: 10px 22px; border-radius: 100px; background: var(--ink); color: var(--warm-white); text-decoration: none; }
+
+.hero { padding: 80px 0 40px; text-align: center; }
+.hero .eyebrow { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px; display: block; }
+.hero h1 { font-size: clamp(40px, 6vw, 68px); line-height: 1.04; margin-bottom: 24px; }
+.hero h1 em { color: var(--accent); font-style: italic; }
+.hero .lede { font-size: 19px; max-width: 720px; margin: 0 auto 16px; color: var(--body); }
+.hero .lede strong { color: var(--ink); }
+
+.filter-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 36px auto 12px; }
+.filter-pill { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; padding: 8px 18px; border-radius: 100px; background: var(--warm-off); color: var(--ink); border: 1px solid var(--warm-cream); cursor: pointer; transition: all 0.15s ease; }
+.filter-pill:hover { background: var(--warm-cream); }
+.filter-pill.active { background: var(--ink); color: var(--warm-white); border-color: var(--ink); }
+
+.summary-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; padding: 30px 24px; margin: 0 auto; max-width: 920px; font-family: 'Syne', sans-serif; font-size: 13px; color: var(--muted); font-weight: 600; letter-spacing: 0.04em; }
+.summary-row .pill { padding: 6px 14px; background: var(--accent-pale); color: var(--accent-deep); border-radius: 100px; }
+
+/* Tool grid */
+.tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 22px; margin: 40px 0 80px; }
+.tool { background: var(--warm-white); border: 1px solid var(--warm-cream); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; transition: transform 0.15s ease, box-shadow 0.15s ease; position: relative; }
+.tool:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(26,26,26,0.08); }
+.tool.featured { background: var(--ink); color: var(--warm-white); border-color: var(--ink); }
+.tool-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.tool-cat { font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+.tool.featured .tool-cat { color: var(--accent-pale); }
+.tool-price { font-family: 'Libre Baskerville', serif; font-size: 28px; font-weight: 700; color: var(--ink); }
+.tool.featured .tool-price { color: var(--warm-white); }
+.tool-price small { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+.tool.featured .tool-price small { color: rgba(251,247,240,0.65); }
+.tool h3 { font-family: 'Libre Baskerville', serif; font-size: 22px; font-weight: 700; margin-bottom: 8px; line-height: 1.25; }
+.tool.featured h3 { color: var(--warm-white); }
+.tool p { font-size: 14px; line-height: 1.55; color: var(--body); margin-bottom: 18px; flex: 1; }
+.tool.featured p { color: rgba(251,247,240,0.75); }
+.tool .features { font-size: 13px; color: var(--muted); margin-bottom: 18px; line-height: 1.7; }
+.tool.featured .features { color: rgba(251,247,240,0.6); }
+.tool-cta { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 13px; padding: 12px 22px; border-radius: 100px; background: var(--accent); color: var(--warm-white); text-decoration: none; text-align: center; transition: background 0.15s ease; }
+.tool-cta:hover { background: var(--accent-deep); color: var(--warm-white); }
+.tool.featured .tool-cta { background: var(--accent-pale); color: var(--ink); }
+.tool.featured .tool-cta:hover { background: var(--warm-white); }
+.tool-tag { position: absolute; top: 14px; right: 14px; font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; background: var(--accent-pale); color: var(--accent-deep); }
+.tool.free .tool-price { color: var(--accent); }
+.tool.free .tool-tag { background: var(--accent); color: var(--warm-white); }
+
+/* Bundle CTA strip between sections */
+.bundle-strip { background: var(--ink); color: var(--warm-white); padding: 60px 0; margin: 60px 0; border-radius: var(--radius); }
+.bundle-strip-inner { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: center; padding: 0 40px; }
+.bundle-strip h2 { color: var(--warm-white); font-size: clamp(26px, 3vw, 36px); margin-bottom: 12px; }
+.bundle-strip h2 em { color: var(--accent-pale); font-style: italic; }
+.bundle-strip p { color: rgba(251,247,240,0.75); font-size: 16px; margin-bottom: 0; }
+.bundle-strip .ctas { display: flex; flex-direction: column; gap: 10px; }
+.bundle-strip .btn-bundle { padding: 14px 22px; border-radius: 100px; font-family: 'Syne', sans-serif; font-weight: 600; font-size: 14px; background: var(--accent); color: var(--warm-white); text-decoration: none; text-align: center; }
+.bundle-strip .btn-bundle.outline { background: transparent; border: 1.5px solid rgba(251,247,240,0.4); }
+
+.section-head { text-align: center; margin: 70px auto 30px; max-width: 720px; }
+.section-head h2 { font-size: clamp(28px, 4vw, 40px); margin-bottom: 12px; }
+.section-head h2 em { color: var(--accent); font-style: italic; }
+.section-head p { font-size: 16px; color: var(--body); }
+
+.footer { background: var(--warm-off); border-top: 1px solid var(--warm-cream); padding: 50px 0 30px; margin-top: 80px; }
+.footer p, .footer a { font-size: 14px; color: var(--muted); text-decoration: none; }
+.footer a:hover { color: var(--accent); }
+.footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+
+@media (max-width: 768px) {
+  .bundle-strip-inner { grid-template-columns: 1fr; padding: 0 24px; }
+  .summary-row { gap: 12px; padding: 20px 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="banner">Most UK compliance software charges &pound;15-&pound;35 <strong>every month</strong>. Ours is <strong>paid once</strong>. <a href="#bundles">See the bundle &rarr;</a></div>
+
+<header class="wrap">
+  <nav class="nav">
+    <a href="./index.html" class="brand"><span class="brand-dot"></span>External<span class="brand-os">OS</span></a>
+    <a href="#bundles" class="nav-cta">Get the bundle &pound;179</a>
+  </nav>
+</header>
+
+<section class="hero wrap">
+  <span class="eyebrow">All Tools, every category</span>
+  <h1>18 UK compliance tools. <em>Paid once.</em></h1>
+  <p class="lede">Every toolkit from &pound;9 to &pound;49. <strong>Buy what you need, save with a bundle.</strong> No subscriptions, no account login required, lifetime updates when the legislation moves.</p>
+</section>
+
+<div class="wrap">
+  <div class="summary-row">
+    <span class="pill">18 paid tools</span>
+    <span class="pill">5 free tools live</span>
+    <span class="pill">From &pound;9</span>
+    <span class="pill">Bundles save up to 60%</span>
+    <span class="pill">14-day refund</span>
+  </div>
+</div>
+
+<!-- TIER 1: £9 entry -->
+<div class="wrap">
+  <div class="section-head">
+    <h2>Single calculators &middot; <em>&pound;9 to &pound;19</em></h2>
+    <p>One job, one file, one payment. Ladder-in tier for buyers who want one specific answer.</p>
+  </div>
+  <div class="tools-grid">
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">Tax</span><span class="tool-price">&pound;9 <small>once</small></span></div>
+      <h3>UK Tax Calculator</h3>
+      <p>Google Sheet with 2025/26 rates baked in. Self Assessment, income tax, NI, dividend tax. Plus tax-saving checklist PDF.</p>
+      <a href="./uk-tax-calculator.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">Property</span><span class="tool-price">&pound;19 <small>once</small></span></div>
+      <h3>Property Rental Yield Tool</h3>
+      <p>Yield, SDLT (with 2026 +5% surcharge), Section 24 mortgage interest cap. All in one spreadsheet. Plus ROI projection model.</p>
+      <a href="./property-rental-yield.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">Bookkeeping</span><span class="tool-price">&pound;19 <small>once</small></span></div>
+      <h3>Invoice / Expense Categoriser</h3>
+      <p>Google Sheet with all 10 HMRC SA103 categories baked in. Drop-in expense log, quarterly P&amp;L auto-roll, VAT threshold tracker.</p>
+      <a href="./invoice-expense-categoriser.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">Freelance</span><span class="tool-price">&pound;19 <small>once</small></span></div>
+      <h3>Client Comms Templates</h3>
+      <p>30 freelancer email templates. Chase payments, scope creep, refunds, onboarding, kickoff, completion, edge cases. Plus tone-guide PDF.</p>
+      <a href="./client-comms-drafter.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+  </div>
+</div>
+
+<!-- BUNDLE STRIP (mid-page CTA) -->
+<div class="wrap">
+  <div class="bundle-strip" id="bundles">
+    <div class="bundle-strip-inner">
+      <div>
+        <h2>Buying three or more? <em>Bundle saves you up to &pound;272.</em></h2>
+        <p>Three named bundles + the Full Suite. Pick the one that fits your situation. All bundles save 60% versus buying the tools separately.</p>
+      </div>
+      <div class="ctas">
+        <a href="./index.html#products" class="btn-bundle">Full UK Business Suite &pound;179</a>
+        <a href="./index.html#product-toolkit" class="btn-bundle outline">Freelancer Toolkit &pound;49</a>
+        <a href="./index.html#product-employer" class="btn-bundle outline">Employer Pack &pound;89</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TIER 2: £29 main band -->
+<div class="wrap">
+  <div class="section-head">
+    <h2>Full toolkits &middot; <em>&pound;29</em></h2>
+    <p>Multi-document kits with templates, calculators, and reference guides. Most popular tier.</p>
+  </div>
+  <div class="tools-grid">
+
+    <article class="tool featured">
+      <span class="tool-tag">MTD wedge</span>
+      <div class="tool-meta"><span class="tool-cat">MTD</span><span class="tool-price">&pound;29 <small>once</small></span></div>
+      <h3>The MTD Spreadsheet</h3>
+      <p>Locked HMRC-shape template with four cumulative quarters. Bridging-software shortlist (free + &pound;15-&pound;30 one-time tools). Quarterly checklist PDF. iCal feed of every deadline.</p>
+      <a href="./mtd-spreadsheet.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">Landlord</span><span class="tool-price">&pound;29 <small>once</small></span></div>
+      <h3>UK Landlord Legal Pack</h3>
+      <p>100-page PDF: all 37 Section 8 grounds with example notices, RRA 2026 timeline, deposit prescribed info, standard notices (Form N1/N5/N5B/N6A).</p>
+      <a href="./uk-landlord-compliance.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">Employment</span><span class="tool-price">&pound;29 <small>once</small></span></div>
+      <h3>UK Employment Law Kit</h3>
+      <p>Calculator (holiday, sick pay, notice, redundancy, maternity/paternity, NMW 2025/26) + 11 letter templates + ERA 2025 transition guide.</p>
+      <a href="./uk-employment-law.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">Health &amp; Safety</span><span class="tool-price">&pound;29 <small>once</small></span></div>
+      <h3>HSE Risk Assessment Pack</h3>
+      <p>11 industry-preset templates (construction, food, office, retail, warehouse, healthcare, education, agriculture, manufacturing, hospitality, beauty) + RIDDOR/HSE checklist.</p>
+      <a href="./health-safety-risk-assessment.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">Contracts</span><span class="tool-price">&pound;29 <small>once</small></span></div>
+      <h3>Contract Review Spotter</h3>
+      <p>9 contract-type red-flag checklists + 14 common red-flag explainers + 10 missing-clause warning guide. Spot the risk before you sign.</p>
+      <a href="./contract-review.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">Food Hygiene</span><span class="tool-price">&pound;29 <small>once</small></span></div>
+      <h3>HACCP / Food Hygiene Pack</h3>
+      <p>HACCP plan template + 14-allergen matrix + cleaning schedule + EHO inspection prep checklist + 14 document templates. Natasha's Law ready.</p>
+      <a href="./food-hygiene-haccp.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">Construction</span><span class="tool-price">&pound;29 <small>once</small></span></div>
+      <h3>Construction Quote Builder</h3>
+      <p>16 job-type quote templates (extensions, kitchens, bathrooms, roofing, etc.) + UK trade day-rate reference + CIS guidance + materials cost reference.</p>
+      <a href="./construction-quote.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">IR35</span><span class="tool-price">&pound;29 <small>once</small></span></div>
+      <h3>IR35 Assessment Kit</h3>
+      <p>Status questionnaire PDF + 10 case-law citation reference + contract-clause checklist + verdict logic flowchart. Free web checker also live.</p>
+      <a href="./ir35-assessment.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">Freelance</span><span class="tool-price">&pound;29 <small>once</small></span></div>
+      <h3>Proposal Generator</h3>
+      <p>6 proposal templates (Word/PDF) for common freelance scenarios + brief structure guide. Bonsai-style without the &pound;19/mo.</p>
+      <a href="./proposal-generator.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">Creative</span><span class="tool-price">&pound;29 <small>once</small></span></div>
+      <h3>Creative Contracts Pack</h3>
+      <p>9 contract templates (photography, videography, music, illustration, etc.) + model release pack + usage license templates + CDPA 1988 reference.</p>
+      <a href="./creative-contracts.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">Education</span><span class="tool-price">&pound;29 <small>once</small></span></div>
+      <h3>Teacher Lesson Plans</h3>
+      <p>KS1-KS5 lesson plan templates aligned to 4 exam boards (AQA, Edexcel, OCR, WJEC) + structure guide + worksheet template + mark-scheme template.</p>
+      <a href="./teacher-lesson-plans.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+  </div>
+</div>
+
+<!-- TIER 3: £39-£49 -->
+<div class="wrap">
+  <div class="section-head">
+    <h2>Multi-document kits &middot; <em>&pound;39 to &pound;49</em></h2>
+    <p>Bigger packs for higher-stakes compliance jobs. Where you would otherwise call a solicitor.</p>
+  </div>
+  <div class="tools-grid">
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">AML / KYC</span><span class="tool-price">&pound;39 <small>once</small></span></div>
+      <h3>AML / KYC Document Pack</h3>
+      <p>15 AML/KYC document templates (CDD records, risk assessment, policy, SAR draft) across 8 regulated sectors + UK AML 2017 + 2024 amendments compliance checklist.</p>
+      <a href="./aml-kyc-docs.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">GDPR</span><span class="tool-price">&pound;39 <small>once</small></span></div>
+      <h3>GDPR Compliance Documents</h3>
+      <p>14 GDPR templates (privacy policy, cookie policy, DPIA, ROPA, DSAR response, breach notification, consent forms) + 7 industry-preset packs + checklist.</p>
+      <a href="./gdpr-compliance.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">Employment</span><span class="tool-price">&pound;39 <small>once</small></span></div>
+      <h3>Employee Handbook Generator</h3>
+      <p>6 industry-specific handbook templates (Word, fill-in-blanks) + 20-section structure guide + ERA 2025 mandatory-clause checklist. Replaces &pound;500+ solicitor draft.</p>
+      <a href="./employee-handbook-generator.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+    <article class="tool">
+      <div class="tool-meta"><span class="tool-cat">Grants</span><span class="tool-price">&pound;49 <small>once</small></span></div>
+      <h3>Grant Application Writer</h3>
+      <p>10 funder-preset templates (NLCF, Arts Council, BBC Children in Need, etc.) + 10-section structure guide + theory of change framework + logic model.</p>
+      <a href="./grant-application-writer.html" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+  </div>
+</div>
+
+<!-- FREE TOOLS -->
+<div class="wrap">
+  <div class="section-head">
+    <h2>Free tools &middot; <em>no email gate</em></h2>
+    <p>Use them right now. Trailers for the paid kits. Always free.</p>
+  </div>
+  <div class="tools-grid">
+
+    <article class="tool free">
+      <span class="tool-tag">Free</span>
+      <div class="tool-meta"><span class="tool-cat">IR35</span><span class="tool-price">&pound;0</span></div>
+      <h3>IR35 Status Checker</h3>
+      <p>7 CEST-style questions, instant verdict. The free trailer for the full IR35 Assessment Kit.</p>
+      <a href="./ir35-checker.html" class="tool-cta">Open the checker &rarr;</a>
+    </article>
+
+    <article class="tool free">
+      <span class="tool-tag">Free</span>
+      <div class="tool-meta"><span class="tool-cat">Calendar</span><span class="tool-price">&pound;0</span></div>
+      <h3>UK Ltd Compliance Calendar</h3>
+      <p>Year-end in, every HMRC and Companies House deadline out. Print or subscribe via iCal.</p>
+      <a href="./compliance-calendar.html" class="tool-cta">Open the calendar &rarr;</a>
+    </article>
+
+    <article class="tool free">
+      <span class="tool-tag">Free</span>
+      <div class="tool-meta"><span class="tool-cat">Employer</span><span class="tool-price">&pound;0</span></div>
+      <h3>Employer Costs Calculator</h3>
+      <p>Salary in, full cost of hire out. NI, pension, holiday, training, equipment loaded onto the headline number.</p>
+      <a href="./employer-costs.html" class="tool-cta">Open the calculator &rarr;</a>
+    </article>
+
+    <article class="tool free">
+      <span class="tool-tag">Free</span>
+      <div class="tool-meta"><span class="tool-cat">Landlord</span><span class="tool-price">&pound;0</span></div>
+      <h3>Landlord Compliance Check</h3>
+      <p>12 questions, RRA 2026 + 31 May Information Sheet readiness. Verdict + action list.</p>
+      <a href="./landlord-compliance-check.html" class="tool-cta">Open the check &rarr;</a>
+    </article>
+
+    <article class="tool free">
+      <span class="tool-tag">Free</span>
+      <div class="tool-meta"><span class="tool-cat">MTD</span><span class="tool-price">&pound;0</span></div>
+      <h3>MTD ITSA Survival Kit</h3>
+      <p>One-page PDF: your Q1 deadline + a seven-step action list. No email gate. Print and stick on the fridge.</p>
+      <a href="./mtd-kit.html" class="tool-cta">Get the PDF &rarr;</a>
+    </article>
+
+    <article class="tool free">
+      <span class="tool-tag">Free</span>
+      <div class="tool-meta"><span class="tool-cat">MTD</span><span class="tool-price">&pound;0</span></div>
+      <h3>MTD Jargon Decoder</h3>
+      <p>12 cards. Qualifying income, cumulative update, EOPS, bridging software. Plain English, worked examples.</p>
+      <a href="./mtd-jargon.html" class="tool-cta">Open the decoder &rarr;</a>
+    </article>
+
+  </div>
+</div>
+
+<!-- Compliance Tracker (standalone reference) -->
+<div class="wrap">
+  <div class="section-head">
+    <h2>Live reference &middot; <em>not in any bundle</em></h2>
+    <p>Stays current as HMRC moves. Lifetime updates included.</p>
+  </div>
+  <div class="tools-grid">
+
+    <article class="tool featured">
+      <span class="tool-tag">Lifetime</span>
+      <div class="tool-meta"><span class="tool-cat">Reference</span><span class="tool-price">&pound;59 <small>lifetime</small></span></div>
+      <h3>UK Compliance Tracker</h3>
+      <p>Live Google Sheet of every UK threshold, deadline, rate, RRA citation, IR35 reference. Updated monthly when HMRC moves. Yours forever, single payment. Pairs with everything.</p>
+      <a href="./index.html#product-tracker" class="tool-cta">See what's inside &rarr;</a>
+    </article>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>
+      <a class="brand" href="./index.html"><span class="brand-dot"></span>External<span class="brand-os">OS</span></a>
+      <p style="margin-top: 12px; max-width: 360px;">UK compliance, paid once. Tax, IR35, MTD, employment law, tenancy. Built in Leeds. Files you keep.</p>
+    </div>
+    <div>
+      <p><a href="./index.html">Home</a> &middot; <a href="./mtd.html">MTD hub</a> &middot; <a href="./privacy.html">Privacy</a> &middot; <a href="./terms.html">Terms</a> &middot; <a href="./refund-policy.html">Refunds</a></p>
+      <p style="margin-top: 8px; font-size: 12px; opacity: 0.7;">&copy; ExternalOS 2026</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
