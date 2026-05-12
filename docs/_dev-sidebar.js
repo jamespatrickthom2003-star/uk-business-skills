@@ -147,4 +147,34 @@
     var isClosed = bar.classList.toggle('closed');
     try { localStorage.setItem('eos-dev-sidebar-open', isClosed ? 'closed' : 'open'); } catch (e) {}
   });
+
+  // Persist sidebar scroll position across navigations.
+  // 1. Restore last scrollTop (or fall back to scrolling the active link into view)
+  // 2. Save scrollTop on every scroll (throttled) + on link click + on beforeunload
+  var SCROLL_KEY = 'eos-dev-sidebar-scroll';
+  var stored = null;
+  try { stored = sessionStorage.getItem(SCROLL_KEY); } catch (e) {}
+  if (stored !== null) {
+    bar.scrollTop = parseInt(stored, 10) || 0;
+  } else {
+    var activeLink = bar.querySelector('.eds-link.eds-active');
+    if (activeLink) {
+      var offset = activeLink.offsetTop - 120;
+      bar.scrollTop = offset > 0 ? offset : 0;
+    }
+  }
+
+  var saveTimer = null;
+  function saveScroll() {
+    try { sessionStorage.setItem(SCROLL_KEY, String(bar.scrollTop)); } catch (e) {}
+  }
+  bar.addEventListener('scroll', function() {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(saveScroll, 60);
+  });
+  bar.addEventListener('click', function(e) {
+    if (e.target.closest('.eds-link')) saveScroll();
+  });
+  window.addEventListener('beforeunload', saveScroll);
+  window.addEventListener('pagehide', saveScroll);
 })();
