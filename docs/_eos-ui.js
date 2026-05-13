@@ -141,21 +141,24 @@
         if (!entry.isIntersecting) return;
         var el = entry.target;
         statObserver.unobserve(el);
+        var idx = Array.prototype.indexOf.call(stats, el);
         var target = parseFloat(el.getAttribute('data-eos-stat'));
         var prefix = el.getAttribute('data-prefix') || '';
         var suffix = el.getAttribute('data-suffix') || '';
-        var duration = 900;
-        var start = performance.now();
+        var duration = 2200;
+        var delay = idx * 220;
+        var start = performance.now() + delay;
         function frame(now) {
+          if (now < start) { requestAnimationFrame(frame); return; }
           var t = Math.min(1, (now - start) / duration);
-          var eased = 1 - Math.pow(1 - t, 3);
-          var value = Math.round(target * eased);
+          var eased = 1 - Math.pow(1 - t, 4);
+          var value = target === 0 ? 0 : Math.round(target * eased);
           el.textContent = prefix + value + suffix;
           if (t < 1) requestAnimationFrame(frame);
         }
         requestAnimationFrame(frame);
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.4 });
     stats.forEach(function (s) { statObserver.observe(s); });
   } else {
     stats.forEach(function (el) {
