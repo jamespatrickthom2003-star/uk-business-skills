@@ -674,6 +674,189 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
   .eos-stat__value { font-size: 36px; }
 }
 
+/* ---------- SPECIMENS (mock product previews, three on the landing) ---------- */
+
+.eos-specimen-grid {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding: 0 var(--s-4);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-4);
+  align-items: start;
+}
+@media (max-width: 960px) {
+  .eos-specimen-grid { grid-template-columns: 1fr; max-width: 560px; gap: var(--s-5); }
+}
+
+.eos-specimen {
+  background: var(--surface-raised);
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--accent);
+  display: flex; flex-direction: column;
+  position: relative;
+  transform: perspective(1200px) rotateX(0) rotateY(0);
+  transition: transform 400ms var(--ease-out),
+              border-color var(--motion-base) var(--ease-hover);
+}
+.eos-specimen[data-accent="hmrc"] { --accent: var(--accent-hmrc); }
+.eos-specimen[data-accent="butter"] { --accent: var(--accent-butter); }
+.eos-specimen[data-accent="heritage"] { --accent: var(--accent-heritage); }
+.eos-specimen[data-accent="penalty"] { --accent: var(--accent-penalty); }
+.eos-specimen:hover {
+  transform: perspective(1200px) rotateX(2deg) rotateY(-2deg) translateY(-3px);
+  border-color: var(--ink-soft);
+}
+
+.eos-specimen__chrome {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: var(--s-2) var(--s-3);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-muted);
+  letter-spacing: 0;
+  background: var(--surface-base);
+}
+.eos-specimen__filename {
+  display: inline-flex; align-items: center; gap: var(--s-2);
+  font-family: var(--font-mono);
+}
+.eos-specimen__filename::before {
+  content: '';
+  width: 7px; height: 7px;
+  background: var(--accent);
+  transform: rotate(45deg);
+}
+
+.eos-specimen__body {
+  padding: var(--s-4);
+  flex: 1;
+  display: flex; flex-direction: column; gap: var(--s-3);
+}
+.eos-specimen__caption {
+  padding: var(--s-3) var(--s-4);
+  border-top: 1px solid var(--rule);
+  background: var(--surface-base);
+}
+.eos-specimen__caption-tag {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--s-1);
+  display: block;
+}
+.eos-specimen__caption-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--ink-primary);
+  line-height: 1.2;
+  margin-bottom: var(--s-1);
+}
+.eos-specimen__caption-meta {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+
+/* Specimen sub-styles: spreadsheet rows */
+.eos-specimen__sheet {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  border: 1px solid var(--rule);
+}
+.eos-specimen__sheet > * {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--rule);
+}
+.eos-specimen__sheet > *:nth-last-child(-n+2) { border-bottom: 0; }
+.eos-specimen__sheet > .eos-specimen__cell-label {
+  background: var(--surface-base);
+  font-family: var(--font-sans);
+  font-weight: 500;
+}
+.eos-specimen__sheet > .eos-specimen__cell-value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-primary);
+}
+.eos-specimen__sheet > .eos-specimen__cell-total {
+  background: var(--surface-base);
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Specimen sub-styles: document layout */
+.eos-specimen__doc h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink-primary);
+  margin-bottom: var(--s-2);
+  padding-bottom: var(--s-1);
+  border-bottom: 1px solid var(--rule);
+}
+.eos-specimen__doc dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px var(--s-3);
+  font-size: 12px;
+  margin-bottom: var(--s-2);
+}
+.eos-specimen__doc dt {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: var(--ink-muted);
+  padding-top: 2px;
+}
+.eos-specimen__doc dd {
+  font-family: var(--font-serif);
+  color: var(--ink-soft);
+}
+.eos-specimen__doc dd strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+.eos-specimen__doc-citation {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-muted);
+  padding: var(--s-2) 0;
+  border-top: 1px solid var(--rule);
+  margin-top: var(--s-1);
+}
+
+/* Specimen sub-styles: tracker rows */
+.eos-specimen__tracker {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 6px var(--s-2);
+  font-size: 11px;
+  font-family: var(--font-mono);
+}
+.eos-specimen__tracker > * { padding: 6px 0; border-bottom: 1px dashed var(--rule); }
+.eos-specimen__tracker > *:nth-last-child(-n+3) { border-bottom: 0; }
+.eos-specimen__tracker-date { color: var(--ink-muted); white-space: nowrap; }
+.eos-specimen__tracker-label { color: var(--ink-soft); font-family: var(--font-sans); }
+.eos-specimen__tracker-status {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
 /* ---------- REVEAL ON SCROLL (bundles + tools entering viewport) ---------- */
 
 .eos-reveal {
