@@ -1022,28 +1022,32 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
   .eos-hero__inner > * { opacity: 1; transform: none; animation: none; }
 }
 
-/* ---------- STAIR TABS (rise from behind the card's top edge on hover) ---------- */
-/* Anchored to the card's top edge. SVG sits above the card with its
-   bottom edge flush to the card's top. At rest, all three pyramid tabs
-   are translated down out of view so nothing is visible. On hover,
-   each tab rises into its equidistant stair-step position in sequence:
-   smallest (front) first, medium second, largest (back) last. */
+/* ---------- STAIR TABS (rise from below the title, peaks point up at it) ---------- */
+/* Anchored beneath the card title, peaks of each pyramid point UP at
+   the title above. At rest, all three pyramid tabs are translated
+   below the SVG bottom so nothing is visible. On hover, each tab
+   rises into its equidistant stair-step position in sequence: smallest
+   (front) first, medium second, largest (back) last. Each tab carries
+   a different opacity for depth, matching the layered-diamond logo. */
 
 .eos-card-mark {
-  position: absolute;
-  bottom: 100%;
-  right: var(--s-4);
+  display: block;
   width: 60px;
   height: 36px;
+  margin-top: var(--s-2);
   pointer-events: none;
   overflow: hidden;
-  z-index: 1;
 }
 .eos-card-mark__tab {
   fill: var(--accent);
   transform: translateY(40px);
   transition: transform 450ms var(--ease-out);
 }
+/* SVG order: largest (back) drawn first, smallest (front) drawn last
+   on top. Depth gradient via opacity attribute on each polygon. */
+.eos-card-mark__tab:nth-child(1) { opacity: 0.45; }   /* back / largest */
+.eos-card-mark__tab:nth-child(2) { opacity: 0.7; }    /* middle */
+.eos-card-mark__tab:nth-child(3) { opacity: 1; }      /* front / smallest */
 /* SVG order: largest (back) drawn first, smallest (front) drawn last
    so the smallest sits on top in z-stack. Animation order is the
    inverse: smallest rises first. */
