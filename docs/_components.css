@@ -214,12 +214,30 @@ small { font-size: var(--type-caption); line-height: 1.4; letter-spacing: var(--
   color: var(--ink-muted);
   margin-bottom: var(--s-4);
 }
+/* Tiny stacked-diamond mark before each eyebrow.
+   Inline SVG via background-image, sized 16x12, recoloured by CSS via
+   currentColor + url-encoded fill. Six concentric mini-diamonds, the
+   logo's lineage shrunk into an eyebrow flourish. */
 .eos-eyebrow::before {
   content: '';
-  width: 6px; height: 6px;
-  background: var(--accent);
-  transform: rotate(45deg);
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+  background-color: var(--accent);
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><polygon points='20,2 38,15 20,28 2,15'/><polygon points='20,5 35,15 20,25 5,15' fill='white'/><polygon points='20,7 33,15 20,23 7,15'/><polygon points='20,10 30,15 20,20 10,15' fill='white'/><polygon points='20,12 28,15 20,18 12,15'/></svg>") center/contain no-repeat;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 30'><polygon points='20,2 38,15 20,28 2,15'/><polygon points='20,5 35,15 20,25 5,15' fill='white'/><polygon points='20,7 33,15 20,23 7,15'/><polygon points='20,10 30,15 20,20 10,15' fill='white'/><polygon points='20,12 28,15 20,18 12,15'/></svg>") center/contain no-repeat;
+  transform: none;
 }
+
+/* Section-type accent map: each section header sets its accent via data-section-type.
+   The eyebrow + decorative marks within the section pick up the type-accent. */
+[data-section-type="statement"] { --accent: var(--accent-hmrc); }
+[data-section-type="catalogue"] { --accent: var(--accent-hmrc); }
+[data-section-type="editorial"] { --accent: var(--accent-heritage); }
+[data-section-type="specimen"]  { --accent: var(--accent-hmrc); }
+[data-section-type="manifesto"] { --accent: var(--accent-heritage); }
+[data-section-type="free"]      { --accent: var(--accent-butter); }
+[data-section-type="urgent"]    { --accent: var(--accent-penalty); }
 
 .eos-display {
   font-size: var(--type-display);
@@ -953,19 +971,75 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
   white-space: nowrap;
 }
 
-/* ---------- REVEAL ON SCROLL (bundles + tools entering viewport) ---------- */
+/* ---------- REVEAL ON SCROLL (diamond-layer build-up) ---------- */
+/* Children of a revealing parent stagger in like the brand mark
+   assembling itself: six beats, 60ms apart, 500ms each. */
 
 .eos-reveal {
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(24px);
   transition: opacity 500ms var(--ease-out), transform 500ms var(--ease-out);
 }
 .eos-reveal[data-visible="true"] {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Six-beat stagger for direct children of a [data-eos-stagger] container */
+[data-eos-stagger] > .eos-reveal { transition-delay: 0ms; }
+[data-eos-stagger] > .eos-reveal:nth-child(2) { transition-delay: 60ms; }
+[data-eos-stagger] > .eos-reveal:nth-child(3) { transition-delay: 120ms; }
+[data-eos-stagger] > .eos-reveal:nth-child(4) { transition-delay: 180ms; }
+[data-eos-stagger] > .eos-reveal:nth-child(5) { transition-delay: 240ms; }
+[data-eos-stagger] > .eos-reveal:nth-child(n+6) { transition-delay: 300ms; }
+
 @media (prefers-reduced-motion: reduce) {
   .eos-reveal { opacity: 1; transform: none; transition: none; }
+  [data-eos-stagger] > .eos-reveal { transition-delay: 0ms; }
+}
+
+/* ---------- HERO STAGGER (6-beat page-load build-up) ---------- */
+/* On first paint, hero children appear in tiered beats: rule, h1,
+   ledes, CTA row, trust band. Mimics the diamond drawing itself in. */
+
+.eos-hero__inner > * {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: eos-hero-in 700ms var(--ease-out) forwards;
+}
+.eos-hero__inner > *:nth-child(1) { animation-delay: 0ms; }
+.eos-hero__inner > *:nth-child(2) { animation-delay: 100ms; }
+.eos-hero__inner > *:nth-child(3) { animation-delay: 200ms; }
+.eos-hero__inner > *:nth-child(4) { animation-delay: 300ms; }
+.eos-hero__inner > *:nth-child(5) { animation-delay: 400ms; }
+.eos-hero__inner > *:nth-child(n+6) { animation-delay: 500ms; }
+
+@keyframes eos-hero-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .eos-hero__inner > * { opacity: 1; transform: none; animation: none; }
+}
+
+/* ---------- BUNDLE / TOOL ROW HOVER: 6-LAYER ACCENT STACK ---------- */
+/* Replaces the single 16px bar from v4. On hover, six tiny rules
+   fan in along the left edge in sequence, building like the diamond. */
+
+.eos-bundle-card::before,
+.eos-tool-card::before {
+  box-shadow: none;
+  transition: width 250ms var(--ease-out);
+}
+.eos-bundle-card:hover::before,
+.eos-tool-card:hover::before {
+  width: var(--s-3);
+  box-shadow:
+    0 -10px 0 -1.5px var(--accent),
+    0 -20px 0 -3px var(--accent),
+    0 -30px 0 -4.5px var(--accent),
+    0 10px 0 -1.5px var(--accent),
+    0 20px 0 -3px var(--accent),
+    0 30px 0 -4.5px var(--accent);
 }
 
 /* ---------- SECTIONS ---------- */

@@ -25,8 +25,8 @@
 
 <link rel="preload" href="./assets/fonts/plexserif-400-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="./assets/fonts/plexsans-400-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="./_design-tokens.css?v=10" />
-<link rel="stylesheet" href="./_components.css?v=10" />
+<link rel="stylesheet" href="./_design-tokens.css?v=11" />
+<link rel="stylesheet" href="./_components.css?v=11" />
 
 <script type="application/ld+json">
 {
@@ -113,7 +113,7 @@
 </div>
 
 <!-- Hero -->
-<section class="eos-hero eos-mark-rails" id="hero">
+<section class="eos-hero eos-mark-rails" id="hero" data-section-type="statement">
  <div class="eos-mark-rail eos-mark-rail--left" aria-hidden="true">
   <svg viewBox="0 0 140 280" preserveAspectRatio="xMinYMid meet">
    <polygon points="0,0 140,140 0,280"/>
@@ -200,24 +200,24 @@
 </section>
 
 <!-- How it works -->
-<section class="eos-section eos-section--alt" id="how" aria-labelledby="how-title">
+<section class="eos-section eos-section--alt" id="how" data-section-type="catalogue" aria-labelledby="how-title">
  <div class="eos-section__head">
   <span class="eos-eyebrow">How it works</span>
   <h2 id="how-title">Pick the tool. <em>Open the file. Done.</em></h2>
   <p>No subscriptions, no logins, no monthly bill. Every tool is a spreadsheet, a template pack or a browser calculator. You buy it once. You keep it forever. When HMRC rates change we ship the update.</p>
  </div>
- <div class="eos-step-row">
-  <article class="eos-step-card">
+ <div class="eos-step-row" data-eos-stagger>
+  <article class="eos-step-card eos-reveal">
    <div class="eos-step-card__num">1</div>
    <h4 class="eos-step-card__title">Take the 60-second quiz</h4>
    <p class="eos-step-card__body">Tell us if you're a sole trader, landlord, employer, creative or running a regulated practice. We curate three to five tools that fit your shape.</p>
   </article>
-  <article class="eos-step-card">
+  <article class="eos-step-card eos-reveal">
    <div class="eos-step-card__num">2</div>
    <h4 class="eos-step-card__title">Buy the toolkit</h4>
    <p class="eos-step-card__body">One payment, GBP, secure checkout. Downloads land in your email within seconds. Google Sheets, Excel, PDF and Word, ready to open.</p>
   </article>
-  <article class="eos-step-card">
+  <article class="eos-step-card eos-reveal">
    <div class="eos-step-card__num">3</div>
    <h4 class="eos-step-card__title">Run the work yourself</h4>
    <p class="eos-step-card__body">Tax bands, case law and rate changes are already inside. Type your numbers in. The tool gives you the figure HMRC actually wants, in the format they ask for.</p>
@@ -226,13 +226,13 @@
 </section>
 
 <!-- Bundles -->
-<section class="eos-section" id="products" aria-labelledby="products-title">
+<section class="eos-section" id="products" data-section-type="catalogue" aria-labelledby="products-title">
  <div class="eos-section__head">
   <span class="eos-eyebrow">The bundles</span>
   <h2 id="products-title">Buy the bundle. <em>Save against the per-tool prices.</em></h2>
   <p>Lifetime licence. Download once, use forever. Updates included when HMRC rates change.</p>
  </div>
- <div class="eos-bundle-grid">
+ <div class="eos-bundle-grid" data-eos-stagger>
 
   <article class="eos-bundle-card eos-reveal" data-accent="hmrc">
    <span class="eos-bundle-card__num">01</span>
@@ -331,13 +331,13 @@
 </section>
 
 <!-- What's actually inside (product specimens) -->
-<section class="eos-section" aria-labelledby="specimens-title">
+<section class="eos-section" aria-labelledby="specimens-title" data-section-type="specimen">
  <div class="eos-section__head">
   <span class="eos-eyebrow">What's actually inside</span>
   <h2 id="specimens-title">Three specimens from <em>the catalogue.</em></h2>
   <p>Spreadsheets you open in Google Sheets or Excel. Document templates you open in Word. Live trackers that get updated every time a rate changes. Below: a peek at what arrives in your inbox.</p>
  </div>
- <div class="eos-specimen-grid">
+ <div class="eos-specimen-grid" data-eos-stagger>
 
   <article class="eos-specimen eos-reveal" data-accent="hmrc">
    <div class="eos-specimen__chrome">
@@ -428,13 +428,13 @@
 </section>
 
 <!-- Secondary subscription stack comparison -->
-<section class="eos-section eos-section--alt" id="pricing-cuts" aria-labelledby="cuts-title">
+<section class="eos-section eos-section--alt" id="pricing-cuts" data-section-type="editorial" aria-labelledby="cuts-title">
  <div class="eos-section__head">
   <span class="eos-eyebrow">The maths against monthly</span>
   <h2 id="cuts-title">Stop subscribing for <em>the same answer.</em></h2>
   <p>Most UK freelancers and small employers don't bleed money on one big software bill. They bleed money on the stack. Bonsai for proposals, FreshBooks for invoicing, Notion Business for the workspace, DocuSign for contracts. Same job, smaller bill, paid once.</p>
  </div>
- <div class="eos-cuts">
+ <div class="eos-cuts" data-eos-stagger>
 
   <div class="eos-cuts__entry eos-reveal">
    <span class="eos-cuts__num">01</span>
@@ -535,13 +535,13 @@
 </section>
 
 <!-- Free tools -->
-<section class="eos-section" id="free-tools" aria-labelledby="free-title">
+<section class="eos-section" id="free-tools" data-section-type="free" aria-labelledby="free-title">
  <div class="eos-section__head">
   <span class="eos-eyebrow">Free, no signup</span>
   <h2 id="free-title">Five tools you can use right now. <em>No email gate.</em></h2>
   <p>Browser-based, same case law and HMRC rates as the paid kits. Use them as much as you want. Buy if and when you need the rest.</p>
  </div>
- <div class="eos-tool-grid">
+ <div class="eos-tool-grid" data-eos-stagger>
 
   <a class="eos-tool-card eos-reveal" data-accent="hmrc" href="./ir35-checker.html">
    <div class="eos-tool-card__head">
@@ -597,7 +597,7 @@
 </section>
 
 <!-- Why this exists -->
-<section class="eos-section eos-section--alt" aria-label="Why ExternalOS exists">
+<section class="eos-section eos-section--alt" aria-label="Why ExternalOS exists" data-section-type="manifesto">
  <div class="eos-section__head">
   <span class="eos-eyebrow">Why this exists</span>
   <h2>UK business admin shouldn't be <em>a subscription trap.</em></h2>
@@ -680,6 +680,6 @@
  </div>
 </footer>
 
-<script src="./_eos-ui.js?v=10" defer></script>
+<script src="./_eos-ui.js?v=11" defer></script>
 </body>
 </html>
