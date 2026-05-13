@@ -76,6 +76,18 @@
   --motion-fast: 150ms;
   --motion-base: 200ms;
   --motion-drawer: 250ms;
+
+  /* Slight rounding (workshop allows up to 2px on buttons; pulled to 3px for non-button surfaces) */
+  --radius-button: 3px;
+  --radius-card: 2px;
+
+  /* Logo + mark-rail 6-step gradient (HMRC-green ramp, light surface) */
+  --step-1: #DCE9E1;
+  --step-2: #B6D2C0;
+  --step-3: #87B69A;
+  --step-4: #58917B;
+  --step-5: #356F59;
+  --step-6: #1F4D38;
 }
 
 html[data-theme="dark"] {
@@ -92,6 +104,14 @@ html[data-theme="dark"] {
   --accent-penalty: #D26464;
 
   --accent: var(--accent-hmrc);
+
+  /* Logo + mark-rail 6-step gradient inverted for dark surface */
+  --step-1: #2A2F2C;
+  --step-2: #3A4B41;
+  --step-3: #4F6B5A;
+  --step-4: #6D9682;
+  --step-5: #92BDA8;
+  --step-6: #B8DCC9;
 }
 
 @media (prefers-reduced-motion: reduce) {
