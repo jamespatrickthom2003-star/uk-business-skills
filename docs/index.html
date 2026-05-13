@@ -54,39 +54,19 @@
 </head>
 <body>
 
-<!-- Logo sprite (stepped diamond, themed via .eos-logo-mark currentColor + opacity stack) -->
-<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
- <symbol id="eos-logo" viewBox="0 0 40 40">
-  <polygon points="20,4 34,18 20,32 6,18"/>
-  <polygon points="20,8.6 31.7,20.3 20,32 8.3,20.3"/>
-  <polygon points="20,13.2 29.4,22.6 20,32 10.6,22.6"/>
-  <polygon points="20,17.8 27.1,24.9 20,32 12.9,24.9"/>
-  <polygon points="20,22.4 24.8,27.2 20,32 15.2,27.2"/>
-  <polygon points="20,27 22.5,29.5 20,32 17.5,29.5"/>
- </symbol>
- <symbol id="eos-mark-rail-left" viewBox="0 0 140 280" preserveAspectRatio="xMinYMid meet">
-  <polygon points="0,0 140,140 0,280"/>
-  <polygon points="0,46 117,163 0,280"/>
-  <polygon points="0,92 94,186 0,280"/>
-  <polygon points="0,138 71,209 0,280"/>
-  <polygon points="0,184 48,232 0,280"/>
-  <polygon points="0,230 25,255 0,280"/>
- </symbol>
- <symbol id="eos-mark-rail-right" viewBox="0 0 140 280" preserveAspectRatio="xMaxYMid meet">
-  <polygon points="140,0 0,140 140,280"/>
-  <polygon points="140,46 23,163 140,280"/>
-  <polygon points="140,92 46,186 140,280"/>
-  <polygon points="140,138 69,209 140,280"/>
-  <polygon points="140,184 92,232 140,280"/>
-  <polygon points="140,230 115,255 140,280"/>
- </symbol>
-</svg>
 
 <!-- Header -->
 <header class="eos-header" data-eos-header role="banner">
  <div class="eos-header__inner">
   <a class="eos-header__brand" href="./" aria-label="ExternalOS home">
-   <svg class="eos-header__brand-mark eos-logo-mark" aria-hidden="true"><use href="#eos-logo"/></svg>
+   <svg class="eos-header__brand-mark eos-logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+    <polygon points="20,4 34,18 20,32 6,18"/>
+    <polygon points="20,8.6 31.7,20.3 20,32 8.3,20.3"/>
+    <polygon points="20,13.2 29.4,22.6 20,32 10.6,22.6"/>
+    <polygon points="20,17.8 27.1,24.9 20,32 12.9,24.9"/>
+    <polygon points="20,22.4 24.8,27.2 20,32 15.2,27.2"/>
+    <polygon points="20,27 22.5,29.5 20,32 17.5,29.5"/>
+   </svg>
    <span class="eos-header__brand-wordmark">ExternalOS</span>
   </a>
   <nav class="eos-header__nav" aria-label="Main navigation">
@@ -135,10 +115,24 @@
 <!-- Hero -->
 <section class="eos-hero eos-mark-rails" id="hero">
  <div class="eos-mark-rail eos-mark-rail--left" aria-hidden="true">
-  <svg viewBox="0 0 140 280" preserveAspectRatio="xMinYMid meet"><use href="#eos-mark-rail-left"/></svg>
+  <svg viewBox="0 0 140 280" preserveAspectRatio="xMinYMid meet">
+   <polygon points="0,0 140,140 0,280"/>
+   <polygon points="0,46 117,163 0,280"/>
+   <polygon points="0,92 94,186 0,280"/>
+   <polygon points="0,138 71,209 0,280"/>
+   <polygon points="0,184 48,232 0,280"/>
+   <polygon points="0,230 25,255 0,280"/>
+  </svg>
  </div>
  <div class="eos-mark-rail eos-mark-rail--right" aria-hidden="true">
-  <svg viewBox="0 0 140 280" preserveAspectRatio="xMaxYMid meet"><use href="#eos-mark-rail-right"/></svg>
+  <svg viewBox="0 0 140 280" preserveAspectRatio="xMaxYMid meet">
+   <polygon points="140,0 0,140 140,280"/>
+   <polygon points="140,46 23,163 140,280"/>
+   <polygon points="140,92 46,186 140,280"/>
+   <polygon points="140,138 69,209 140,280"/>
+   <polygon points="140,184 92,232 140,280"/>
+   <polygon points="140,230 115,255 140,280"/>
+  </svg>
  </div>
  <div class="eos-hero__inner">
   <hr class="eos-rule" aria-hidden="true">
