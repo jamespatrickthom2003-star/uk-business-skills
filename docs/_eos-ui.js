@@ -113,4 +113,60 @@
       });
     });
   }
+
+  // ---------- CART (localStorage, ready for Payhip wiring later) ----------
+
+  var CART_KEY = 'eos-cart';
+
+  function readCart() {
+    try {
+      var raw = localStorage.getItem(CART_KEY);
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) { return []; }
+  }
+  function writeCart(items) {
+    try { localStorage.setItem(CART_KEY, JSON.stringify(items)); } catch (e) {}
+  }
+  function cartCount() {
+    return readCart().length;
+  }
+  function refreshCartBadge() {
+    var nodes = document.querySelectorAll('[data-eos-cart]');
+    nodes.forEach(function (n) {
+      n.setAttribute('data-count', String(cartCount()));
+      var badge = n.querySelector('.eos-header__cart-count');
+      if (badge) badge.textContent = String(cartCount());
+    });
+  }
+  function addToCart(sku, name, price) {
+    var items = readCart();
+    if (items.some(function (i) { return i.sku === sku; })) return false;
+    items.push({ sku: sku, name: name, price: price, addedAt: Date.now() });
+    writeCart(items);
+    refreshCartBadge();
+    return true;
+  }
+  function removeFromCart(sku) {
+    var items = readCart().filter(function (i) { return i.sku !== sku; });
+    writeCart(items);
+    refreshCartBadge();
+  }
+  window.eosCart = { read: readCart, add: addToCart, remove: removeFromCart, count: cartCount, refresh: refreshCartBadge };
+  refreshCartBadge();
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-eos-add-to-cart]');
+    if (!btn) return;
+    e.preventDefault();
+    var sku = btn.getAttribute('data-sku');
+    var name = btn.getAttribute('data-name');
+    var price = btn.getAttribute('data-price');
+    if (!sku) return;
+    var added = addToCart(sku, name, price);
+    var label = btn.querySelector('.eos-button-label') || btn;
+    var original = btn.getAttribute('data-original-label') || label.textContent.trim();
+    btn.setAttribute('data-original-label', original);
+    label.textContent = added ? 'Added to cart' : 'Already in cart';
+    setTimeout(function () { label.textContent = original; }, 1800);
+  });
 })();

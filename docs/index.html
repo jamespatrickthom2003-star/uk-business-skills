@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ExternalOS. UK compliance, paid once</title>
-<meta name="description" content="UK business tools as files you keep, plus a live UK Compliance Tracker updated monthly. Tax, IR35, MTD, employment law, tenancy. Built on 2025/26 HMRC rates and real case law. 18 tools in 3 packs, pay once. Compliance Tracker £59 lifetime." />
-<meta name="keywords" content="ExternalOS, UK freelancer toolkit, IR35 checker, employer compliance, landlord legal pack, UK tax calculator, MTD, Notion template, UK business tools" />
+<title>ExternalOS. The boring admin, done.</title>
+<meta name="description" content="ExternalOS does the external stuff every UK business owner has to do, paid once. Tax calculators, IR35 kit, employer compliance, landlord templates, MTD spreadsheet. Files you keep, not subscriptions you rent." />
 <meta name="author" content="ExternalOS" />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://externalos.com/" />
 
 <meta property="og:type" content="website" />
-<meta property="og:title" content="ExternalOS. UK compliance, paid once" />
-<meta property="og:description" content="UK business tools as files you keep. 18 tools in 3 packs, plus a live UK Compliance Tracker refreshed every Friday. Tax, IR35, MTD, employment, tenancy." />
+<meta property="og:title" content="ExternalOS. We do the boring admin. You do the work." />
+<meta property="og:description" content="Tools that handle the external stuff every UK business owner has to do. Paid once. Files you keep. No subscriptions." />
 <meta property="og:url" content="https://externalos.com/" />
 <meta property="og:site_name" content="ExternalOS" />
 <meta property="og:locale" content="en_GB" />
@@ -20,14 +19,14 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@ExternalOS_" />
-<meta name="twitter:title" content="ExternalOS. UK compliance, paid once" />
-<meta name="twitter:description" content="UK business tools as files you keep. 18 tools in 3 packs, plus a live UK Compliance Tracker refreshed every Friday. Tax, IR35, MTD, employment, tenancy." />
+<meta name="twitter:title" content="ExternalOS. We do the boring admin. You do the work." />
+<meta name="twitter:description" content="Tools that handle the external stuff every UK business owner has to do. Paid once. Files you keep. No subscriptions." />
 <meta name="twitter:image" content="https://externalos.com/og-image.png" />
 
 <link rel="preload" href="./assets/fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="./assets/fonts/fraunces-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="./_design-tokens.css?v=2" />
-<link rel="stylesheet" href="./_components.css?v=2" />
+<link rel="stylesheet" href="./_design-tokens.css?v=3" />
+<link rel="stylesheet" href="./_components.css?v=3" />
 
 <script type="application/ld+json">
 {
@@ -36,10 +35,9 @@
  "name": "ExternalOS",
  "url": "https://externalos.com/",
  "logo": "https://externalos.com/og-image.png",
- "description": "ExternalOS builds UK business tools for freelancers, employers and landlords. Files you download once and keep, covering tax, IR35, MTD, compliance, employment law and tenancy. Built on 2025/26 HMRC rates and real case law.",
+ "description": "ExternalOS makes UK business admin tools: tax calculators, IR35 kits, employer compliance packs, landlord legal templates, MTD spreadsheets. Files you download once and keep. No subscriptions.",
  "foundingDate": "2026",
  "sameAs": [
-  "https://externalos.gumroad.com",
   "https://github.com/externalOS",
   "https://twitter.com/ExternalOS_",
   "https://instagram.com/externalos"
@@ -56,23 +54,45 @@
 </head>
 <body>
 
+<!-- Logo sprite (stepped diamond, themed via .eos-logo-mark currentColor + opacity stack) -->
 <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
  <symbol id="eos-logo" viewBox="0 0 40 40">
-  <polygon points="20,4 4,20 20,36" fill="currentColor"/>
-  <polygon points="20,4 36,20 20,36" style="fill: var(--accent, currentColor)"/>
+  <polygon points="20,4 34,18 20,32 6,18"/>
+  <polygon points="20,8.6 31.7,20.3 20,32 8.3,20.3"/>
+  <polygon points="20,13.2 29.4,22.6 20,32 10.6,22.6"/>
+  <polygon points="20,17.8 27.1,24.9 20,32 12.9,24.9"/>
+  <polygon points="20,22.4 24.8,27.2 20,32 15.2,27.2"/>
+  <polygon points="20,27 22.5,29.5 20,32 17.5,29.5"/>
+  <circle cx="20" cy="36" r="2"/>
+ </symbol>
+ <symbol id="eos-mark-rail-left" viewBox="0 0 140 280" preserveAspectRatio="xMinYMid meet">
+  <polygon points="0,0 140,140 0,280"/>
+  <polygon points="0,46 117,163 0,280"/>
+  <polygon points="0,92 94,186 0,280"/>
+  <polygon points="0,138 71,209 0,280"/>
+  <polygon points="0,184 48,232 0,280"/>
+  <polygon points="0,230 25,255 0,280"/>
+ </symbol>
+ <symbol id="eos-mark-rail-right" viewBox="0 0 140 280" preserveAspectRatio="xMaxYMid meet">
+  <polygon points="140,0 0,140 140,280"/>
+  <polygon points="140,46 23,163 140,280"/>
+  <polygon points="140,92 46,186 140,280"/>
+  <polygon points="140,138 69,209 140,280"/>
+  <polygon points="140,184 92,232 140,280"/>
+  <polygon points="140,230 115,255 140,280"/>
  </symbol>
 </svg>
 
-<!-- Anti-monthly banner -->
+<!-- Banner -->
 <div class="eos-banner">
- Most UK compliance software charges &pound;15-&pound;35 <strong>every month</strong>. Ours is <strong>paid once</strong>. <a href="#products">See the bundle &rarr;</a>
+ Most UK compliance software charges &pound;15-&pound;35 <strong>every month</strong>. Ours is <strong>paid once</strong>. <a href="#pricing-cuts">See what monthly really costs &rarr;</a>
 </div>
 
 <!-- Header -->
 <header class="eos-header" data-eos-header role="banner">
  <div class="eos-header__inner">
   <a class="eos-header__brand" href="./" aria-label="ExternalOS home">
-   <svg class="eos-header__brand-mark" aria-hidden="true"><use href="#eos-logo"/></svg>
+   <svg class="eos-header__brand-mark eos-logo-mark" aria-hidden="true"><use href="#eos-logo"/></svg>
    <span class="eos-header__brand-wordmark">ExternalOS</span>
   </a>
   <nav class="eos-header__nav" aria-label="Main navigation">
@@ -86,6 +106,10 @@
     <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
     <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
    </button>
+   <a class="eos-header__cart" href="./cart.html" data-eos-cart data-count="0" aria-label="View cart">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.6 12.3a2 2 0 0 0 2 1.7h8.8a2 2 0 0 0 2-1.7L22 7H6"/><circle cx="10" cy="21" r="1.3"/><circle cx="18" cy="21" r="1.3"/></svg>
+    <span class="eos-header__cart-count">0</span>
+   </a>
    <a class="eos-button eos-button--primary eos-button--small" href="./quiz.html" data-magnetic>Find my toolkit</a>
   </div>
   <button class="eos-header__hamburger" data-eos-drawer-open type="button" aria-label="Open menu" aria-controls="eos-drawer" aria-expanded="false">
@@ -105,6 +129,7 @@
    <a href="#free-tools">Free</a>
    <a href="./mtd.html">MTD</a>
    <a href="#products">Bundles</a>
+   <a href="./cart.html">Cart</a>
    <a href="./privacy.html">Privacy</a>
   </nav>
   <div class="eos-drawer__footer">
@@ -114,21 +139,26 @@
 </div>
 
 <!-- Hero -->
-<section class="eos-hero" id="hero">
+<section class="eos-hero eos-mark-rails" id="hero">
+ <div class="eos-mark-rail eos-mark-rail--left" aria-hidden="true">
+  <svg viewBox="0 0 140 280" preserveAspectRatio="xMinYMid meet"><use href="#eos-mark-rail-left"/></svg>
+ </div>
+ <div class="eos-mark-rail eos-mark-rail--right" aria-hidden="true">
+  <svg viewBox="0 0 140 280" preserveAspectRatio="xMaxYMid meet"><use href="#eos-mark-rail-right"/></svg>
+ </div>
  <div class="eos-hero__inner">
   <hr class="eos-rule" aria-hidden="true">
-  <span class="eos-hero__eyebrow eos-eyebrow">For UK sole traders, contractors, landlords, and small employers</span>
-  <h1>UK compliance, <em>paid once.</em></h1>
-  <p class="eos-hero__lede">Plain-English toolkits for UK tax and compliance you can run yourself. IR35, MTD, landlord, employer. <strong>One payment. No subscriptions. Lifetime updates when the legislation moves.</strong></p>
-  <p class="eos-hero__lede">Audit-ready output, built on the current HMRC framework. Files you keep, not a tool you rent.</p>
+  <h1>We do the boring admin. <em>You do the work.</em></h1>
+  <p class="eos-hero__lede">ExternalOS makes the spreadsheets, calculators and document packs UK business owners need to handle tax, IR35, MTD, landlord rules and employment law. <strong>Paid once. Files you keep. No monthly bill.</strong></p>
+  <p class="eos-hero__lede">Built on current HMRC rates and named UK case law. Ready for your accountant, ready for HMRC.</p>
   <div class="eos-hero__cta-row">
-   <a class="eos-button eos-button--primary" href="./quiz.html" data-magnetic>Find my toolkit (60-sec quiz)</a>
-   <a class="eos-button eos-button--secondary" href="./tools.html">Or browse all 18 tools</a>
+   <a class="eos-button eos-button--primary eos-button--large" href="./quiz.html" data-magnetic>Find my toolkit &nbsp;&rarr;</a>
+   <a class="eos-button eos-button--secondary eos-button--large" href="./tools.html">Browse all 18 tools</a>
   </div>
   <div class="eos-hero__trust">
-   <span class="eos-hero__trust-item"><strong>Built for HMRC, not the IRS.</strong> UK law, UK rates, UK case law. Built on 2025/26 HMRC bands.</span>
-   <span class="eos-hero__trust-item">Free <a href="./ir35-checker.html">IR35 checker live now</a>. Try it before you buy.</span>
-   <span class="eos-hero__trust-item">MTD for Income Tax phase 1 starts 6 April 2026 for &gt;&pound;50k. We're already on the 2025/26 bands. Last updated 18 Apr 2026.</span>
+   <span class="eos-hero__trust-item"><strong>Built for HMRC, not the IRS.</strong> UK law, UK rates, UK case law, 2025/26 bands baked in.</span>
+   <span class="eos-hero__trust-item">Five free tools live now. <a href="#free-tools">Use them before you buy.</a></span>
+   <span class="eos-hero__trust-item">MTD for Income Tax phase 1 hits 6 April 2026. Spreadsheet ready.</span>
    <span class="eos-hero__trust-item"><strong>14-day refund, no questions.</strong> Every file yours to keep, lifetime updates when the legislation moves.</span>
   </div>
  </div>
@@ -138,247 +168,186 @@
 <section class="eos-section eos-section--alt" id="how" aria-labelledby="how-title">
  <div class="eos-section__head">
   <span class="eos-eyebrow">How it works</span>
-  <h2 id="how-title">File in. <em>Answer out.</em></h2>
-  <p>Each skill is a structured instruction set you drop into whichever chat tool you already use. Not a chatbot, not a wrapper. The 2025/26 HMRC bands, CEST criteria, and named UK case law are already inside the file. Three steps.</p>
+  <h2 id="how-title">Pick the tool. <em>Open the file. Done.</em></h2>
+  <p>No subscriptions, no logins, no monthly bill. Every tool is a spreadsheet, a template pack or a browser calculator. You buy it once. You keep it forever. When the legislation moves we ship the update.</p>
  </div>
  <div class="eos-step-row">
   <article class="eos-step-card">
    <div class="eos-step-card__num">1</div>
-   <h4 class="eos-step-card__title">Download the skill file</h4>
-   <p class="eos-step-card__body">Pick the pack that matches your work. Each file covers one specific area of UK business compliance.</p>
+   <h4 class="eos-step-card__title">Take the 60-second quiz</h4>
+   <p class="eos-step-card__body">Tell us if you're a sole trader, landlord, employer, creative or running a regulated practice. We curate three to five tools that fit your shape.</p>
   </article>
   <article class="eos-step-card">
    <div class="eos-step-card__num">2</div>
-   <h4 class="eos-step-card__title">Drop it into your chat tool</h4>
-   <p class="eos-step-card__body">Tested on ChatGPT, Claude, and Gemini. Free tiers work. No API keys, no integrations, no setup.</p>
+   <h4 class="eos-step-card__title">Buy the toolkit</h4>
+   <p class="eos-step-card__body">One payment, GBP, secure checkout. Downloads land in your email within seconds. Google Sheets, Excel, PDF and Word, ready to open.</p>
   </article>
   <article class="eos-step-card">
    <div class="eos-step-card__num">3</div>
-   <h4 class="eos-step-card__title">Get the answer</h4>
-   <p class="eos-step-card__body">The skill walks you through the inputs, runs the maths against current rates, and gives you the figure your accountant or HMRC actually wants.</p>
+   <h4 class="eos-step-card__title">Run the work yourself</h4>
+   <p class="eos-step-card__body">Tax bands, case law and rate changes are already inside. Type your numbers in. The tool gives you the figure your accountant or HMRC actually wants.</p>
   </article>
  </div>
 </section>
 
-<!-- Sample skill file -->
-<section class="eos-section" aria-labelledby="file-preview-title">
+<!-- Bundles -->
+<section class="eos-section" id="products" aria-labelledby="products-title">
  <div class="eos-section__head">
-  <span class="eos-eyebrow">Sample skill file</span>
-  <h2 id="file-preview-title">This is what you actually <em>download.</em></h2>
-  <p>Plain Markdown. Open it in any text editor. Drop it into your chat tool as context. Below: the first page of the IR35 Status Assessment skill.</p>
- </div>
- <div class="eos-file-preview">
-  <div class="eos-file-preview__frame">
-   <div class="eos-file-preview__head">
-    <span>ir35-status-assessment.md</span>
-    <span>v2025.4</span>
-    <span>11 pages</span>
-    <span>8.4 KB</span>
-   </div>
-   <div class="eos-file-preview__body">
-    <h3># IR35 Status Assessment, UK 2025/26</h3>
-    <p>ExternalOS skill file. Last updated 9 Apr 2026. Built against current case law.</p>
-    <h4>## Purpose</h4>
-    <p>Determine whether a contract falls inside or outside IR35 (off-payroll working rules) under HMRC's published guidance and the leading UK case law. Output: a written status decision, a CEST comparison, and a Status Determination Statement (SDS) ready to send.</p>
-    <h4>## Reference framework</h4>
-    <ul>
-     <li>ITEPA 2003 Part 2 Chapter 8, the IR35 statute</li>
-     <li>HMRC's CEST tool decision logic, current at April 2026</li>
-     <li>Atholl House Productions Ltd v HMRC [2022] EWCA Civ 501</li>
-     <li>HMRC v PGMOL [2024] UKSC 29</li>
-     <li>Kickabout Productions Ltd v HMRC [2022] EWCA Civ 502</li>
-    </ul>
-    <h4>## How the skill works</h4>
-    <p>Walk the user through 14 questions covering: mutuality of obligation, right of substitution, control over work, financial risk, integration, exclusivity, intent and pay structure. Score against the three-stage Ready Mixed Concrete test as restated by the Court of Appeal in Atholl House.</p>
-    <h4>## Output formats supported</h4>
-    <ul>
-     <li>Plain-English status decision (1 paragraph)</li>
-     <li>Structured SDS document (HMRC-format, ready for the client)</li>
-     <li>CEST comparison table (your reasoning vs CEST output)</li>
-     <li>Risk register entry (for accountant or IFA records)</li>
-    </ul>
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- Products -->
-<section class="eos-section eos-section--alt" id="products" aria-labelledby="products-title">
- <div class="eos-section__head">
-  <span class="eos-eyebrow">The packs</span>
-  <h2 id="products-title">UK compliance, <em>paid once.</em> Pick the pack that fits.</h2>
-  <p>Lifetime licence. Download once, use forever.</p>
+  <span class="eos-eyebrow">The bundles</span>
+  <h2 id="products-title">Buy the bundle. <em>Save against the per-tool prices.</em></h2>
+  <p>Lifetime licence. Download once, use forever. Updates pushed free when the legislation moves.</p>
  </div>
  <div class="eos-bundle-grid">
 
   <article class="eos-bundle-card" data-accent="hmrc">
    <span class="eos-bundle-card__tag">01 / Full UK Business Suite</span>
    <h3 class="eos-bundle-card__title">Full UK Business Suite</h3>
-   <span class="eos-bundle-card__count">18 tools</span>
-   <p class="eos-bundle-card__body">For multi-hat businesses. Landlord plus freelancer. Employer plus contractor. All eighteen tools in one download. If you wear more than one hat, this pays for itself on the first deadline.</p>
-   <div class="eos-bundle-card__price">&pound;179<small>GBP, lifetime</small></div>
-   <p class="eos-bundle-card__vat">ex-VAT. 20% VAT added for UK/EU buyers at checkout.</p>
-   <p class="eos-bundle-card__save">Save &pound;272 vs buying separately</p>
-   <a class="eos-bundle-card__cta" href="https://externalos.gumroad.com/l/vrmevr" target="_blank" rel="noopener">Buy the Suite &rarr;</a>
+   <span class="eos-bundle-card__count">All 18 tools</span>
+   <p class="eos-bundle-card__body">For people who wear more than one hat. Sole trader and landlord. Employer and contractor. Property pro running a small shop. Every spreadsheet, template pack and document we make, all eighteen tools, in one download.</p>
+   <div class="eos-bundle-card__price">&pound;179<small>once, yours forever</small></div>
+   <p class="eos-bundle-card__save">Save &pound;272 against the per-tool prices</p>
+   <div class="eos-bundle-card__actions">
+    <button class="eos-button eos-button--primary" type="button" data-eos-add-to-cart data-sku="bundle-suite" data-name="Full UK Business Suite" data-price="179"><span class="eos-button-label">Add to cart</span></button>
+    <a class="eos-bundle-card__details" href="./tools.html#suite">What's inside</a>
+   </div>
   </article>
 
   <article class="eos-bundle-card" data-accent="hmrc">
    <span class="eos-bundle-card__tag">02 / Freelancer Toolkit</span>
-   <h3 class="eos-bundle-card__title">UK Freelancer Toolkit</h3>
-   <span class="eos-bundle-card__count">6 skill files</span>
-   <p class="eos-bundle-card__body">Tax calculator, IR35 assessment, contract review, invoice categoriser, proposal generator, client comms. Six files, one download. Covers Self Assessment 31 January 2026 and MTD for Income Tax (phase 1 live 6 April 2026 for &gt;&pound;50k turnover).</p>
-   <div class="eos-bundle-card__price">&pound;49<small>GBP, lifetime</small></div>
-   <p class="eos-bundle-card__vat">ex-VAT. 20% VAT added for UK/EU buyers at checkout.</p>
-   <p class="eos-bundle-card__save">Save &pound;75 vs buying separately</p>
-   <a class="eos-bundle-card__cta" href="https://externalos.gumroad.com/l/aavttu" target="_blank" rel="noopener">Buy this pack &rarr;</a>
+   <h3 class="eos-bundle-card__title">Freelancer Toolkit</h3>
+   <span class="eos-bundle-card__count">6 tools</span>
+   <p class="eos-bundle-card__body">UK tax calculator, IR35 assessment kit, contract review, invoice and expense categoriser, proposal generator, client comms pack. Covers Self Assessment 31 January and MTD for Income Tax phase 1 from April 2026.</p>
+   <div class="eos-bundle-card__price">&pound;49<small>once, yours forever</small></div>
+   <p class="eos-bundle-card__save">Save &pound;75 against the per-tool prices</p>
+   <div class="eos-bundle-card__actions">
+    <button class="eos-button eos-button--primary" type="button" data-eos-add-to-cart data-sku="bundle-freelancer" data-name="Freelancer Toolkit" data-price="49"><span class="eos-button-label">Add to cart</span></button>
+    <a class="eos-bundle-card__details" href="./tools.html#freelancer">What's inside</a>
+   </div>
   </article>
 
   <article class="eos-bundle-card" data-accent="hmrc">
-   <span class="eos-bundle-card__tag">03 / Employer</span>
-   <h3 class="eos-bundle-card__title">UK Employer Compliance Pack</h3>
-   <span class="eos-bundle-card__count">7 skill files</span>
-   <p class="eos-bundle-card__body">Employment law, employee handbooks, health and safety risk assessments, GDPR compliance, AML/KYC documentation, contract review, client comms drafter. Updated for 2025/26 statutory rates (SSP &pound;118.75, redundancy cap &pound;719) and ERA 2025 commencement timing.</p>
-   <div class="eos-bundle-card__price">&pound;89<small>GBP, lifetime</small></div>
-   <p class="eos-bundle-card__vat">ex-VAT. 20% VAT added for UK/EU buyers at checkout.</p>
-   <p class="eos-bundle-card__save">Save &pound;134 vs buying separately</p>
-   <a class="eos-bundle-card__cta" href="https://externalos.gumroad.com/l/fxlgeq" target="_blank" rel="noopener">Buy this pack &rarr;</a>
+   <span class="eos-bundle-card__tag">03 / Employer Compliance</span>
+   <h3 class="eos-bundle-card__title">Employer Compliance Pack</h3>
+   <span class="eos-bundle-card__count">7 tools</span>
+   <p class="eos-bundle-card__body">Employment law kit, employee handbook generator, HSE risk assessments, GDPR documents, AML and KYC pack, contract review, client comms. Updated for 2025/26 statutory rates and ERA 2025 commencement timing.</p>
+   <div class="eos-bundle-card__price">&pound;89<small>once, yours forever</small></div>
+   <p class="eos-bundle-card__save">Save &pound;134 against the per-tool prices</p>
+   <div class="eos-bundle-card__actions">
+    <button class="eos-button eos-button--primary" type="button" data-eos-add-to-cart data-sku="bundle-employer" data-name="Employer Compliance Pack" data-price="89"><span class="eos-button-label">Add to cart</span></button>
+    <a class="eos-bundle-card__details" href="./tools.html#employer">What's inside</a>
+   </div>
   </article>
 
   <article class="eos-bundle-card" data-accent="penalty">
    <span class="eos-bundle-card__tag">04 / Landlord 31 May Kit</span>
-   <h3 class="eos-bundle-card__title">UK Landlord 31 May Deadline Kit</h3>
+   <h3 class="eos-bundle-card__title">Landlord 31 May Kit</h3>
    <span class="eos-bundle-card__count">4 documents + getting-started PDF</span>
-   <p class="eos-bundle-card__body">Landlords of assured tenancies in England must comply with Renters' Rights Act 2025 transition rules by 31 May 2026. Financial penalty up to &pound;7,000 per breach. Ships a Section 21 transition guide, a tenant information sheet, a Ground 4A statement, and the grounds-for-possession quick reference. Plain English, ready to use.</p>
-   <div class="eos-bundle-card__price">&pound;29<small>GBP, lifetime</small></div>
-   <p class="eos-bundle-card__vat">ex-VAT. 20% VAT added for UK/EU buyers at checkout.</p>
-   <a class="eos-bundle-card__cta" href="https://externalos.gumroad.com/l/landlord31may" target="_blank" rel="noopener">Buy this pack &rarr;</a>
+   <p class="eos-bundle-card__body">Renters' Rights Act 2025 transition deadline is 31 May 2026. Fines up to &pound;7,000 per breach. Ships a Section 21 transition guide, tenant information sheet, Ground 4A statement, and the grounds-for-possession quick reference. Plain English, ready to use.</p>
+   <div class="eos-bundle-card__price">&pound;29<small>once, yours forever</small></div>
+   <div class="eos-bundle-card__actions">
+    <button class="eos-button eos-button--primary" type="button" data-eos-add-to-cart data-sku="bundle-landlord-31-may" data-name="Landlord 31 May Kit" data-price="29"><span class="eos-button-label">Add to cart</span></button>
+    <a class="eos-bundle-card__details" href="./landlord-31-may-kit.html">What's inside</a>
+   </div>
   </article>
 
   <article class="eos-bundle-card" data-accent="heritage">
-   <span class="eos-bundle-card__tag">05 / Landlord</span>
-   <h3 class="eos-bundle-card__title">UK Landlord Legal Pack</h3>
-   <span class="eos-bundle-card__count">3 skill files</span>
-   <p class="eos-bundle-card__body">Landlord compliance (RRA 2025-aware), rental yield and SDLT calculator (post-1 April 2025 bands), GDPR compliance for tenant data. Built for England-based portfolio landlords.</p>
-   <div class="eos-bundle-card__price">&pound;29<small>GBP, lifetime</small></div>
-   <p class="eos-bundle-card__vat">ex-VAT. 20% VAT added for UK/EU buyers at checkout.</p>
-   <a class="eos-bundle-card__cta" href="https://externalos.gumroad.com/l/iuffuj" target="_blank" rel="noopener">Buy this pack &rarr;</a>
+   <span class="eos-bundle-card__tag">05 / Landlord Legal Pack</span>
+   <h3 class="eos-bundle-card__title">Landlord Legal Pack</h3>
+   <span class="eos-bundle-card__count">3 tools</span>
+   <p class="eos-bundle-card__body">Landlord compliance (RRA 2025-aware), rental yield and SDLT calculator (post-April 2025 bands), GDPR for tenant data. Built for England-based portfolio landlords.</p>
+   <div class="eos-bundle-card__price">&pound;29<small>once, yours forever</small></div>
+   <div class="eos-bundle-card__actions">
+    <button class="eos-button eos-button--primary" type="button" data-eos-add-to-cart data-sku="bundle-landlord-legal" data-name="Landlord Legal Pack" data-price="29"><span class="eos-button-label">Add to cart</span></button>
+    <a class="eos-bundle-card__details" href="./uk-landlord-compliance.html">What's inside</a>
+   </div>
   </article>
 
   <article class="eos-bundle-card" data-accent="butter">
-   <span class="eos-bundle-card__tag">06 / Compliance Tracker (new)</span>
+   <span class="eos-bundle-card__tag">06 / Compliance Tracker</span>
    <h3 class="eos-bundle-card__title">UK Compliance Tracker</h3>
    <span class="eos-bundle-card__count">Live Google Sheet</span>
-   <p class="eos-bundle-card__body">Every UK tax deadline, threshold, rate change, landlord reform milestone and IR35 tribunal citation a UK operator needs, in one live Sheet. Updated monthly. 8 tabs, every figure sourced to gov.uk or BAILII with a last-verified date. Lifetime access, one payment.</p>
-   <div class="eos-bundle-card__price">&pound;59<small>GBP, lifetime</small></div>
-   <p class="eos-bundle-card__vat">ex-VAT. One-time payment, lifetime access, monthly updates. 20% VAT added for UK/EU buyers at checkout.</p>
-   <a class="eos-bundle-card__cta" href="https://externalos.gumroad.com/l/compliance-tracker" target="_blank" rel="noopener">Buy this pack &rarr;</a>
+   <p class="eos-bundle-card__body">Every UK tax deadline, threshold, rate change, landlord milestone and IR35 tribunal citation a UK operator needs, in one live sheet. Updated monthly. Eight tabs, every figure sourced to gov.uk or BAILII with a last-verified date.</p>
+   <div class="eos-bundle-card__price">&pound;59<small>once, yours forever</small></div>
+   <div class="eos-bundle-card__actions">
+    <button class="eos-button eos-button--primary" type="button" data-eos-add-to-cart data-sku="compliance-tracker" data-name="UK Compliance Tracker" data-price="59"><span class="eos-button-label">Add to cart</span></button>
+    <a class="eos-bundle-card__details" href="./tools.html#tracker">What's inside</a>
+   </div>
   </article>
 
  </div>
 </section>
 
-<!-- Why not ChatGPT -->
-<section class="eos-section" aria-labelledby="why-not-title">
+<!-- Secondary subscription stack comparison -->
+<section class="eos-section eos-section--alt" id="pricing-cuts" aria-labelledby="cuts-title">
  <div class="eos-section__head">
-  <h2 id="why-not-title">Why not just <em>ask ChatGPT?</em></h2>
-  <p>Because a generic chatbot is a starting point, not a finishing line. UK tax and compliance need more than a best guess.</p>
- </div>
- <div class="eos-comparison">
-  <div class="eos-comparison__col">
-   <h3>Generic chatbot</h3>
-   <ul class="eos-comparison__list">
-    <li><span class="eos-comparison__count">0</span>named UK case law citations. Guesses UK rates from training data that may be months or years out of date.</li>
-    <li><span class="eos-comparison__count">3+</span>jurisdictions blurred. Mixes UK, US, and EU regulations without warning.</li>
-    <li><span class="eos-comparison__count">69-88%</span>hallucination rate on legal queries (Stanford HAI, Dahl et al., 2024).</li>
-    <li>You have to know what to ask, and how to ask it. Every single time.</li>
-    <li>Doesn't know what Renters' Rights Act 2025 actually changed.</li>
-   </ul>
-  </div>
-  <div class="eos-comparison__col eos-comparison__col--featured">
-   <h3>ExternalOS skill</h3>
-   <ul class="eos-comparison__list">
-    <li><span class="eos-comparison__count">3</span>named IR35 cases embedded (Atholl House, PGMOL, Kickabout Productions). 2025/26 HMRC bands. CEST-aligned.</li>
-    <li><span class="eos-comparison__count">1</span>jurisdiction, UK only. Built for HMRC, not the IRS.</li>
-    <li><span class="eos-comparison__count">42</span>rate variables tracked. <span class="eos-comparison__count">17</span>Section 8 grounds documented. <span class="eos-comparison__count">38</span>CEST decision points.</li>
-    <li>Structured workflow, no prompt engineering required.</li>
-    <li>Written by a small UK team who file the same forms and sit with the same HMRC tabs as the people this is for.</li>
-   </ul>
-   <p class="eos-comparison__footnote">11 discrete checks per IR35 run, versioned against 2025/26 HMRC bands. Methodology on <a href="https://github.com/externalOS" target="_blank" rel="noopener">GitHub</a>.</p>
-  </div>
- </div>
-</section>
-
-<!-- 3-year cost comparison table -->
-<section class="eos-section eos-section--alt" aria-label="Cost comparison vs UK accounting SaaS">
- <div class="eos-section__head">
-  <span class="eos-eyebrow">3-year cost</span>
-  <h2>The same compliance job, <em>half the price.</em></h2>
-  <p>Most UK compliance software charges &pound;15-&pound;35 every month. Over three years that's &pound;540-&pound;1,260 per tier. Our Full Suite covers 18 tools for &pound;179, once.</p>
+  <span class="eos-eyebrow">The maths against monthly</span>
+  <h2 id="cuts-title">Your accountant still does the books. <em>We replace everything else.</em></h2>
+  <p>Most freelancers and small employers don't bleed money on Sage. They bleed money on the secondary subscription stack. Bonsai for proposals, FreshBooks for invoicing, Notion Business for the workspace, DocuSign for contracts. Same job, smaller bill, paid once.</p>
  </div>
  <div class="eos-table-wrap">
   <table class="eos-table">
    <thead>
     <tr>
-     <th>Provider</th>
-     <th>Monthly</th>
-     <th>3 years</th>
-     <th>Lock-in</th>
+     <th>What it replaces</th>
+     <th>Their price</th>
+     <th>Three-year cost</th>
+     <th>Our equivalent</th>
     </tr>
    </thead>
    <tbody>
     <tr>
-     <td>Sage Accounting (Standard)</td>
-     <td>&pound;21.60-&pound;46.80</td>
-     <td>&pound;778-&pound;1,685</td>
-     <td>Lose access if you stop</td>
+     <td>Bonsai (proposals + contracts)</td>
+     <td>&pound;19/mo</td>
+     <td>&pound;684</td>
+     <td>Proposal Generator &pound;29</td>
     </tr>
     <tr>
-     <td>QuickBooks (Sole Trader)</td>
-     <td>&pound;12-&pound;19.20</td>
-     <td>&pound;432-&pound;691</td>
-     <td>Monthly subscription</td>
-    </tr>
-    <tr>
-     <td>FreshBooks (Lite)</td>
-     <td>&pound;15-&pound;25</td>
+     <td>FreshBooks Lite (invoicing + categorisation)</td>
+     <td>&pound;15-&pound;25/mo</td>
      <td>&pound;540-&pound;900</td>
-     <td>Monthly subscription</td>
+     <td>Invoice / Expense Categoriser &pound;19</td>
     </tr>
     <tr>
-     <td>Xero (Starter)</td>
-     <td>&pound;15-&pound;33</td>
-     <td>&pound;540-&pound;1,188</td>
-     <td>Monthly, your data hostage</td>
+     <td>Notion Business (templates + workspace)</td>
+     <td>&pound;8/mo per user</td>
+     <td>&pound;288</td>
+     <td>Freelancer OS Notion template &pound;29</td>
     </tr>
     <tr>
-     <td>Crunch (Sole Trader)</td>
-     <td>&pound;24.50</td>
-     <td>&pound;882</td>
-     <td>Bundled with accountant fees</td>
+     <td>DocuSign Personal (signed contracts)</td>
+     <td>&pound;10/mo</td>
+     <td>&pound;360</td>
+     <td>Creative Contracts Pack &pound;29</td>
+    </tr>
+    <tr>
+     <td>Qdos IR35 Status Plus (per-contract)</td>
+     <td>&pound;49 per check</td>
+     <td>Adds up fast</td>
+     <td>IR35 Assessment Kit &pound;29</td>
     </tr>
     <tr class="eos-table__row--featured">
-     <td>ExternalOS Full Suite</td>
-     <td>&pound;0</td>
-     <td>&pound;179</td>
-     <td>Yours forever. No account. No subscription.</td>
+     <td>ExternalOS Freelancer Toolkit</td>
+     <td>&pound;0/mo</td>
+     <td>&pound;49</td>
+     <td>All five, yours forever</td>
     </tr>
    </tbody>
   </table>
  </div>
  <div class="eos-section__head" style="margin-top: var(--s-5); margin-bottom: 0;">
-  <p>Prices verified from public UK pricing pages as of May 2026. Sage and QuickBooks ranges reflect their UK introductory and standard tiers. All competitor prices add 20% VAT at checkout. We add 20% VAT once at &pound;179.</p>
+  <p>Prices verified from public UK pricing pages, May 2026. Competitor prices add 20% VAT at checkout. Our prices are total at checkout, no add-ons.</p>
  </div>
  <div style="text-align: center; margin-top: var(--s-5);">
-  <a class="eos-button eos-button--primary" href="#products" data-magnetic>See the Full Suite &pound;179</a>
+  <a class="eos-button eos-button--primary eos-button--large" href="#products" data-magnetic>See the bundles &rarr;</a>
  </div>
 </section>
 
 <!-- Free tools -->
 <section class="eos-section" id="free-tools" aria-labelledby="free-title">
  <div class="eos-section__head">
-  <span class="eos-eyebrow">No signup required</span>
-  <h2 id="free-title">Five free tools. <em>No email gate.</em></h2>
-  <p>Plain-text, browser-based tools using the same case law, HMRC rates, and Companies House rules as the paid packs. Use them as much as you want. Buy if and when you want the rest.</p>
+  <span class="eos-eyebrow">Free, no signup</span>
+  <h2 id="free-title">Five tools you can use right now. <em>No email gate.</em></h2>
+  <p>Browser-based, same case law and HMRC rates as the paid kits. Use them as much as you want. Buy if and when you need the rest.</p>
  </div>
  <div class="eos-tool-grid">
 
@@ -388,7 +357,7 @@
     <span class="eos-tool-card__price">Free</span>
    </div>
    <h3 class="eos-tool-card__title">IR35 Status Checker</h3>
-   <p class="eos-tool-card__body">Seven CEST-style questions, instant verdict. Substitution, control, mutuality of obligation, financial risk, equipment, integration, exclusivity. Modelled on Atholl House, PGMOL, and Pimlico Plumbers.</p>
+   <p class="eos-tool-card__body">Seven CEST-style questions, instant verdict. Substitution, control, mutuality, financial risk, equipment, integration, exclusivity. Modelled on Atholl House, PGMOL and Kickabout.</p>
    <span class="eos-tool-card__cta">Open the checker &rarr;</span>
   </a>
 
@@ -398,7 +367,7 @@
     <span class="eos-tool-card__price">Free</span>
    </div>
    <h3 class="eos-tool-card__title">Compliance Calendar</h3>
-   <p class="eos-tool-card__body">Year-end in. Every Companies House and HMRC deadline for the next 12 months out. Accounts, Corp Tax, VAT quarters, PAYE, P11D, MTD ITSA. Exportable as .ics.</p>
+   <p class="eos-tool-card__body">Year-end in. Every Companies House and HMRC deadline for the next twelve months out. Accounts, Corp Tax, VAT quarters, PAYE, P11D, MTD ITSA. Exportable as .ics.</p>
    <span class="eos-tool-card__cta">Build my calendar &rarr;</span>
   </a>
 
@@ -408,7 +377,7 @@
     <span class="eos-tool-card__price">Free</span>
    </div>
    <h3 class="eos-tool-card__title">Employer Costs Calculator</h3>
-   <p class="eos-tool-card__body">Salary in. Full annual cost out. Class 1 employer NI (15% above &pound;5k), Employment Allowance &pound;10,500, pension auto-enrol, holiday accrual, NLW/NMW compliance. April 2026 rates.</p>
+   <p class="eos-tool-card__body">Salary in. Full annual cost out. Class 1 employer NI (15% above &pound;5k), Employment Allowance &pound;10,500, pension auto-enrol, holiday accrual, NLW and NMW compliance. April 2026 rates.</p>
    <span class="eos-tool-card__cta">Calculate the cost &rarr;</span>
   </a>
 
@@ -418,8 +387,18 @@
     <span class="eos-tool-card__price">Free</span>
    </div>
    <h3 class="eos-tool-card__title">Landlord Compliance Check</h3>
-   <p class="eos-tool-card__body">Twelve yes/no questions covering the Renters' Rights Act 2026, the 31 May Information Sheet (&pound;7,000 fines), Section 13 rent rules, deposit protection, EPC, Right to Rent, HMO, MTD ITSA.</p>
+   <p class="eos-tool-card__body">Twelve yes/no questions covering the Renters' Rights Act 2026, the 31 May information sheet (&pound;7k fines), Section 13 rent rules, deposit protection, EPC, Right to Rent, HMO and MTD ITSA.</p>
    <span class="eos-tool-card__cta">Start the check &rarr;</span>
+  </a>
+
+  <a class="eos-tool-card" href="./mtd-clock.html">
+   <div class="eos-tool-card__head">
+    <span class="eos-tool-card__category">Sole trader / landlord</span>
+    <span class="eos-tool-card__price">Free</span>
+   </div>
+   <h3 class="eos-tool-card__title">MTD Penalty Clock</h3>
+   <p class="eos-tool-card__body">Live countdown to MTD for Income Tax phase 1 (6 April 2026, &gt;&pound;50k turnover). Penalty bands, late-filing points, daily-rate triggers. Updated to the latest HMRC schedule.</p>
+   <span class="eos-tool-card__cta">Start the clock &rarr;</span>
   </a>
 
  </div>
@@ -428,14 +407,14 @@
 <!-- Founder note -->
 <section class="eos-section eos-section--alt" aria-label="Why ExternalOS exists">
  <div class="eos-section__head">
-  <span class="eos-eyebrow">Why I built this</span>
+  <span class="eos-eyebrow">Why this exists</span>
   <h2>Built by a guy in Yorkshire who'd had <em>enough Sundays on HMRC tabs.</em></h2>
  </div>
  <div class="eos-container--reading" style="text-align: left;">
-  <p style="margin-bottom: var(--s-3); color: var(--ink-soft);">I'm a sole trader myself. I'd spent too many Sundays on the same HMRC tabs, the same 11pm panic before 31 January, the same "is this allowable?" question Googled four different ways. The category response is either a &pound;19-a-month subscription that wants to live in your bank account forever, or an accountant at &pound;200 an hour whose hour you cannot afford.</p>
-  <p style="margin-bottom: var(--s-3); color: var(--ink-soft);">There was a third path nobody was selling. Do the work once. Package it as files. Sell it for the price of a takeaway. When the legislation moves, ship the update for free. The point of compliance software is not to charge you every month for the same answer; it is to give you the answer in a file you can keep.</p>
-  <p style="font-style: italic; font-size: 19px; color: var(--accent); border-left: 2px solid var(--accent); padding-left: var(--s-3);">I charge &pound;9 to &pound;49 per tool because the work is done. Not per user, not per month, not per filing. You download the file, you keep the file, and when the legislation moves I ship the update. That's the whole arrangement.</p>
-  <p style="margin-top: var(--s-4); color: var(--ink-muted); font-size: 14px;">Reach me at <a href="mailto:hello@externalos.com">hello@externalos.com</a>.</p>
+  <p style="margin-bottom: var(--s-3); color: var(--ink-soft);">I'm a sole trader myself. I'd spent too many Sundays on the same HMRC pages, the same 11pm panic before 31 January, the same "is this allowable?" question Googled four different ways. The category response is a &pound;19-a-month subscription that wants to live in your bank account forever, or an accountant at &pound;200 an hour whose hour you can't afford.</p>
+  <p style="margin-bottom: var(--s-3); color: var(--ink-soft);">There was a third option nobody was selling. Do the work once. Package it as files. Sell it for the price of a takeaway. When the legislation moves, ship the update for free. The point of compliance software is not to charge you every month for the same answer; it is to give you the answer in a file you can keep.</p>
+  <p style="font-style: italic; font-size: 19px; color: var(--accent); border-left: 2px solid var(--accent); padding-left: var(--s-3); margin-bottom: var(--s-3);">I charge &pound;9 to &pound;49 per tool because the work is done. Not per user, not per month, not per filing. You download the file, you keep the file, and when the legislation moves I ship the update. That's the whole arrangement.</p>
+  <p style="color: var(--ink-muted); font-size: 14px;">Reach me at <a href="mailto:hello@externalos.com">hello@externalos.com</a>.</p>
  </div>
 </section>
 
@@ -480,11 +459,11 @@
    <div class="eos-footer__col">
     <h5>Company</h5>
     <ul>
+     <li><a href="./cart.html">Cart</a></li>
      <li><a href="./terms.html">Terms</a></li>
      <li><a href="./privacy.html">Privacy</a></li>
      <li><a href="./refund-policy.html">Refund policy</a></li>
      <li><a href="mailto:hello@externalos.com">hello@externalos.com</a></li>
-     <li><a href="https://github.com/externalOS" rel="noopener">GitHub</a></li>
     </ul>
    </div>
   </div>
@@ -492,7 +471,7 @@
   <div class="eos-footer__newsletter">
    <div class="eos-footer__newsletter-copy">
     <h4>The Brief, weekly</h4>
-    <p>UK compliance, tax, landlord, employer changes that actually matter. One email, one Friday morning.</p>
+    <p>UK compliance, tax, landlord and employer changes that actually matter. One email, Friday morning, fifteen minutes max.</p>
    </div>
    <form class="eos-footer__newsletter-form" action="mailto:hello@externalos.com" method="get">
     <input class="eos-footer__newsletter-input" type="email" name="email" placeholder="you@somewhere.co.uk" aria-label="Email address" required>
@@ -502,12 +481,12 @@
 
   <div class="eos-footer__colophon">
    <p>Set in Fraunces and IBM Plex Mono. Built in 2026 in Yorkshire. Tax data current to the 2026/27 HMRC schedule. Spreadsheet templates compatible with Excel and Google Sheets.</p>
-   <p>ExternalOS 2026. Sole trader, not VAT registered. Lifetime licence. Files you keep. <a href="./terms.html">Terms</a>, <a href="./privacy.html">Privacy</a>, <a href="./refund-policy.html">Refunds</a>.</p>
+   <p>ExternalOS 2026. Sole trader. Lifetime licence. Files you keep. <a href="./terms.html">Terms</a>, <a href="./privacy.html">Privacy</a>, <a href="./refund-policy.html">Refunds</a>.</p>
    <p>Informational tool, not tax or legal advice. Consult a qualified adviser for decisions affecting your tax, legal, or compliance position.</p>
   </div>
  </div>
 </footer>
 
-<script src="./_eos-ui.js?v=2" defer></script>
+<script src="./_eos-ui.js?v=3" defer></script>
 </body>
 </html>
