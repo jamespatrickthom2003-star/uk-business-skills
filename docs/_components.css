@@ -305,7 +305,6 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
 .eos-logo-mark polygon:nth-child(4) { fill: var(--step-4); }
 .eos-logo-mark polygon:nth-child(5) { fill: var(--step-5); }
 .eos-logo-mark polygon:nth-child(6) { fill: var(--step-6); }
-.eos-logo-mark circle { fill: var(--step-6); }
 
 /* ---------- MARK RAILS (hero side decoration, same 6-step ramp) ---------- */
 
