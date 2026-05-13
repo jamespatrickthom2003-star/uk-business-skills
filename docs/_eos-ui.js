@@ -114,6 +114,74 @@
     });
   }
 
+  // ---------- TICKER (hero "what just changed" feed) ----------
+
+  var ticker = document.querySelector('[data-eos-ticker]');
+  if (ticker) {
+    var items = ticker.querySelectorAll('.eos-ticker__item');
+    if (items.length > 1) {
+      var i = 0;
+      items[0].setAttribute('data-active', 'true');
+      setInterval(function () {
+        items[i].setAttribute('data-active', 'false');
+        i = (i + 1) % items.length;
+        items[i].setAttribute('data-active', 'true');
+      }, 4500);
+    } else if (items.length === 1) {
+      items[0].setAttribute('data-active', 'true');
+    }
+  }
+
+  // ---------- STAT COUNTER (counts up on viewport entry) ----------
+
+  var stats = document.querySelectorAll('[data-eos-stat]');
+  if (stats.length && 'IntersectionObserver' in window && !reduceMotion.matches) {
+    var statObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        statObserver.unobserve(el);
+        var target = parseFloat(el.getAttribute('data-eos-stat'));
+        var prefix = el.getAttribute('data-prefix') || '';
+        var suffix = el.getAttribute('data-suffix') || '';
+        var duration = 900;
+        var start = performance.now();
+        function frame(now) {
+          var t = Math.min(1, (now - start) / duration);
+          var eased = 1 - Math.pow(1 - t, 3);
+          var value = Math.round(target * eased);
+          el.textContent = prefix + value + suffix;
+          if (t < 1) requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+      });
+    }, { threshold: 0.5 });
+    stats.forEach(function (s) { statObserver.observe(s); });
+  } else {
+    stats.forEach(function (el) {
+      var target = parseFloat(el.getAttribute('data-eos-stat'));
+      var prefix = el.getAttribute('data-prefix') || '';
+      var suffix = el.getAttribute('data-suffix') || '';
+      el.textContent = prefix + target + suffix;
+    });
+  }
+
+  // ---------- REVEAL ON SCROLL (bundles + tools entering viewport) ----------
+
+  var revealEls = document.querySelectorAll('.eos-reveal');
+  if (revealEls.length && 'IntersectionObserver' in window && !reduceMotion.matches) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.setAttribute('data-visible', 'true');
+        revealObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.setAttribute('data-visible', 'true'); });
+  }
+
   // ---------- CART (localStorage, ready for Payhip wiring later) ----------
 
   var CART_KEY = 'eos-cart';

@@ -25,8 +25,8 @@
 
 <link rel="preload" href="./assets/fonts/plexserif-400-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="./assets/fonts/plexsans-400-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="./_design-tokens.css?v=5" />
-<link rel="stylesheet" href="./_components.css?v=5" />
+<link rel="stylesheet" href="./_design-tokens.css?v=6" />
+<link rel="stylesheet" href="./_components.css?v=6" />
 
 <script type="application/ld+json">
 {
@@ -146,8 +146,55 @@
   <div class="eos-hero__trust">
    <span class="eos-hero__trust-item"><strong>Built for HMRC, not the IRS.</strong> UK law, UK rates, UK case law, 2025/26 bands baked in.</span>
    <span class="eos-hero__trust-item">Five free tools live now. <a href="#free-tools">Use them before you buy.</a></span>
-   <span class="eos-hero__trust-item">MTD for Income Tax phase 1 hits 6 April 2026. Spreadsheet ready.</span>
    <span class="eos-hero__trust-item"><strong>14-day refund, no questions.</strong> Files yours forever. Updates included when HMRC rates change.</span>
+  </div>
+
+  <div class="eos-ticker" data-eos-ticker aria-live="polite" aria-label="Recent updates">
+   <span class="eos-ticker__label">Live</span>
+   <div class="eos-ticker__feed">
+    <div class="eos-ticker__item">
+     <span class="eos-ticker__date">12 May 2026</span>
+     <span>MTD for Income Tax penalty thresholds verified against HMRC schedule</span>
+     <span class="eos-ticker__source">HMRC</span>
+    </div>
+    <div class="eos-ticker__item">
+     <span class="eos-ticker__date">06 May 2026</span>
+     <span>RRA 2025 31 May information sheet template published to Landlord Kit</span>
+     <span class="eos-ticker__source">Renters' Rights Act</span>
+    </div>
+    <div class="eos-ticker__item">
+     <span class="eos-ticker__date">21 Apr 2026</span>
+     <span>SSP &pound;118.75 weekly, redundancy cap &pound;719 confirmed in Employer Kit</span>
+     <span class="eos-ticker__source">DWP / ERA 2025</span>
+    </div>
+    <div class="eos-ticker__item">
+     <span class="eos-ticker__date">06 Apr 2026</span>
+     <span>2025/26 income tax bands and NIC thresholds locked across all calculators</span>
+     <span class="eos-ticker__source">HMRC</span>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- Stat strip -->
+<section class="eos-section eos-section--flush" aria-label="ExternalOS at a glance">
+ <div class="eos-stat-strip">
+  <div class="eos-stat">
+   <span class="eos-stat__value" data-eos-stat="18">0</span>
+   <span class="eos-stat__label">Tools in catalogue</span>
+  </div>
+  <div class="eos-stat">
+   <span class="eos-stat__value" data-eos-stat="5">0</span>
+   <span class="eos-stat__label">Free, no signup</span>
+  </div>
+  <div class="eos-stat">
+   <span class="eos-stat__value" data-eos-stat="9" data-prefix="&pound;">&pound;0</span>
+   <span class="eos-stat__label">Cheapest tool</span>
+  </div>
+  <div class="eos-stat">
+   <span class="eos-stat__value" data-eos-stat="0" data-prefix="&pound;" data-suffix="/mo">&pound;0/mo</span>
+   <span class="eos-stat__label">Subscription bill</span>
   </div>
  </div>
 </section>
@@ -187,7 +234,7 @@
  </div>
  <div class="eos-bundle-grid">
 
-  <article class="eos-bundle-card" data-accent="hmrc">
+  <article class="eos-bundle-card eos-reveal" data-accent="hmrc">
    <span class="eos-bundle-card__tag">01 / Full UK Business Suite</span>
    <h3 class="eos-bundle-card__title">Full UK Business Suite</h3>
    <span class="eos-bundle-card__count">All 18 tools</span>
@@ -200,7 +247,7 @@
    </div>
   </article>
 
-  <article class="eos-bundle-card" data-accent="hmrc">
+  <article class="eos-bundle-card eos-reveal" data-accent="hmrc">
    <span class="eos-bundle-card__tag">02 / Freelancer Toolkit</span>
    <h3 class="eos-bundle-card__title">Freelancer Toolkit</h3>
    <span class="eos-bundle-card__count">6 tools</span>
@@ -213,7 +260,7 @@
    </div>
   </article>
 
-  <article class="eos-bundle-card" data-accent="hmrc">
+  <article class="eos-bundle-card eos-reveal" data-accent="hmrc">
    <span class="eos-bundle-card__tag">03 / Employer Compliance</span>
    <h3 class="eos-bundle-card__title">Employer Compliance Pack</h3>
    <span class="eos-bundle-card__count">7 tools</span>
@@ -226,7 +273,7 @@
    </div>
   </article>
 
-  <article class="eos-bundle-card" data-accent="penalty">
+  <article class="eos-bundle-card eos-reveal" data-accent="penalty">
    <span class="eos-bundle-card__tag">04 / Landlord 31 May Kit</span>
    <h3 class="eos-bundle-card__title">Landlord 31 May Kit</h3>
    <span class="eos-bundle-card__count">4 documents + getting-started PDF</span>
@@ -238,7 +285,7 @@
    </div>
   </article>
 
-  <article class="eos-bundle-card" data-accent="heritage">
+  <article class="eos-bundle-card eos-reveal" data-accent="heritage">
    <span class="eos-bundle-card__tag">05 / Landlord Legal Pack</span>
    <h3 class="eos-bundle-card__title">Landlord Legal Pack</h3>
    <span class="eos-bundle-card__count">3 tools</span>
@@ -250,7 +297,7 @@
    </div>
   </article>
 
-  <article class="eos-bundle-card" data-accent="butter">
+  <article class="eos-bundle-card eos-reveal" data-accent="butter">
    <span class="eos-bundle-card__tag">06 / Compliance Tracker</span>
    <h3 class="eos-bundle-card__title">UK Compliance Tracker</h3>
    <span class="eos-bundle-card__count">Live Google Sheet</span>
@@ -339,7 +386,7 @@
  </div>
  <div class="eos-tool-grid">
 
-  <a class="eos-tool-card" data-accent="hmrc" href="./ir35-checker.html">
+  <a class="eos-tool-card eos-reveal" data-accent="hmrc" href="./ir35-checker.html">
    <div class="eos-tool-card__head">
     <span class="eos-tool-card__category">Contractor</span>
     <span class="eos-tool-card__price">Free</span>
@@ -349,7 +396,7 @@
    <span class="eos-tool-card__cta">Open the checker &rarr;</span>
   </a>
 
-  <a class="eos-tool-card" data-accent="heritage" href="./compliance-calendar.html">
+  <a class="eos-tool-card eos-reveal" data-accent="heritage" href="./compliance-calendar.html">
    <div class="eos-tool-card__head">
     <span class="eos-tool-card__category">UK Ltd</span>
     <span class="eos-tool-card__price">Free</span>
@@ -359,7 +406,7 @@
    <span class="eos-tool-card__cta">Build my calendar &rarr;</span>
   </a>
 
-  <a class="eos-tool-card" data-accent="butter" href="./employer-costs.html">
+  <a class="eos-tool-card eos-reveal" data-accent="butter" href="./employer-costs.html">
    <div class="eos-tool-card__head">
     <span class="eos-tool-card__category">Employer</span>
     <span class="eos-tool-card__price">Free</span>
@@ -369,7 +416,7 @@
    <span class="eos-tool-card__cta">Calculate the cost &rarr;</span>
   </a>
 
-  <a class="eos-tool-card" data-accent="heritage" href="./landlord-compliance-check.html">
+  <a class="eos-tool-card eos-reveal" data-accent="heritage" href="./landlord-compliance-check.html">
    <div class="eos-tool-card__head">
     <span class="eos-tool-card__category">Landlord</span>
     <span class="eos-tool-card__price">Free</span>
@@ -379,7 +426,7 @@
    <span class="eos-tool-card__cta">Start the check &rarr;</span>
   </a>
 
-  <a class="eos-tool-card" data-accent="penalty" href="./mtd-clock.html">
+  <a class="eos-tool-card eos-reveal" data-accent="penalty" href="./mtd-clock.html">
    <div class="eos-tool-card__head">
     <span class="eos-tool-card__category">Sole trader / landlord</span>
     <span class="eos-tool-card__price">Free</span>
@@ -476,6 +523,6 @@
  </div>
 </footer>
 
-<script src="./_eos-ui.js?v=5" defer></script>
+<script src="./_eos-ui.js?v=6" defer></script>
 </body>
 </html>
