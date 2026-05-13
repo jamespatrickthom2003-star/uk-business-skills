@@ -126,7 +126,7 @@
         items[i].setAttribute('data-active', 'false');
         i = (i + 1) % items.length;
         items[i].setAttribute('data-active', 'true');
-      }, 4500);
+      }, 6000);
     } else if (items.length === 1) {
       items[0].setAttribute('data-active', 'true');
     }
@@ -145,8 +145,8 @@
         var target = parseFloat(el.getAttribute('data-eos-stat'));
         var prefix = el.getAttribute('data-prefix') || '';
         var suffix = el.getAttribute('data-suffix') || '';
-        var duration = 2200;
-        var delay = idx * 220;
+        var duration = 2800;
+        var delay = idx * 320;
         var start = performance.now() + delay;
         function frame(now) {
           if (now < start) { requestAnimationFrame(frame); return; }
