@@ -547,22 +547,23 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
   position: fixed; inset: 0; z-index: 9999;
   display: grid; place-items: center;
   background: var(--surface-base);
-  animation: eos-boot-out 440ms var(--ease-out) 980ms forwards;
+  /* starts blank, holds, layers come in one by one, then clears */
+  animation: eos-boot-out 560ms var(--ease-out) 2350ms forwards;
 }
-.eos-boot__mark { width: 76px; height: 76px; }
+.eos-boot__mark { width: 150px; height: 150px; }
 .eos-boot__mark polygon {
   transform-box: fill-box;
   transform-origin: center;
   opacity: 0;
-  transform: scale(0.55) translateY(10px);
-  animation: eos-boot-layer 380ms var(--ease-out) forwards;
+  transform: scale(0.5) translateY(14px);
+  animation: eos-boot-layer 540ms var(--ease-out) forwards;
 }
-.eos-boot__mark polygon:nth-child(1) { fill: var(--step-1); animation-delay: 0ms; }
-.eos-boot__mark polygon:nth-child(2) { fill: var(--step-2); animation-delay: 60ms; }
-.eos-boot__mark polygon:nth-child(3) { fill: var(--step-3); animation-delay: 120ms; }
-.eos-boot__mark polygon:nth-child(4) { fill: var(--step-4); animation-delay: 180ms; }
-.eos-boot__mark polygon:nth-child(5) { fill: var(--step-5); animation-delay: 240ms; }
-.eos-boot__mark polygon:nth-child(6) { fill: var(--step-6); animation-delay: 300ms; }
+.eos-boot__mark polygon:nth-child(1) { fill: var(--step-1); animation-delay: 280ms; }
+.eos-boot__mark polygon:nth-child(2) { fill: var(--step-2); animation-delay: 470ms; }
+.eos-boot__mark polygon:nth-child(3) { fill: var(--step-3); animation-delay: 660ms; }
+.eos-boot__mark polygon:nth-child(4) { fill: var(--step-4); animation-delay: 850ms; }
+.eos-boot__mark polygon:nth-child(5) { fill: var(--step-5); animation-delay: 1040ms; }
+.eos-boot__mark polygon:nth-child(6) { fill: var(--step-6); animation-delay: 1230ms; }
 @keyframes eos-boot-layer { to { opacity: 1; transform: none; } }
 @keyframes eos-boot-out {
   to { opacity: 0; visibility: hidden; pointer-events: none; }
