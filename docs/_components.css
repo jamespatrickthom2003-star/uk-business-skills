@@ -581,6 +581,7 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
   font-size: var(--type-display);
   line-height: 1.06;
   letter-spacing: -0.015em;
+  text-wrap: balance;
   color: var(--ink-primary);
   margin: 0;
   font-weight: 580;

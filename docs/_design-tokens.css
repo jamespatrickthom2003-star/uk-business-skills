@@ -32,7 +32,7 @@
 
   /* Q4 type scale (S221: display + h1 pushed larger for contrast -
      the dramatic scale jump is the "modern, not boring" lever) */
-  --type-display: clamp(54px, 8.5vw, 104px);
+  --type-display: clamp(40px, 5.4vw, 74px);
   --type-h1: clamp(40px, 5.2vw, 60px);
   --type-h2: clamp(30px, 4vw, 44px);
   --type-h3: 22px;
