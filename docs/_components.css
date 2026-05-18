@@ -9,6 +9,26 @@
 
 /* ---------- FONTS (self-hosted IBM Plex family, locked S209 v5) ---------- */
 
+/* Fraunces variable (S221): DISPLAY/headline face only. Plex Sans stays
+   body, Plex Mono stays data/specimen (untouched, load-bearing for
+   ledger credibility). Fraunces carries the editorial character that
+   makes the site read modern + crafted, not boring. opsz axis lets
+   headlines use the high-contrast optical-display cut. */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('./assets/fonts/fraunces-var.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('./assets/fonts/fraunces-var-italic.woff2') format('woff2-variations');
+}
+
 /* Plex Serif: body + headlines + editorial italics */
 @font-face {
   font-family: 'IBM Plex Serif';
@@ -155,9 +175,14 @@ img, svg { display: block; max-width: 100%; }
 /* ---------- TYPE PRIMITIVES (Q4) ---------- */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 600;
   color: inherit;
+  /* Fraunces opsz axis: large headings auto-take the high-contrast
+     display cut, small ones stay readable. This is the system-wide
+     display-face swap (S221). Plex Sans body + Plex Mono data unchanged. */
+  font-optical-sizing: auto;
+  font-variation-settings: 'SOFT' 0, 'WONK' 1;
 }
 
 h1 { font-size: var(--type-h1); line-height: var(--leading-h1); letter-spacing: var(--track-h1); }
@@ -534,15 +559,19 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
 }
 .eos-hero__lead { max-width: 640px; }
 .eos-hero h1 {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: var(--type-display);
-  line-height: var(--leading-display);
-  letter-spacing: var(--track-display);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
   color: var(--ink-primary);
   margin: 0;
+  font-weight: 580;
+  font-optical-sizing: auto;
+  font-variation-settings: 'SOFT' 0, 'WONK' 1;
 }
 .eos-hero h1 em {
-  font-style: italic; font-weight: 500; color: var(--accent);
+  font-style: italic; font-weight: 460; color: var(--accent);
+  font-variation-settings: 'SOFT' 60, 'WONK' 1;
 }
 /* The signature: a ledger rule that draws itself under the headline */
 .eos-hero__sigrule {
