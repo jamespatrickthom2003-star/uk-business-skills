@@ -621,7 +621,7 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
   /* Block so the gap lives ONLY between the two sentences, not on every
      line. Tight leading above keeps each sentence compact. */
   display: block;
-  margin-top: 0.34em;
+  margin-top: 0.08em;
 }
 /* The signature: a ledger rule that draws itself under the headline */
 /* Signature: the green rule draws, then the layered diamond settles
