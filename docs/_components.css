@@ -691,8 +691,12 @@ html.eos-boot--skip .eos-boot { display: none; }
   background: var(--accent);
   transform: scaleX(0);
   transform-origin: center;
-  animation: eos-rule-draw 420ms var(--ease-out) 320ms forwards;
+  /* First visit: wait for the boot overlay to clear (~2.9s) so the
+     draw is actually seen. Repeat visits skip the boot, so draw
+     promptly (overridden below via the boot-skip class). */
+  animation: eos-rule-draw 420ms var(--ease-out) 3050ms forwards;
 }
+html.eos-boot--skip .eos-hero__sigrule-line { animation-delay: 320ms; }
 .eos-hero__sigmark {
   width: 26px; height: 26px;
   overflow: visible;
