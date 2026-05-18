@@ -46,6 +46,13 @@
   font-display: swap;
   src: url('./assets/fonts/newsreader-600-italic.woff2') format('woff2');
 }
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./assets/fonts/newsreader-700-italic.woff2') format('woff2');
+}
 
 /* Plex Serif: body + headlines + editorial italics */
 @font-face {
@@ -571,26 +578,6 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
 html.eos-boot--skip .eos-boot { display: none; }
 @media (prefers-reduced-motion: reduce) { .eos-boot { display: none; } }
 
-/* ---------- THEME TOGGLE = layered diamond (S221 idea 5) ----------
-   The toggle IS the mark. The 6 step vars already invert under
-   html[data-theme="dark"] (see _design-tokens.css), so flipping theme
-   recolours the 6 layers; a staggered fill transition makes the
-   inversion ripple inner<->outer. The inversion is the switch. */
-.eos-theme-mark { width: 20px; height: 20px; display: block; }
-.eos-theme-mark polygon {
-  transition: fill var(--motion-base) var(--ease-hover);
-}
-.eos-theme-mark polygon:nth-child(1) { fill: var(--step-1); transition-delay: 0ms; }
-.eos-theme-mark polygon:nth-child(2) { fill: var(--step-2); transition-delay: 30ms; }
-.eos-theme-mark polygon:nth-child(3) { fill: var(--step-3); transition-delay: 60ms; }
-.eos-theme-mark polygon:nth-child(4) { fill: var(--step-4); transition-delay: 90ms; }
-.eos-theme-mark polygon:nth-child(5) { fill: var(--step-5); transition-delay: 120ms; }
-.eos-theme-mark polygon:nth-child(6) { fill: var(--step-6); transition-delay: 150ms; }
-.eos-header__theme:hover .eos-theme-mark { transform: scale(1.06); transition: transform var(--motion-fast) var(--ease-hover); }
-@media (prefers-reduced-motion: reduce) {
-  .eos-theme-mark polygon { transition: none; transition-delay: 0ms; }
-}
-
 /* ---------- HERO ---------- */
 
 /* Ledger hero (S221): asymmetric broadsheet + live specimen.
@@ -666,7 +653,10 @@ html.eos-boot--skip .eos-boot { display: none; }
 .eos-hero h1 em {
   font-family: 'Newsreader', 'IBM Plex Serif', Georgia, serif;
   font-style: italic;
-  font-weight: 600;
+  /* 700 on the light (default) surface: dark-green-on-cream optically
+     constricts, so it needs more weight to match the dark-mode read.
+     Dark mode drops back to 600. */
+  font-weight: 700;
   color: var(--accent);
   font-variation-settings: normal;
   letter-spacing: -0.005em;
@@ -675,6 +665,7 @@ html.eos-boot--skip .eos-boot { display: none; }
   display: block;
   margin-top: 0.08em;
 }
+html[data-theme="dark"] .eos-hero h1 em { font-weight: 600; }
 /* The signature: a ledger rule that draws itself under the headline */
 /* Signature: the green rule draws, then the layered diamond settles
    into register at its end. The logo becomes the punctuation of the
