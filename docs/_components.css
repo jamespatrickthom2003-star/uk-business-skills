@@ -579,7 +579,7 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
 .eos-hero h1 {
   font-family: var(--font-display);
   font-size: var(--type-display);
-  line-height: 1.08;
+  line-height: 1.22;
   letter-spacing: -0.015em;
   color: var(--ink-primary);
   margin: 0;
