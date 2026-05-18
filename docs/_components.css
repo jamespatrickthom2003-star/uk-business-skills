@@ -558,7 +558,10 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
 /* Headline is full-width, OUT of the 2-col grid, so each sentence
    sits on its own single line and never wraps - that wrapping was
    the entire source of the descender collisions. */
-.eos-hero__head { margin-bottom: var(--s-6); }
+/* Centred masthead block. The asymmetry lives in the body below
+   (lede left + specimen right), so a centred headline reads as a
+   newspaper masthead, not a generic centred hero. */
+.eos-hero__head { margin-bottom: var(--s-6); text-align: center; }
 /* Full-width mono masthead line */
 .eos-hero__kicker {
   display: flex; align-items: center; gap: var(--s-3);
@@ -627,7 +630,7 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
 .eos-hero__sigrule {
   display: flex;
   align-items: center;
-  gap: var(--s-3);
+  justify-content: center;
   margin: var(--s-4) 0 var(--s-5);
 }
 .eos-hero__sigrule-line {
@@ -635,7 +638,7 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
   width: clamp(140px, 32%, 280px);
   background: var(--accent);
   transform: scaleX(0);
-  transform-origin: left center;
+  transform-origin: center;
   animation: eos-rule-draw 420ms var(--ease-out) 320ms forwards;
 }
 .eos-hero__sigmark {
