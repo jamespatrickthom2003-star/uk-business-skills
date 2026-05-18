@@ -570,8 +570,8 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
   font-variation-settings: 'SOFT' 0, 'WONK' 1;
 }
 .eos-hero h1 em {
-  font-style: italic; font-weight: 460; color: var(--accent);
-  font-variation-settings: 'SOFT' 60, 'WONK' 1;
+  font-style: normal; font-weight: 620; color: var(--accent);
+  font-variation-settings: 'SOFT' 0, 'WONK' 0;
 }
 /* The signature: a ledger rule that draws itself under the headline */
 .eos-hero__sigrule {
