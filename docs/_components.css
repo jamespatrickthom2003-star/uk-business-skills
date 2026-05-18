@@ -29,6 +29,24 @@
   src: url('./assets/fonts/fraunces-var-italic.woff2') format('woff2-variations');
 }
 
+/* Newsreader italic (S221): the "answer voice" in the hero title only.
+   WSJ News./Opinion. logic - statement in Fraunces, reply in a second
+   editorial italic at equal size. Italic only, two weights. */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./assets/fonts/newsreader-500-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./assets/fonts/newsreader-600-italic.woff2') format('woff2');
+}
+
 /* Plex Serif: body + headlines + editorial italics */
 @font-face {
   font-family: 'IBM Plex Serif';
@@ -569,19 +587,16 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
   font-optical-sizing: auto;
   font-variation-settings: 'SOFT' 0, 'WONK' 0;
 }
+/* The answer voice: Newsreader italic, EQUAL size to the statement,
+   green. Contrast by typeface + style, never by shrinking - the reply
+   is the payoff, it carries equal mass. (WSJ News./Opinion. logic.) */
 .eos-hero h1 em {
-  font-style: normal; font-weight: 620; color: var(--accent);
-  font-variation-settings: 'SOFT' 0, 'WONK' 0;
-  /* Smaller than the black lines so "You do the work." sits on ONE
-     line and the emphasis reads as a calmer answering line. Wraps
-     again only on very narrow screens to avoid overflow. */
-  display: inline-block;
-  font-size: clamp(34px, 5.2vw, 70px);
-  white-space: nowrap;
-  letter-spacing: -0.01em;
-}
-@media (max-width: 560px) {
-  .eos-hero h1 em { white-space: normal; font-size: clamp(30px, 8vw, 40px); }
+  font-family: 'Newsreader', 'IBM Plex Serif', Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--accent);
+  font-variation-settings: normal;
+  letter-spacing: -0.005em;
 }
 /* The signature: a ledger rule that draws itself under the headline */
 /* Signature: the green rule draws, then the layered diamond settles
