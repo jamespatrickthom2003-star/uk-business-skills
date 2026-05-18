@@ -532,12 +532,9 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
 }
 .eos-hero__kicker,
 .eos-hero__grid {
-  max-width: var(--container-standard);
+  max-width: var(--container-wide);
   margin: 0 auto;
-  /* Side padding always clears the mark-rails (rail max 116px) plus a
-     gap, so hero content never overlaps the logo fans. Collapses on
-     narrow screens where the rails are hidden. */
-  padding: 0 clamp(var(--s-5), 9vw, 152px);
+  padding: 0 var(--s-5);
 }
 /* Full-width mono masthead line */
 .eos-hero__kicker {
@@ -642,8 +639,6 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
 @media (max-width: 920px) {
   .eos-hero__grid { grid-template-columns: 1fr; gap: var(--s-6); }
   .eos-spec { order: 2; }
-  /* rails hidden <=900px, so drop the rail-clearing padding */
-  .eos-hero__kicker, .eos-hero__grid { padding: 0 var(--s-4); }
 }
 @media (max-width: 640px) {
   .eos-hero { padding: var(--s-5) 0; }
