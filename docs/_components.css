@@ -549,11 +549,16 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
   position: relative;
 }
 .eos-hero__kicker,
+.eos-hero__head,
 .eos-hero__grid {
   max-width: var(--container-wide);
   margin: 0 auto;
   padding: 0 var(--s-5);
 }
+/* Headline is full-width, OUT of the 2-col grid, so each sentence
+   sits on its own single line and never wraps - that wrapping was
+   the entire source of the descender collisions. */
+.eos-hero__head { margin-bottom: var(--s-6); }
 /* Full-width mono masthead line */
 .eos-hero__kicker {
   display: flex; align-items: center; gap: var(--s-3);
@@ -578,15 +583,27 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
 .eos-hero__lead { max-width: 640px; }
 .eos-hero h1 {
   font-family: var(--font-display);
-  font-size: var(--type-display);
-  line-height: 1.06;
+  /* Sized so the longest line ("We do the boring admin.") fits one
+     line within the full container at any width; scales down with the
+     viewport so it never wraps and never overflows. */
+  font-size: clamp(26px, 5.4vw, 78px);
+  line-height: 1.04;
   letter-spacing: -0.015em;
-  text-wrap: balance;
   color: var(--ink-primary);
   margin: 0;
   font-weight: 580;
   font-optical-sizing: auto;
   font-variation-settings: 'SOFT' 0, 'WONK' 0;
+}
+.eos-hero__line,
+.eos-hero h1 em {
+  display: block;
+  white-space: nowrap;
+}
+/* Very small phones: allow a wrap rather than clip. No spec column
+   fights it there, so a 2-line wrap is fine and cannot collide. */
+@media (max-width: 480px) {
+  .eos-hero__line, .eos-hero h1 em { white-space: normal; }
 }
 /* The answer voice: Newsreader italic, EQUAL size to the statement,
    green. Contrast by typeface + style, never by shrinking - the reply
