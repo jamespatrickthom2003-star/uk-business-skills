@@ -572,6 +572,16 @@ html[data-theme="dark"] .eos-header__theme .icon-moon { display: inline-block; }
 .eos-hero h1 em {
   font-style: normal; font-weight: 620; color: var(--accent);
   font-variation-settings: 'SOFT' 0, 'WONK' 0;
+  /* Smaller than the black lines so "You do the work." sits on ONE
+     line and the emphasis reads as a calmer answering line. Wraps
+     again only on very narrow screens to avoid overflow. */
+  display: inline-block;
+  font-size: clamp(34px, 5.2vw, 70px);
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+@media (max-width: 560px) {
+  .eos-hero h1 em { white-space: normal; font-size: clamp(30px, 8vw, 40px); }
 }
 /* The signature: a ledger rule that draws itself under the headline */
 /* Signature: the green rule draws, then the layered diamond settles
